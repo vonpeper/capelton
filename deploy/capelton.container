@@ -1,0 +1,35 @@
+[Unit]
+Description=capelton — capelton.mx (Next.js 15 App)
+After=network-online.target traefik.service
+Wants=network-online.target
+
+[Container]
+ContainerName=capelton
+Image=ghcr.io/vonpeper/capelton:latest
+Pull=newer
+AutoUpdate=registry
+Network=prosuite.network
+
+HealthCmd=node -e "require('http').get('http://127.0.0.1:3000', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)}).on('error', () => process.exit(1))"
+HealthInterval=30s
+HealthTimeout=5s
+HealthStartPeriod=20s
+HealthRetries=3
+
+PodmanArgs=--memory=512m --memory-swap=512m --cpus=0.5
+
+Label=traefik.enable=true
+Label=traefik.docker.network=prosuite
+Label=traefik.http.services.capelton.loadbalancer.server.port=3000
+Label=traefik.http.routers.capelton.rule=Host(`capelton.mx`) || Host(`www.capelton.mx`)
+Label=traefik.http.routers.capelton.entrypoints=websecure
+Label=traefik.http.routers.capelton.tls.certresolver=letsencrypt-dns
+Label=traefik.http.routers.capelton.service=capelton
+Label=org.prosuite.stack=capelton
+
+[Service]
+Restart=always
+TimeoutStartSec=180
+
+[Install]
+WantedBy=multi-user.target default.target

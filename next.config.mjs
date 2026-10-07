@@ -1,8 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   images: {
     unoptimized: true,
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'capelton.mx',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.capelton.mx',
+        pathname: '/**',
+      },
       {
         protocol: 'https',
         hostname: 'capeltonmexico.com',

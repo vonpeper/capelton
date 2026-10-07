@@ -6,7 +6,7 @@ import WhatsAppBubble from "@/components/WhatsAppBubble";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://capeltonmexico.com"),
+  metadataBase: new URL("https://capelton.mx"),
   title: {
     default: "Capelton México | Espacios Móviles, Casetas y Oficinas Modulares de Alta Ingeniería",
     template: "%s | Capelton México",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_MX",
-    url: "https://capeltonmexico.com",
+    url: "https://capelton.mx",
     siteName: "Capelton México",
     title: "Capelton México | Espacios Móviles y Arquitectura Modular de Vanguardia",
     description:
@@ -82,7 +82,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Capelton México",
-    url: "https://capeltonmexico.com",
+    url: "https://capelton.mx",
     logo: "https://capeltonmexico.com/wp-content/uploads/yootheme/cache/f6/logo-f66c954a.webp",
     contactPoint: {
       "@type": "ContactPoint",

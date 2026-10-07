@@ -5,12 +5,17 @@ export const SITE_CONFIG = {
 
   name: "Capelton México",
   legalName: "Capelton de México S.A. de C.V.",
-  tagline: "Espacios Móviles, Casetas y Oficinas Modulares de Alta Ingeniería",
+  tagline: "Espacios Móviles, Casetas y Oficinas Modulares",
+  domain: "capelton.mx",
+  url: "https://capelton.mx",
+  email: "ventas@capeltonmexico.com",
+  location: "Planta y oficinas: Metepec, Estado de México",
+  schedule: "Lunes a Sábado hasta las 6:00 pm",
 
   contact: {
     ventas: {
       label: "Venta Directa",
-      subtitle: "Patrimonio Permanente · Compra de Unidades",
+      subtitle: "Adquisición de Unidades Modulares",
       phone: "55 2964 0104",
       phoneFormatted: "+52 55 2964 0104",
       phoneRaw: "5529640104",
@@ -20,8 +25,8 @@ export const SITE_CONFIG = {
       waDefaultMessage: "Hola, deseo cotizar la VENTA de un espacio modular Capelton",
     },
     rentas: {
-      label: "Renta Flexible",
-      subtitle: "100% Deducible (OPEX) · Entrega Inmediata",
+      label: "Renta de Unidades",
+      subtitle: "Arrendamiento Flexible",
       phone: "55 7948 3632",
       phoneFormatted: "+52 55 7948 3632",
       phoneRaw: "5579483632",

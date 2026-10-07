@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { products, categories } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://capeltonmexico.com";
+  const baseUrl = "https://capelton.mx";
 
   // Base routes
   const staticRoutes: MetadataRoute.Sitemap = [

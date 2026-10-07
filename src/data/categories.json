@@ -1,0 +1,136 @@
+[
+  {
+    "id": "oficinas",
+    "slug": "oficinas-moviles",
+    "name": "Oficinas Móviles",
+    "nameEn": "Mobile Offices",
+    "tagline": "Espacios ejecutivos climatizados y salas de mando para la industria y construcción.",
+    "taglineEn": "Climate-controlled executive workspaces and command centers for industry and construction.",
+    "modelsCount": 9,
+    "image": "https://capeltonmexico.com/wp-content/uploads/2025/02/Categoria_Oficinas.png",
+    "corteImage": "https://capeltonmexico.com/wp-content/uploads/2025/02/Oficinas_Corte.png",
+    "modelSlugs": [
+      "cm3m",
+      "cm3mr",
+      "cm4m",
+      "cm6m",
+      "cm8m",
+      "cm10m",
+      "cm12m",
+      "cm14m",
+      "cm17m"
+    ]
+  },
+  {
+    "id": "casetas",
+    "slug": "casetas-moviles",
+    "name": "Casetas de Vigilancia",
+    "nameEn": "Guard & Security Booths",
+    "tagline": "Puntos de control perimetral con visibilidad 360° para seguridad y acceso en sitio.",
+    "taglineEn": "Perimeter control checkpoints with 360° visibility for site security and access management.",
+    "modelsCount": 2,
+    "image": "https://capeltonmexico.com/wp-content/uploads/2025/02/Categoria_Casetas.png",
+    "corteImage": "https://capeltonmexico.com/wp-content/uploads/2025/02/CM-3M2.png",
+    "modelSlugs": [
+      "cmvc3m2",
+      "cmv6m2"
+    ]
+  },
+  {
+    "id": "dormitorios",
+    "slug": "dormitorios-moviles",
+    "name": "Dormitorios Móviles",
+    "nameEn": "Mobile Sleeper Units",
+    "tagline": "Módulos habitacionales y campamentos de descanso para personal de obra y minería.",
+    "taglineEn": "Residential sleeper modules and base camp accommodations for construction and mining crews.",
+    "modelsCount": 7,
+    "image": "https://capeltonmexico.com/wp-content/uploads/2025/02/Categoria_Dormitorios.png",
+    "corteImage": "https://capeltonmexico.com/wp-content/uploads/2025/02/Dormitorios_Corte.png",
+    "modelSlugs": [
+      "cmd4ib",
+      "cmdbc6m",
+      "cmd10br",
+      "cmdc10m",
+      "cmd12m",
+      "cmd12x60",
+      "hotel12x60"
+    ]
+  },
+  {
+    "id": "sanitarios",
+    "slug": "sanitarios-moviles",
+    "name": "Sanitarios Móviles",
+    "nameEn": "Mobile Restroom Units",
+    "tagline": "Remolques y módulos hidrosanitarios autónomos con estándares de máxima higiene.",
+    "taglineEn": "Autonomous mobile restroom trailers and modules with hospital-grade hygiene standards.",
+    "modelsCount": 3,
+    "image": "https://capeltonmexico.com/wp-content/uploads/2025/02/Categoria_Sanitarios.png",
+    "corteImage": "https://capeltonmexico.com/wp-content/uploads/2025/02/Sanitarios_Corte.png",
+    "modelSlugs": [
+      "cms10m",
+      "cmb10m",
+      "cml6x16"
+    ]
+  },
+  {
+    "id": "comedores",
+    "slug": "comedores-moviles",
+    "name": "Comedores Móviles",
+    "nameEn": "Mobile Dining Units",
+    "tagline": "Comedores industriales climatizados con barras de servicio para alta densidad.",
+    "taglineEn": "Climate-controlled industrial dining units with food service counters for high-density crews.",
+    "modelsCount": 3,
+    "image": "https://capeltonmexico.com/wp-content/uploads/2025/02/Categoria_Comedores.png",
+    "corteImage": "https://capeltonmexico.com/wp-content/uploads/2025/02/Comedores_Corte.png",
+    "modelSlugs": [
+      "cmk6m",
+      "cmk8m",
+      "cmm12co"
+    ]
+  },
+  {
+    "id": "contenedores",
+    "slug": "contenedores-moviles",
+    "name": "Contenedores y Minibodegas",
+    "nameEn": "Containers & Mini-Storage",
+    "tagline": "Bodegas y minibodegas modulares de máxima seguridad para resguardo de herramienta y materiales.",
+    "taglineEn": "Modular high-security storage and warehouse units for tools, equipment, and materials.",
+    "modelsCount": 3,
+    "image": "https://capeltonmexico.com/wp-content/uploads/2025/02/Categoria_Contenedores.png",
+    "corteImage": "https://capeltonmexico.com/wp-content/uploads/2025/02/Contenedores_Corte.png",
+    "modelSlugs": [
+      "bodega8x32",
+      "minibodega-casa-seca",
+      "minibodega-contenedor"
+    ]
+  },
+  {
+    "id": "consultorios",
+    "slug": "consultorios",
+    "name": "Consultorios Móviles",
+    "nameEn": "Mobile Medical Clinics",
+    "tagline": "Unidades médicas móviles y consultorios clínicos para atención en campo y brigadas.",
+    "taglineEn": "Mobile medical units and clinical consult rooms for field health programs and emergency response.",
+    "modelsCount": 4,
+    "image": "https://capeltonmexico.com/wp-content/uploads/2025/07/Consultorios_Corte-min-scaled.png",
+    "corteImage": "https://capeltonmexico.com/wp-content/uploads/2025/07/Consultorios_Corte-min-scaled.png",
+    "modelSlugs": [
+      "cm4-mm",
+      "cm6-mm",
+      "cm8-mm",
+      "cm10-mm"
+    ]
+  },
+  {
+    "id": "almacenes",
+    "slug": "almacenes",
+    "name": "Almacenes Industriales",
+    "nameEn": "Industrial Warehouses",
+    "tagline": "Soluciones de almacenamiento y bodegas industriales modulares de instalación inmediata.",
+    "taglineEn": "Modular storage and industrial warehouse solutions engineered for immediate turnkey installation.",
+    "modelsCount": 0,
+    "image": "/images/categoria-almacenes.png",
+    "corteImage": "/images/categoria-almacenes.png",
+    "modelSlugs": []
+  }
+]

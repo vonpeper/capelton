@@ -6,7 +6,7 @@ import { Home, Phone, ArrowRight, ShieldCheck, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Página no encontrada (404)',
-  description: 'La página solicitada no existe o ha sido reubicada. Conoce nuestro catálogo de oficinas móviles y casetas de vigilancia en México.',
+  description: 'La página solicitada no existe o ha sido reubicada. Conoce nuestro catálogo de oficinas móviles y casetas en México.',
   robots: {
     index: false,
     follow: false,
@@ -52,7 +52,7 @@ export default function NotFound() {
             <div className="flex items-center gap-3">
               <ShieldCheck className="w-5 h-5 text-capelton-green" />
               <div>
-                <div className="text-xs font-bold text-neutral-900 group-hover:text-capelton-green transition-colors">Casetas de Vigilancia</div>
+                <div className="text-xs font-bold text-neutral-900 group-hover:text-capelton-green transition-colors">Casetas</div>
                 <div className="text-[11px] text-neutral-500">Modelos 1.2m a 3m</div>
               </div>
             </div>

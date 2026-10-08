@@ -9,17 +9,18 @@ import { LanguageProvider } from "@/context/LanguageContext";
 export const metadata: Metadata = {
   metadataBase: new URL("https://capeltonmexico.com"),
   title: {
-    default: "Capelton México | Casetas de Vigilancia, Oficinas Móviles y Módulos Prefabricados",
+    default: "Capelton México | Casetas, Oficinas Móviles y Módulos Prefabricados",
     template: "%s | Capelton México",
   },
   description:
-    "Fabricación, venta y renta de oficinas móviles, casetas de vigilancia, dormitorios y espacios modulares para la industria y construcción en México. Cotiza hoy.",
+    "Fabricación, venta y renta de oficinas móviles, casetas, dormitorios y espacios modulares para la industria y construcción en México. Cotiza hoy.",
   keywords: [
-    "casetas de vigilancia",
+    "casetas",
     "oficinas móviles",
     "casetas modulares",
     "dormitorios móviles",
     "casetas prefabricadas",
+    "casetas móviles",
     "contenedores de obra",
     "comedores industriales móviles",
     "sanitarios móviles",
@@ -27,7 +28,6 @@ export const metadata: Metadata = {
     "Capelton México",
     "renta de casetas",
     "venta de oficinas móviles",
-    "casetas de seguridad",
     "espacios modulares México",
   ],
   alternates: {
@@ -46,22 +46,22 @@ export const metadata: Metadata = {
     locale: "es_MX",
     url: "https://capeltonmexico.com",
     siteName: "Capelton México",
-    title: "Capelton México | Casetas de Vigilancia, Oficinas Móviles y Módulos Prefabricados",
+    title: "Capelton México | Casetas, Oficinas Móviles y Módulos Prefabricados",
     description:
-      "Fabricación, venta y renta de oficinas móviles, casetas de vigilancia y arquitectura modular de rápida implementación en todo México.",
+      "Fabricación, venta y renta de oficinas móviles, casetas y arquitectura modular de rápida implementación en todo México.",
     images: [
       {
         url: "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png",
         width: 1920,
         height: 627,
-        alt: "Capelton México - Espacios Móviles y Casetas de Vigilancia",
+        alt: "Capelton México - Espacios Móviles y Casetas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Capelton México | Casetas de Vigilancia y Oficinas Móviles",
-    description: "Fabricación, venta y renta de oficinas móviles y casetas de vigilancia en todo México.",
+    title: "Capelton México | Casetas y Oficinas Móviles",
+    description: "Fabricación, venta y renta de oficinas móviles y casetas en todo México.",
     images: ["https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png"],
   },
   robots: {
@@ -106,7 +106,7 @@ export default function RootLayout({
           "Capelton de México",
           "Capelton de México S.A. de C.V."
         ],
-        "description": "Fabricación, venta y renta de casetas de vigilancia, oficinas móviles y espacios modulares en México.",
+        "description": "Fabricación, venta y renta de casetas, oficinas móviles y espacios modulares en México.",
         "inLanguage": "es-MX"
       },
       {
@@ -117,7 +117,7 @@ export default function RootLayout({
         "url": "https://capeltonmexico.com",
         "logo": "https://capeltonmexico.com/images/logo-capelton.png",
         "image": "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png",
-        "description": "Especialistas en ingeniería, diseño y manufactura de oficinas móviles, casetas de vigilancia, dormitorios y espacios modulares para la industria y construcción en México.",
+        "description": "Especialistas en ingeniería, diseño y manufactura de oficinas móviles, casetas, dormitorios y espacios modulares para la industria y construcción en México.",
         "telephone": "+52-55-2964-0104",
         "address": {
           "@type": "PostalAddress",

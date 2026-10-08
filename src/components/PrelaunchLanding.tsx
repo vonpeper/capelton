@@ -77,7 +77,7 @@ export default function PrelaunchLanding() {
 
         {/* Monumental Headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.15] max-w-2xl mt-3 mb-3">
-          {t("Casetas de Vigilancia, Oficinas Móviles y Espacios Modulares", "Security Guard Booths, Mobile Offices & Modular Spaces")}
+          {t("Casetas, Oficinas Móviles y Espacios Modulares", "Booths, Mobile Offices & Modular Spaces")}
         </h1>
         <p className="text-sm sm:text-base font-medium text-capelton-darkgreen mb-3">
           Capelton México · {t("Ingeniería y Manufactura Directa", "Direct Engineering & Manufacturing")}
@@ -185,8 +185,8 @@ export default function PrelaunchLanding() {
               </h2>
               <p className="text-xs sm:text-sm text-[#6e6e73] leading-relaxed mb-4">
                 {t(
-                  "Arrendamiento de casetas de vigilancia y oficinas móviles para obras y campamentos temporales.",
-                  "Rental of security guard booths and mobile offices for construction sites and temporary projects."
+                  "Arrendamiento de casetas y oficinas móviles para obras y campamentos temporales.",
+                  "Rental of booths and mobile offices for construction sites and temporary projects."
                 )}
               </p>
 

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: process.env.STATIC_EXPORT === "true" ? "export" : "standalone",
   images: {
     unoptimized: true,
     remotePatterns: [

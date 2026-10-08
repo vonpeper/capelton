@@ -30,6 +30,7 @@ const DICTIONARY: Record<string, string> = {
 
   // Categories
   "Oficinas Móviles": "Mobile Offices",
+  "Casetas": "Booths",
   "Casetas de Vigilancia": "Guard & Security Booths",
   "Dormitorios Móviles": "Mobile Sleeper Units",
   "Sanitarios Móviles": "Mobile Restroom Units",

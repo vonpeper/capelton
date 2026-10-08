@@ -293,10 +293,10 @@
   {
     "id": 2068,
     "slug": "cmvc3m2",
-    "title": "Caseta de Vigilancia CMVC-3M2",
+    "title": "Caseta CMVC-3M2",
     "modelCode": "CMVC-3M2",
     "category": "casetas",
-    "categoryName": "Casetas de Vigilancia",
+    "categoryName": "Casetas",
     "originalUrl": "https://capeltonmexico.com/cmvc3m2/",
     "dimensions": "2.44 × 1.22 × 2.50m",
     "weight": "500kg",
@@ -317,16 +317,16 @@
       "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV3M2_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV-3M2.pdf",
-    "tagline": "Unidad Sanitarios Móviles CMVC3M2 de ingeniería avanzada y rápido despliegue.",
+    "tagline": "Unidad Caseta CMVC-3M2 de ingeniería avanzada y rápido despliegue.",
     "isFlagship": false
   },
   {
     "id": 2045,
     "slug": "cmv6m2",
-    "title": "Caseta de Vigilancia CMVC-6M2",
+    "title": "Caseta CMVC-6M2",
     "modelCode": "CMVC-6M2",
     "category": "casetas",
-    "categoryName": "Casetas de Vigilancia",
+    "categoryName": "Casetas",
     "originalUrl": "https://capeltonmexico.com/cmv6m2/",
     "dimensions": "2.44 × 2.44 × 2.50m",
     "weight": "650kg",
@@ -347,7 +347,7 @@
       "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV6M2_PLANTA-1.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV-6M2.pdf",
-    "tagline": "Unidad Sanitarios Móviles CMVC6M2 de ingeniería avanzada y rápido despliegue.",
+    "tagline": "Unidad Caseta CMVC-6M2 de ingeniería avanzada y rápido despliegue.",
     "isFlagship": false
   },
   {

@@ -85,7 +85,7 @@ const MODEL_LABELS: Record<string, { es: string; en: string }> = {
   cm14m: { es: "CM-14M (Oficina Macro 14m)", en: "CM-14M (Macro Office 14m)" },
   cm17m: { es: "CM-17M (Oficina Master 17m)", en: "CM-17M (Master Office 17m)" },
 
-  // Casetas de Vigilancia
+  // Casetas
   cmvc3m2: { es: "CMVC-3M2 (Caseta 2.4×1.2m · 1 pers)", en: "CMVC-3M2 (Booth 2.4×1.2m · 1 pers)" },
   cmv6m2: { es: "CMVC-6M2 (Caseta 2.4×2.4m · 2 pers)", en: "CMVC-6M2 (Booth 2.4×2.4m · 2 pers)" },
 

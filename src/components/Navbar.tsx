@@ -36,7 +36,7 @@ const categoriesList = [
   },
   {
     id: "casetas",
-    name: "Casetas de Vigilancia",
+    name: "Casetas",
     models: "3 modelos",
     badge: "Control de Acceso",
     icon: Shield,

@@ -53,7 +53,7 @@ const bentoCategories: BentoCategory[] = [
   },
   {
     id: "casetas",
-    name: "Casetas de Vigilancia",
+    name: "Casetas",
     nameEn: "Guard & Security Booths",
     badge: "Control de Acceso",
     badgeEn: "Access Control",

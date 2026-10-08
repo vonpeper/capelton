@@ -14,60 +14,73 @@ const categories = JSON.parse(fs.readFileSync(categoriesPath, "utf-8"));
 
 const redirects = [];
 
-// 1. Products (e.g. /cmb10m/ -> /modelos/cmb10m)
+// Helper to push redirect
+function addRedirect(fromSlug, targetUrl, title, description) {
+  redirects.push({
+    fromSlug: fromSlug.replace(/^\/+|\/+$/g, ""),
+    targetUrl,
+    canonicalUrl: `https://capeltonmexico.com${targetUrl.startsWith("/") ? targetUrl : "/" + targetUrl}`,
+    title,
+    description,
+  });
+}
+
+// 1. Products (root /slug/, /producto/slug/, /product/slug/)
 for (const p of products) {
   if (p.slug) {
-    redirects.push({
-      fromSlug: p.slug,
-      targetUrl: `/modelos/${p.slug}`,
-      canonicalUrl: `https://capeltonmexico.com/modelos/${p.slug}`,
-      title: `${p.modelCode || p.title} | ${p.categoryName || "Módulos"} Capelton México`,
-      description: `${p.tagline || `Modelo ${p.modelCode} de Capelton México.`}`,
-    });
+    const title = `${p.modelCode || p.title} | ${p.categoryName || "Módulos"} Capelton México`;
+    const desc = `${p.tagline || `Modelo ${p.modelCode} de Capelton México.`}`;
+    
+    // Root URL e.g. /cmb10m/
+    addRedirect(p.slug, `/modelos/${p.slug}`, title, desc);
+    // WooCommerce URLs e.g. /producto/cmb10m/ and /product/cmb10m/
+    addRedirect(`producto/${p.slug}`, `/modelos/${p.slug}`, title, desc);
+    addRedirect(`product/${p.slug}`, `/modelos/${p.slug}`, title, desc);
   }
 }
 
-// 2. Categories (e.g. /oficinas-moviles/ and /oficinas/ -> /categorias/oficinas)
+// 2. Categories (slug, id, and WordPress taxonomy prefixes)
 for (const c of categories) {
-  if (c.slug) {
-    redirects.push({
-      fromSlug: c.slug,
-      targetUrl: `/categorias/${c.id}`,
-      canonicalUrl: `https://capeltonmexico.com/categorias/${c.id}`,
-      title: `${c.name} | Catálogo Capelton México`,
-      description: `${c.tagline || `Catálogo de ${c.name} Capelton México.`}`,
-    });
-  }
-  // Also handle alias if slug != id
-  if (c.id && c.slug !== c.id) {
-    redirects.push({
-      fromSlug: c.id,
-      targetUrl: `/categorias/${c.id}`,
-      canonicalUrl: `https://capeltonmexico.com/categorias/${c.id}`,
-      title: `${c.name} | Catálogo Capelton México`,
-      description: `${c.tagline || `Catálogo de ${c.name} Capelton México.`}`,
-    });
+  const title = `${c.name} | Catálogo Capelton México`;
+  const desc = `${c.tagline || `Catálogo de ${c.name} Capelton México.`}`;
+  
+  const categoryAliases = new Set([c.slug, c.id].filter(Boolean));
+  for (const alias of categoryAliases) {
+    addRedirect(alias, `/categorias/${c.id}`, title, desc);
+    addRedirect(`categoria/${alias}`, `/categorias/${c.id}`, title, desc);
+    addRedirect(`category/${alias}`, `/categorias/${c.id}`, title, desc);
+    addRedirect(`categoria-producto/${alias}`, `/categorias/${c.id}`, title, desc);
+    addRedirect(`product-category/${alias}`, `/categorias/${c.id}`, title, desc);
   }
 }
 
-// 3. Common legacy URLs
+// 3. Known Legacy WordPress Pages & Plugins
 const legacyStatic = [
-  { fromSlug: "contacto", targetUrl: "/#contacto", title: "Contacto | Capelton México" },
-  { fromSlug: "contacto-capelton", targetUrl: "/#contacto", title: "Contacto | Capelton México" },
-  { fromSlug: "nosotros-capelton", targetUrl: "/nosotros", title: "Nosotros | Capelton México" },
-  { fromSlug: "aviso-privacidad", targetUrl: "/aviso-de-privacidad", title: "Aviso de Privacidad | Capelton México" },
-  { fromSlug: "politica-de-privacidad", targetUrl: "/aviso-de-privacidad", title: "Aviso de Privacidad | Capelton México" },
-  { fromSlug: "terminos", targetUrl: "/terminos-y-condiciones", title: "Términos y Condiciones | Capelton México" },
+  { slug: "contacto", target: "/#contacto", title: "Contacto | Capelton México" },
+  { slug: "contacto-2", target: "/#contacto", title: "Contacto | Capelton México" },
+  { slug: "contacto-capelton", target: "/#contacto", title: "Contacto | Capelton México" },
+  { slug: "nosotros-capelton", target: "/nosotros", title: "Nosotros | Capelton México" },
+  { slug: "aviso-privacidad", target: "/aviso-de-privacidad", title: "Aviso de Privacidad | Capelton México" },
+  { slug: "politica-de-privacidad", target: "/aviso-de-privacidad", title: "Aviso de Privacidad | Capelton México" },
+  { slug: "terminos", target: "/terminos-y-condiciones", title: "Términos y Condiciones | Capelton México" },
+  { slug: "login", target: "/", title: "Capelton México" },
+  { slug: "cuenta-de-membresia", target: "/", title: "Capelton México" },
+  { slug: "cuenta-de-membresia/tu-perfil", target: "/", title: "Capelton México" },
+  { slug: "cuenta-de-membresia/facturacion-de-membresia", target: "/", title: "Capelton México" },
+  { slug: "cuenta-de-membresia/pedidos-de-membresia", target: "/", title: "Capelton México" },
+  { slug: "niveles-de-membresia", target: "/", title: "Capelton México" },
+  { slug: "equipo-mobiliario", target: "/", title: "Capelton México" },
+  { slug: "catalogo", target: "/", title: "Catálogo | Capelton México" },
+  { slug: "tienda", target: "/", title: "Capelton México" },
+  { slug: "shop", target: "/", title: "Capelton México" },
+  { slug: "renta", target: "/#contacto", title: "Renta de Módulos | Capelton México" },
+  { slug: "venta", target: "/#contacto", title: "Venta de Módulos | Capelton México" },
+  { slug: "comunicado", target: "/aviso-de-privacidad", title: "Comunicado Oficial | Capelton México" },
+  { slug: "comunicados", target: "/aviso-de-privacidad", title: "Comunicado Oficial | Capelton México" },
 ];
 
 for (const leg of legacyStatic) {
-  redirects.push({
-    fromSlug: leg.fromSlug,
-    targetUrl: leg.targetUrl,
-    canonicalUrl: `https://capeltonmexico.com${leg.targetUrl}`,
-    title: leg.title,
-    description: "Capelton México - Soluciones modulares y casetas.",
-  });
+  addRedirect(leg.slug, leg.target, leg.title, "Capelton México - Soluciones modulares y casetas.");
 }
 
 function createHtml(targetUrl, canonicalUrl, title, description) {
@@ -99,15 +112,18 @@ let count = 0;
 for (const r of redirects) {
   const html = createHtml(r.targetUrl, r.canonicalUrl, r.title, r.description);
   
-  // Create /public/[slug]/index.html
+  // Create /public/[fromSlug]/index.html
   const slugDir = path.join(publicDir, r.fromSlug);
   if (!fs.existsSync(slugDir)) {
     fs.mkdirSync(slugDir, { recursive: true });
   }
   fs.writeFileSync(path.join(slugDir, "index.html"), html, "utf-8");
 
-  // Also create /public/[slug].html for Nginx try_files $uri.html
-  fs.writeFileSync(path.join(publicDir, `${r.fromSlug}.html`), html, "utf-8");
+  // Also create /public/[fromSlug].html for Nginx try_files $uri.html
+  // Only if fromSlug doesn't have slashes
+  if (!r.fromSlug.includes("/")) {
+    fs.writeFileSync(path.join(publicDir, `${r.fromSlug}.html`), html, "utf-8");
+  }
   count++;
 }
 

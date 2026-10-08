@@ -31,17 +31,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${product.modelCode} | ${product.categoryName} Capelton`,
     description: `${product.tagline} Dimensiones: ${product.dimensions}. Capacidad: ${product.peopleCapacity}. Venta y renta inmediata en México.`,
+    alternates: {
+      canonical: `https://capeltonmexico.com/modelos/${slug}`,
+    },
     openGraph: {
       title: `${product.modelCode} - ${product.categoryName} | Capelton México`,
       description: product.tagline,
+      url: `https://capeltonmexico.com/modelos/${slug}`,
+      siteName: "Capelton México",
+      locale: "es_MX",
+      type: "website",
       images: [
         {
-          url: product.images[0] || "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_10M_Vista_01.png",
+          url: product.images[0] || "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png",
           width: 1200,
           height: 630,
-          alt: product.modelCode,
+          alt: `${product.modelCode} - ${product.categoryName}`,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.modelCode} | Capelton México`,
+      description: product.tagline,
+      images: [product.images[0] || "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png"],
     },
   };
 }

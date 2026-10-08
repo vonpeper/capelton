@@ -9,23 +9,30 @@ import { LanguageProvider } from "@/context/LanguageContext";
 export const metadata: Metadata = {
   metadataBase: new URL("https://capeltonmexico.com"),
   title: {
-    default: "Capelton México | Espacios Móviles, Casetas y Oficinas Modulares de Alta Ingeniería",
+    default: "Capelton México | Casetas de Vigilancia, Oficinas Móviles y Módulos Prefabricados",
     template: "%s | Capelton México",
   },
   description:
-    "Especialistas en diseño, ingeniería y manufactura de oficinas móviles, casetas, dormitorios y módulos de rápida implementación para la industria, construcción y minería.",
+    "Fabricación, venta y renta de oficinas móviles, casetas de vigilancia, dormitorios y espacios modulares para la industria y construcción en México. Cotiza hoy.",
   keywords: [
-    "oficinas móviles",
     "casetas de vigilancia",
+    "oficinas móviles",
+    "casetas modulares",
     "dormitorios móviles",
-    "contenedores",
-    "consultorios móviles",
-    "comedores industriales",
+    "casetas prefabricadas",
+    "contenedores de obra",
+    "comedores industriales móviles",
+    "sanitarios móviles",
     "arquitectura modular",
     "Capelton México",
     "renta de casetas",
     "venta de oficinas móviles",
+    "casetas de seguridad",
+    "espacios modulares México",
   ],
+  alternates: {
+    canonical: "https://capeltonmexico.com",
+  },
   authors: [{ name: "Capelton de México" }],
   creator: "Capelton de México",
   publisher: "Capelton de México",
@@ -39,23 +46,23 @@ export const metadata: Metadata = {
     locale: "es_MX",
     url: "https://capeltonmexico.com",
     siteName: "Capelton México",
-    title: "Capelton México | Espacios Móviles y Arquitectura Modular de Vanguardia",
+    title: "Capelton México | Casetas de Vigilancia, Oficinas Móviles y Módulos Prefabricados",
     description:
-      "Ingeniería modular de rápida implementación para proyectos de alta exigencia: construcción, minería, logística e industria.",
+      "Fabricación, venta y renta de oficinas móviles, casetas de vigilancia y arquitectura modular de rápida implementación en todo México.",
     images: [
       {
-        url: "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_10M_Vista_01.png",
-        width: 1200,
-        height: 630,
-        alt: "Capelton México Espacios Móviles",
+        url: "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png",
+        width: 1920,
+        height: 627,
+        alt: "Capelton México - Espacios Móviles y Casetas de Vigilancia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Capelton México | Espacios Móviles y Arquitectura Modular",
-    description: "Ingeniería modular de rápida implementación para la industria y construcción en México.",
-    images: ["https://capeltonmexico.com/wp-content/uploads/2025/01/CM_10M_Vista_01.png"],
+    title: "Capelton México | Casetas de Vigilancia y Oficinas Móviles",
+    description: "Fabricación, venta y renta de oficinas móviles y casetas de vigilancia en todo México.",
+    images: ["https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png"],
   },
   robots: {
     index: true,
@@ -69,9 +76,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "https://capeltonmexico.com/wp-content/uploads/2025/08/favicon-32x32-1.png",
-    apple: "https://capeltonmexico.com/wp-content/uploads/2025/08/favicon-32x32-1.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/images/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -81,21 +95,69 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Capelton México",
-    url: "https://capeltonmexico.com",
-    logo: "https://capeltonmexico.com/wp-content/uploads/yootheme/cache/f6/logo-f66c954a.webp",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+52-55-2964-0104",
-      contactType: "sales",
-      areaServed: "MX",
-      availableLanguage: "Spanish",
-    },
-    sameAs: [
-      "https://www.facebook.com/capeltonmexico",
-      "https://www.instagram.com/capeltonmexico",
-    ],
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://capeltonmexico.com/#website",
+        "url": "https://capeltonmexico.com",
+        "name": "Capelton México",
+        "alternateName": [
+          "Capelton",
+          "Capelton de México",
+          "Capelton de México S.A. de C.V."
+        ],
+        "description": "Fabricación, venta y renta de casetas de vigilancia, oficinas móviles y espacios modulares en México.",
+        "inLanguage": "es-MX"
+      },
+      {
+        "@type": ["Organization", "LocalBusiness"],
+        "@id": "https://capeltonmexico.com/#organization",
+        "name": "Capelton México",
+        "legalName": "Capelton de México S.A. de C.V.",
+        "url": "https://capeltonmexico.com",
+        "logo": "https://capeltonmexico.com/images/logo-capelton.png",
+        "image": "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png",
+        "description": "Especialistas en ingeniería, diseño y manufactura de oficinas móviles, casetas de vigilancia, dormitorios y espacios modulares para la industria y construcción en México.",
+        "telephone": "+52-55-2964-0104",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Metepec",
+          "addressRegion": "Estado de México",
+          "addressCountry": "MX",
+          "postalCode": "52140"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "19.2564",
+          "longitude": "-99.6048"
+        },
+        "priceRange": "$$$",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Mexico"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+52-55-2964-0104",
+            "contactType": "sales",
+            "areaServed": "MX",
+            "availableLanguage": ["Spanish", "es"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+52-55-7948-3632",
+            "contactType": "rentals",
+            "areaServed": "MX",
+            "availableLanguage": ["Spanish", "es"]
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/capeltonmexico",
+          "https://www.instagram.com/capeltonmexico"
+        ]
+      }
+    ]
   };
 
   return (

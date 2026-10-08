@@ -76,26 +76,29 @@ export default function PrelaunchLanding() {
         </div>
 
         {/* Monumental Headline */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.15] max-w-2xl mt-3 mb-4">
-          {t("Estamos renovando nuestro sitio para ti.", "We are updating our website for you.")}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.15] max-w-2xl mt-3 mb-3">
+          {t("Casetas de Vigilancia, Oficinas Móviles y Espacios Modulares", "Security Guard Booths, Mobile Offices & Modular Spaces")}
         </h1>
+        <p className="text-sm sm:text-base font-medium text-capelton-darkgreen mb-3">
+          Capelton México · {t("Ingeniería y Manufactura Directa", "Direct Engineering & Manufacturing")}
+        </p>
 
         {/* Texto breve y directo */}
         <div className="max-w-xl mx-auto mb-8 text-sm sm:text-base text-[#515154] leading-relaxed">
           <p>
             {t(
-              "Muy pronto nueva plataforma digital.",
-              "New digital platform coming soon."
+              "Estamos actualizando nuestra plataforma digital.",
+              "We are updating our digital platform."
             )}{" "}
             <strong className="text-black font-semibold">
               {t(
-                "Nuestras operaciones continúan al 100% con total normalidad.",
-                "Our operations continue normally at 100% capacity."
+                "Nuestras operaciones de fabricación, venta y renta continúan al 100% con total normalidad.",
+                "Our manufacturing, sales and rental operations continue normally at 100% capacity."
               )}
             </strong>{" "}
             {t(
-              "Contáctanos para cotizar tu proyecto:",
-              "Contact us to quote your project:"
+              "Contáctanos directamente para cotizar tu proyecto:",
+              "Contact us directly to quote your project:"
             )}
           </p>
         </div>

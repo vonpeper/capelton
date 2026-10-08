@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Nosotros | Capelton México - Ingeniería y Manufactura en Espacios Móviles",
   description:
     "Conoce la trayectoria de Capelton de México. Especialistas en diseño, ingeniería y manufactura de oficinas móviles, casetas y campamentos modulares en acero Calibre 14 con cobertura en todo el país.",
+  alternates: {
+    canonical: "https://capeltonmexico.com/nosotros",
+  },
   openGraph: {
     title: "Nosotros | Capelton México - Ingeniería en Espacios Móviles",
     description:
@@ -16,9 +19,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_10M_Vista_01.png",
-        width: 1200,
-        height: 630,
+        url: "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png",
+        width: 1920,
+        height: 627,
         alt: "Capelton México Planta de Fabricación",
       },
     ],
@@ -27,6 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nosotros | Capelton México",
     description: "Ingeniería y manufactura de oficinas móviles y casetas en todo México.",
+    images: ["https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png"],
   },
 };
 

@@ -6,6 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { usePathname } from "next/navigation";
 import { SITE_CONFIG } from "@/config/site";
 import { CONTACT_INFO } from "@/lib/data";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function WhatsAppBubble() {
   const { t } = useLanguage();
@@ -50,6 +51,7 @@ export default function WhatsAppBubble() {
               href={CONTACT_INFO.ventas.waLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("ventas", "floating_bubble")}
               className="flex items-center justify-between p-2.5 rounded-2xl bg-black/[0.03] hover:bg-capelton-green hover:text-white group/ventas transition-all border border-black/6"
             >
               <div className="flex items-center gap-2.5">
@@ -73,6 +75,7 @@ export default function WhatsAppBubble() {
               href={CONTACT_INFO.rentas.waLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("rentas", "floating_bubble")}
               className="flex items-center justify-between p-2.5 rounded-2xl bg-black/[0.03] hover:bg-black hover:text-white group/rentas transition-all border border-black/6"
             >
               <div className="flex items-center gap-2.5">

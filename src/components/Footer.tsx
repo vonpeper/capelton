@@ -9,6 +9,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { usePathname } from "next/navigation";
 import { SITE_CONFIG } from "@/config/site";
 import FadeIn from "@/components/FadeIn";
+import { trackWhatsAppClick, trackPhoneCallClick } from "@/lib/analytics";
 
 const pulseColumns = [
   { left: "7%", delay: 0, breatheDur: 4.8, beamDur: 5.2, nodeTop: "24%" },
@@ -220,6 +221,7 @@ export default function Footer() {
                     href={CONTACT_INFO.ventas.waLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("ventas", "footer_link")}
                     className="text-neutral-300 hover:text-capelton-green transition-colors"
                     style={{ color: "#d1d5db" }}
                   >
@@ -233,6 +235,7 @@ export default function Footer() {
                     href={CONTACT_INFO.rentas.waLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("rentas", "footer_link")}
                     className="text-neutral-300 hover:text-capelton-green transition-colors"
                     style={{ color: "#d1d5db" }}
                   >
@@ -242,7 +245,11 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-neutral-400 shrink-0" />
-                  <a href={CONTACT_INFO.ventas.telHref} className="text-neutral-400 hover:text-white transition-colors">
+                  <a
+                    href={CONTACT_INFO.ventas.telHref}
+                    onClick={() => trackPhoneCallClick("ventas", CONTACT_INFO.ventas.phone, "footer_pbx")}
+                    className="text-neutral-400 hover:text-white transition-colors"
+                  >
                     {t("Línea PBX:", "PBX Line:")} {CONTACT_INFO.ventas.phone}
                   </a>
                 </li>

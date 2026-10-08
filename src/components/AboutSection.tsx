@@ -7,6 +7,7 @@ import FadeIn from "@/components/FadeIn";
 import SciFiHeading from "@/components/SciFiHeading";
 import { useLanguage } from "@/context/LanguageContext";
 import { CONTACT_INFO } from "@/lib/data";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function AboutSection() {
   const { t, language } = useLanguage();
@@ -82,6 +83,7 @@ export default function AboutSection() {
                   href={CONTACT_INFO.ventas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", "about_section")}
                   className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all shadow-md flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-3.5 h-3.5 fill-white" />
@@ -92,6 +94,7 @@ export default function AboutSection() {
                   href={CONTACT_INFO.rentas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("rentas", "about_section")}
                   className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold text-black bg-white hover:bg-gray-50 border border-black/10 transition-colors flex items-center justify-center gap-2 shadow-sm"
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-capelton-green" />

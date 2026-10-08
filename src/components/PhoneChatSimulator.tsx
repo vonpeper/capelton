@@ -7,6 +7,7 @@ import FadeIn from "@/components/FadeIn";
 import SciFiHeading from "@/components/SciFiHeading";
 import { useLanguage } from "@/context/LanguageContext";
 import { CONTACT_INFO } from "@/lib/data";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function PhoneChatSimulator() {
   const { t, language } = useLanguage();
@@ -77,6 +78,7 @@ export default function PhoneChatSimulator() {
                   href={CONTACT_INFO.ventas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", "chat_simulator_channel")}
                   className="bg-[#f5f5f7] hover:bg-neutral-100 p-4 rounded-2xl border border-black/5 flex items-center gap-3.5 transition-all group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-capelton-green shadow-sm group-hover:scale-105 transition-transform">
@@ -96,6 +98,7 @@ export default function PhoneChatSimulator() {
                   href={CONTACT_INFO.rentas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("rentas", "chat_simulator_channel")}
                   className="bg-[#f5f5f7] hover:bg-neutral-100 p-4 rounded-2xl border border-black/5 flex items-center gap-3.5 transition-all group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-capelton-green shadow-sm group-hover:scale-105 transition-transform">
@@ -118,6 +121,7 @@ export default function PhoneChatSimulator() {
                   href={CONTACT_INFO.ventas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", "chat_simulator_cta")}
                   className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs sm:text-sm font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all shadow-[0_4px_15px_rgba(0,177,64,0.3)] hover:shadow-[0_8px_25px_rgba(0,177,64,0.45)] flex items-center justify-center gap-2 group"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
@@ -129,6 +133,7 @@ export default function PhoneChatSimulator() {
                   href={CONTACT_INFO.rentas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("rentas", "chat_simulator_cta")}
                   className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs sm:text-sm font-bold text-black bg-black/[0.05] hover:bg-black/[0.1] border border-black/10 transition-all flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4 text-capelton-green" />
@@ -245,6 +250,7 @@ export default function PhoneChatSimulator() {
                           }
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() => trackWhatsAppClick(reply.id === "renta" ? "rentas" : "ventas", "simulator_quick_reply")}
                           className="w-full bg-white hover:bg-capelton-green hover:text-white p-2.5 rounded-xl border border-black/8 shadow-xs flex items-center justify-between text-[11px] font-semibold text-black transition-all group/btn"
                         >
                           <span>{reply.label}</span>
@@ -263,6 +269,7 @@ export default function PhoneChatSimulator() {
                       href={selectedTopic === "renta" ? CONTACT_INFO.rentas.waLink : CONTACT_INFO.ventas.waLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackWhatsAppClick(selectedTopic === "renta" ? "rentas" : "ventas", "simulator_send_btn")}
                       className="w-8 h-8 rounded-full bg-capelton-green text-white flex items-center justify-center hover:bg-capelton-darkgreen transition-colors"
                       title={t("Enviar por WhatsApp", "Send via WhatsApp")}
                     >

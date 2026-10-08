@@ -6,6 +6,7 @@ import Link from "next/link";
 import { MessageCircle, FileText, ArrowUpRight, Users, Scale, Box } from "lucide-react";
 import { ProductModel } from "@/lib/types";
 import { useLanguage } from "@/context/LanguageContext";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 interface ProductCardProps {
   product: ProductModel;
@@ -86,6 +87,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick("ventas", `product_card_${product.modelCode}`)}
           className="py-2.5 px-3 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all flex items-center justify-center gap-1 shadow-[0_2px_10px_rgba(0,177,64,0.25)]"
           title={t("Cotizar por WhatsApp", "Quote via WhatsApp")}
         >

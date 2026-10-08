@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { getWhatsAppUrl } from "@/lib/data";
+import { trackWhatsAppClick } from "@/lib/analytics";
 import FadeIn from "@/components/FadeIn";
 import SciFiHeading from "@/components/SciFiHeading";
 
@@ -428,6 +429,7 @@ export default function AppleScrollytelling() {
                 href={getWhatsAppUrl("ventas", t("Hola, me interesa conocer más del modelo CM-10M", "Hello, I am interested in learning more about the CM-10M model"))}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("ventas", "scrollytelling_cm10m")}
                 className="px-4 py-1.5 rounded-full text-xs font-bold text-white bg-black hover:bg-capelton-green transition-all shadow-xs"
               >
                 {t("Cotizar Ventas", "Quote Sales")}

@@ -17,6 +17,7 @@ import ProductCard from "@/components/ProductCard";
 import ProductGallery from "@/components/ProductGallery";
 import SciFiHeading from "@/components/SciFiHeading";
 import { useLanguage } from "@/context/LanguageContext";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 interface ModelDetailContentProps {
   product: ProductModel;
@@ -157,6 +158,7 @@ export default function ModelDetailContent({
               href={`https://wa.me/5215529640104?text=${whatsappSaleMessage}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("ventas", `detail_header_${product.modelCode}`)}
               title={t("WhatsApp Ventas: 55 2964 0104", "WhatsApp Sales: +52 55 2964 0104")}
               className="px-3 py-1.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all flex items-center gap-1.5 shadow-[0_2px_10px_rgba(0,177,64,0.3)]"
             >
@@ -167,6 +169,7 @@ export default function ModelDetailContent({
               href={`https://wa.me/5215579483632?text=${whatsappRentMessage}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("rentas", `detail_header_${product.modelCode}`)}
               title={t("WhatsApp Rentas: 55 7948 3632", "WhatsApp Rentals: +52 55 7948 3632")}
               className="px-3 py-1.5 rounded-full text-xs font-bold text-black bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all flex items-center gap-1.5"
             >
@@ -267,6 +270,7 @@ export default function ModelDetailContent({
                   href={`https://wa.me/5215529640104?text=${whatsappSaleMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", `detail_main_${product.modelCode}`)}
                   className="w-full py-3.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(0,177,64,0.3)]"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
@@ -283,6 +287,7 @@ export default function ModelDetailContent({
                   href={`https://wa.me/5215579483632?text=${whatsappRentMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("rentas", `detail_main_${product.modelCode}`)}
                   className="w-full py-3.5 rounded-full text-xs font-bold text-black bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4 text-capelton-green" />

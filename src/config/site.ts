@@ -1,7 +1,6 @@
 export const SITE_CONFIG = {
-  // Conmutador principal: 'true' muestra la Landing Previa ("Estamos renovando nuestro sitio para ti").
-  // Cambiar a 'false' cuando se autorice la fecha oficial de lanzamiento para activar el sitio completo en '/'.
-  prelaunchMode: true,
+  // Conmutador principal: 'false' para mostrar el sitio oficial completo en '/'.
+  prelaunchMode: false,
 
   name: "Capelton México",
   legalName: "Capelton de México S.A. de C.V.",

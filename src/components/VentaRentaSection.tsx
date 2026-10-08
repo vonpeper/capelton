@@ -6,6 +6,7 @@ import { MessageCircle, CheckCircle2, ArrowRight, ShieldCheck, Clock, FileCheck,
 import FadeIn from "@/components/FadeIn";
 import SciFiHeading from "@/components/SciFiHeading";
 import { useLanguage } from "@/context/LanguageContext";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function VentaRentaSection() {
   const { t } = useLanguage();
@@ -126,6 +127,7 @@ export default function VentaRentaSection() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", "venta_renta_section")}
                   className="w-full py-4 px-8 rounded-full text-sm font-bold text-white bg-black hover:bg-capelton-green transition-all duration-300 shadow-md flex items-center justify-center gap-2 group-hover:shadow-lg"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
@@ -226,6 +228,7 @@ export default function VentaRentaSection() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("rentas", "venta_renta_section")}
                   className="w-full py-4 px-8 rounded-full text-sm font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_8px_25px_rgba(0,177,64,0.3)] hover:shadow-[0_12px_35px_rgba(0,177,64,0.45)] flex items-center justify-center gap-2 group-hover:scale-[1.01]"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />

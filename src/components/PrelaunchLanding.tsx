@@ -18,6 +18,7 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { SITE_CONFIG } from "@/config/site";
+import { trackWhatsAppClick, trackPhoneCallClick } from "@/lib/analytics";
 
 export default function PrelaunchLanding() {
   const { t } = useLanguage();
@@ -142,6 +143,7 @@ export default function PrelaunchLanding() {
                 href={contact.ventas.waLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("ventas", "prelaunch_card")}
                 className="w-full py-3 px-5 rounded-2xl text-xs sm:text-sm font-bold text-white bg-black hover:bg-capelton-green transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group/btn"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
@@ -151,6 +153,7 @@ export default function PrelaunchLanding() {
 
               <a
                 href={contact.ventas.telHref}
+                onClick={() => trackPhoneCallClick("ventas", contact.ventas.phone)}
                 className="w-full py-2 px-3 rounded-xl text-xs font-semibold text-neutral-700 hover:text-black hover:bg-neutral-100 transition-colors flex items-center justify-center gap-2"
               >
                 <Phone className="w-3.5 h-3.5 text-neutral-500" />
@@ -203,6 +206,7 @@ export default function PrelaunchLanding() {
                 href={contact.rentas.waLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("rentas", "prelaunch_card")}
                 className="w-full py-3 px-5 rounded-2xl text-xs sm:text-sm font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_4px_16px_rgba(0,177,64,0.3)] hover:shadow-[0_6px_22px_rgba(0,177,64,0.45)] flex items-center justify-center gap-2 group/btn"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
@@ -212,6 +216,7 @@ export default function PrelaunchLanding() {
 
               <a
                 href={contact.rentas.telHref}
+                onClick={() => trackPhoneCallClick("rentas", contact.rentas.phone)}
                 className="w-full py-2 px-3 rounded-xl text-xs font-semibold text-neutral-700 hover:text-black hover:bg-neutral-100 transition-colors flex items-center justify-center gap-2"
               >
                 <Phone className="w-3.5 h-3.5 text-capelton-green" />

@@ -23,6 +23,7 @@ import { ProductModel } from "@/lib/types";
 import FadeIn from "@/components/FadeIn";
 import SciFiHeading from "@/components/SciFiHeading";
 import { useLanguage } from "@/context/LanguageContext";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const DUO_FEATURE_MAP: Record<string, string> = {
   "sistema de aire acondicionado": "Air conditioning system",
@@ -546,6 +547,7 @@ export default function DuoSwitcher() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", `duo_quote_${modelA.modelCode}`)}
                   className="w-full max-w-xs py-2.5 px-3 rounded-full bg-black hover:bg-capelton-green text-white font-semibold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5"
                 >
                   <MessageCircle className="w-3.5 h-3.5 fill-white" />
@@ -605,6 +607,7 @@ export default function DuoSwitcher() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", `duo_quote_${modelB.modelCode}`)}
                   className="w-full max-w-xs py-2.5 px-3 rounded-full bg-black hover:bg-capelton-green text-white font-semibold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5"
                 >
                   <MessageCircle className="w-3.5 h-3.5 fill-white" />

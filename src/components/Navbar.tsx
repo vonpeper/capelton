@@ -24,6 +24,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { usePathname } from "next/navigation";
 import { SITE_CONFIG } from "@/config/site";
 import { CONTACT_INFO } from "@/lib/data";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const categoriesList = [
   {
@@ -247,6 +248,7 @@ export default function Navbar() {
                         href="https://wa.link/n81wvt"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => trackWhatsAppClick("ventas", "navbar_quick_advice")}
                         className="font-semibold text-capelton-green hover:underline flex items-center gap-1"
                       >
                         <span>{t("Asesoría Técnica Directa", "Direct Technical Support")}</span>
@@ -271,6 +273,7 @@ export default function Navbar() {
               href={CONTACT_INFO.ventas.waLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("ventas", "navbar_desktop_cta")}
               title={t("WhatsApp Ventas Directas: 55 2964 0104", "WhatsApp Sales: +52 55 2964 0104")}
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_2px_10px_rgba(0,177,64,0.3)] hover:shadow-[0_4px_15px_rgba(0,177,64,0.45)]"
             >
@@ -282,6 +285,7 @@ export default function Navbar() {
               href={CONTACT_INFO.rentas.waLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("rentas", "navbar_desktop_cta")}
               title={t("WhatsApp Rentas y Arrendamiento: 55 7948 3632", "WhatsApp Rentals: +52 55 7948 3632")}
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#1d1d1f] bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all duration-300"
             >
@@ -407,6 +411,7 @@ export default function Navbar() {
                   href={CONTACT_INFO.ventas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", "navbar_mobile_menu")}
                   className="w-full text-center py-2.5 rounded-full text-xs font-bold text-white bg-capelton-green shadow-md hover:bg-capelton-darkgreen transition-colors flex items-center justify-center gap-1.5"
                 >
                   <MessageCircle className="w-3.5 h-3.5 fill-white" />
@@ -416,6 +421,7 @@ export default function Navbar() {
                   href={CONTACT_INFO.rentas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("rentas", "navbar_mobile_menu")}
                   className="w-full text-center py-2.5 rounded-full text-xs font-bold text-black bg-black/[0.05] hover:bg-black/[0.08] border border-black/10 transition-colors flex items-center justify-center gap-1.5"
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-capelton-green" />

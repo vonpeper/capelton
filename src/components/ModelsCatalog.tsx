@@ -8,6 +8,7 @@ import { ProductModel, Category } from "@/lib/types";
 import FadeIn from "@/components/FadeIn";
 import SciFiHeading from "@/components/SciFiHeading";
 import { useLanguage } from "@/context/LanguageContext";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 interface ModelsCatalogProps {
   products: ProductModel[];
@@ -138,6 +139,7 @@ export default function ModelsCatalog({ products, categories }: ModelsCatalogPro
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", `catalog_${model.modelCode}`)}
                   className="p-3 rounded-full bg-capelton-green hover:bg-capelton-darkgreen text-white transition-colors shadow-sm"
                   title={t("Cotizar por WhatsApp", "Quote via WhatsApp")}
                 >

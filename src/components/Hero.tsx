@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import SciFiHeading from "@/components/SciFiHeading";
 import HeroFlagshipShowcase from "@/components/HeroFlagshipShowcase";
 import { CONTACT_INFO } from "@/lib/data";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -428,6 +429,7 @@ export default function Hero() {
               href={CONTACT_INFO.ventas.waLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("ventas", "hero_cta")}
               title={t("WhatsApp Ventas Directas: 55 2964 0104", "WhatsApp Direct Sales: +52 55 2964 0104")}
               className="px-5 py-2.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_4px_15px_rgba(0,177,64,0.3)] hover:shadow-[0_6px_20px_rgba(0,177,64,0.45)] flex items-center gap-2 group"
             >
@@ -441,6 +443,7 @@ export default function Hero() {
               href={CONTACT_INFO.rentas.waLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("rentas", "hero_cta")}
               title={t("WhatsApp Rentas y Arrendamiento: 55 7948 3632", "WhatsApp Rentals: +52 55 7948 3632")}
               className="px-5 py-2.5 rounded-full text-xs font-bold text-black bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all duration-300 flex items-center gap-2"
             >

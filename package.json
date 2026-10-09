@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/generate-redirects.mjs",
     "build": "next build",
+    "deploy:preview": "bash scripts/deploy-preview.sh",
     "start": "next start",
     "lint": "next lint"
   },

@@ -1,12 +1,16 @@
+const isPrelaunch = process.env.NEXT_PUBLIC_PRELAUNCH_MODE === "false" ? false : true;
+const siteDomain = process.env.NEXT_PUBLIC_SITE_DOMAIN || "capeltonmexico.com";
+
 export const SITE_CONFIG = {
   // Conmutador principal: 'true' muestra la Landing Previa ("Estamos preparando nuestro nuevo sitio").
-  prelaunchMode: true,
+  // Cuando NEXT_PUBLIC_PRELAUNCH_MODE es 'false', muestra el nuevo sitio completo.
+  prelaunchMode: isPrelaunch,
 
   name: "Capelton México",
   legalName: "Capelton de México S.A. de C.V.",
   tagline: "Espacios Móviles, Casetas y Oficinas Modulares",
-  domain: "capeltonmexico.com",
-  url: "https://capeltonmexico.com",
+  domain: siteDomain,
+  url: `https://${siteDomain}`,
   email: "ventas@capeltonmexico.com",
   location: "Planta y oficinas: Metepec, Estado de México",
   schedule: "Lunes a Sábado hasta las 6:00 pm",

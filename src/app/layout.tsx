@@ -6,10 +6,16 @@ import WhatsAppBubble from "@/components/WhatsAppBubble";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 import { LanguageProvider } from "@/context/LanguageContext";
 
+const isNoIndex = process.env.NEXT_PUBLIC_NO_INDEX === "true";
+const siteDomain = process.env.NEXT_PUBLIC_SITE_DOMAIN || "capeltonmexico.com";
+const siteUrl = `https://${siteDomain}`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://capeltonmexico.com"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Capelton México | Casetas, Oficinas Móviles y Módulos Prefabricados",
+    default: isNoIndex
+      ? "Capelton México [Revisión] | Casetas, Oficinas Móviles y Módulos"
+      : "Capelton México | Casetas, Oficinas Móviles y Módulos Prefabricados",
     template: "%s | Capelton México",
   },
   description:
@@ -31,7 +37,7 @@ export const metadata: Metadata = {
     "espacios modulares México",
   ],
   alternates: {
-    canonical: "https://capeltonmexico.com",
+    canonical: siteUrl,
   },
   authors: [{ name: "Capelton de México" }],
   creator: "Capelton de México",
@@ -44,9 +50,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_MX",
-    url: "https://capeltonmexico.com",
+    url: siteUrl,
     siteName: "Capelton México",
-    title: "Capelton México | Casetas, Oficinas Móviles y Módulos Prefabricados",
+    title: isNoIndex
+      ? "Capelton México [Entorno de Revisión]"
+      : "Capelton México | Casetas, Oficinas Móviles y Módulos Prefabricados",
     description:
       "Fabricación, venta y renta de oficinas móviles, casetas y arquitectura modular de rápida implementación en todo México.",
     images: [
@@ -64,17 +72,31 @@ export const metadata: Metadata = {
     description: "Fabricación, venta y renta de oficinas móviles y casetas en todo México.",
     images: ["https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  robots: isNoIndex
+    ? {
+        index: false,
+        follow: false,
+        nocache: true,
+        googleBot: {
+          index: false,
+          follow: false,
+          noimageindex: true,
+          "max-video-preview": -1,
+          "max-image-preview": "none",
+          "max-snippet": -1,
+        },
+      }
+    : {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -245,6 +267,14 @@ export default function RootLayout({
           <main className="relative flex flex-col min-h-screen">{children}</main>
           <Footer />
           <WhatsAppBubble />
+          {isNoIndex && (
+            <div className="fixed bottom-4 left-4 z-50 bg-black/90 text-white text-xs px-3.5 py-2 rounded-full shadow-2xl border border-white/20 backdrop-blur-md flex items-center gap-2.5 pointer-events-auto select-none">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#00E575] animate-pulse" />
+              <span className="font-semibold tracking-wide">prev.capeltonmexico.com</span>
+              <span className="text-white/40">|</span>
+              <span className="text-[#00E575] font-medium">Entorno de Revisión y Anotaciones (No Indexado)</span>
+            </div>
+          )}
         </LanguageProvider>
       </body>
     </html>

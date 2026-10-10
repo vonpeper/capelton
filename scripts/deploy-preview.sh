@@ -15,9 +15,9 @@ NEXT_PUBLIC_SITE_DOMAIN=prev.capeltonmexico.com \
 STATIC_EXPORT=true \
 npm run build
 
-# 2. Sincronización a servidor remoto
-REMOTE_HOST="propodvps1"
-REMOTE_DEST="/opt/stacks/capelton/site/prev/"
+# 2. Sincronización a servidor remoto (servidor dc donde reside prev.capeltonmexico.com)
+REMOTE_HOST="dc"
+REMOTE_DEST="/var/www/prev.capeltonmexico.com/"
 
 echo "-> 2. Sincronizando archivos estáticos hacia ${REMOTE_HOST}:${REMOTE_DEST}..."
 ssh "${REMOTE_HOST}" "mkdir -p ${REMOTE_DEST}"

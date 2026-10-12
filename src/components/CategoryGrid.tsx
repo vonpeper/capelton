@@ -41,130 +41,123 @@ const bentoCategories: BentoCategory[] = [
     badge: "Línea Insignia",
     badgeEn: "Flagship Line",
     tagline:
-      "Ingeniería modular para alta dirección, salas de juntas y centros de mando operativo.",
+      "Espacios de trabajo móviles para supervisión técnica, salas de juntas y centros de mando operativo.",
     taglineEn:
-      "Modular engineering for executive management, boardrooms, and command centers.",
+      "Mobile workspaces for site supervision, technical meetings, and project directors.",
     modelsLabel: "9 modelos",
     modelsLabelEn: "9 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Oficinas_Corte.png",
+    image: "/images/CM_10M_Vista_01_cropped.png",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <Building2 className="w-5 h-5 text-capelton-green" />,
   },
   {
     id: "casetas",
     name: "Casetas",
-    nameEn: "Guard & Security Booths",
+    nameEn: "Portable Booths",
     badge: "Control de Acceso",
     badgeEn: "Access Control",
     tagline:
       "Puntos de control perimetral con visibilidad 360° para seguridad y acceso en sitio.",
     taglineEn:
-      "Perimeter access control points with 360° visibility for site security.",
+      "Perimeter access control booths with 360° visibility for site security.",
     modelsLabel: "2 modelos",
     modelsLabelEn: "2 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Categoria_Casetas.png",
+    image: "/images/CM_10M_Vista_01_cropped.png",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Shield className="w-5 h-5 text-capelton-green" />,
   },
   {
     id: "dormitorios",
     name: "Dormitorios Móviles",
-    nameEn: "Mobile Sleeper Units",
+    nameEn: "Crew Quarters",
     badge: "Campamentos",
-    badgeEn: "Base Camps",
+    badgeEn: "Workforce Housing",
     tagline:
       "Módulos habitacionales y campamentos de descanso para personal de obra y minería.",
     taglineEn:
-      "Residential modules and rest camps for construction and mining crews.",
+      "Workforce lodging modules and base camps for civil and mining crews.",
     modelsLabel: "7 modelos",
     modelsLabelEn: "7 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Dormitorios_Corte.png",
+    image: "/images/CM_10M_Vista_01_cropped.png",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Bed className="w-5 h-5 text-capelton-green" />,
   },
   {
     id: "sanitarios",
     name: "Sanitarios Móviles",
-    nameEn: "Mobile Restroom Units",
-    badge: "Higiene y Confort",
-    badgeEn: "Hygiene & Comfort",
+    nameEn: "Restroom Units",
+    badge: "Higiene en Obra",
+    badgeEn: "Site Hygiene",
     tagline:
-      "Remolques y módulos hidrosanitarios autónomos con estándares hospitalarios de higiene.",
+      "Remolques y módulos sanitarios de alta capacidad con fácil mantenimiento e higiene garantizada.",
     taglineEn:
-      "Autonomous mobile restroom trailers and modules with hospital-grade hygiene.",
+      "High-capacity mobile restroom trailers and modules with easy maintenance.",
     modelsLabel: "3 modelos",
     modelsLabelEn: "3 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Sanitarios_Corte.png",
+    image: "/images/CM_10M_Vista_01_cropped.png",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Bath className="w-5 h-5 text-capelton-green" />,
   },
   {
     id: "comedores",
     name: "Comedores Móviles",
-    nameEn: "Mobile Dining Units",
+    nameEn: "Dining Units",
     badge: "Servicio y Alimentos",
     badgeEn: "Dining & Food Service",
     tagline:
-      "Grandes comedores industriales climatizados para alta densidad de personal en campo.",
+      "Comedores industriales climatizados para cuadrillas y alta densidad de personal en campo.",
     taglineEn:
-      "Spacious climate-controlled industrial dining units for high-density crews.",
+      "Spacious climate-controlled dining units for workforce crews in the field.",
     modelsLabel: "3 modelos",
     modelsLabelEn: "3 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Comedores_Corte.png",
+    image: "/images/CM_10M_Vista_01_cropped.png",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <Utensils className="w-5 h-5 text-capelton-green" />,
   },
   {
     id: "contenedores",
-    name: "Contenedores y Minibodegas",
-    nameEn: "Containers & Mini-Storage",
-    badge: "Resguardo Industrial",
-    badgeEn: "Industrial Storage",
+    name: "Bodegas y Resguardo",
+    nameEn: "Storage Units",
+    badge: "Resguardo en Sitio",
+    badgeEn: "On-Site Storage",
     tagline:
-      "Bodegas y minibodegas modulares de máxima seguridad para resguardo de herramienta y materiales.",
+      "Bodegas móviles reforzadas para resguardo seguro de maquinaria, planos y herramientas.",
     taglineEn:
-      "Modular high-security storage and warehouse units for tools and equipment.",
+      "Reinforced mobile storage units for secure tool, material, and equipment custody.",
     modelsLabel: "3 modelos",
     modelsLabelEn: "3 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Contenedores_Corte.png",
+    image: "/images/categoria-almacenes.png",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Box className="w-5 h-5 text-capelton-green" />,
   },
   {
     id: "consultorios",
     name: "Consultorios Móviles",
-    nameEn: "Mobile Medical Clinics",
-    badge: "Salud y Brigadas",
-    badgeEn: "Health & Field Care",
+    nameEn: "Mobile Medical Units",
+    badge: "Salud Ocupacional",
+    badgeEn: "Occupational Health",
     tagline:
-      "Clínicas ambulatorias y unidades médicas de rápida respuesta para faenas y comunidades.",
+      "Unidades médicas y brigadas de atención primaria para frentes de trabajo y plantas.",
     taglineEn:
-      "Ambulatory clinics and rapid-response medical units for field crews and communities.",
+      "Mobile clinic units for employee health checkups and jobsite first aid.",
     modelsLabel: "4 modelos",
     modelsLabelEn: "4 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/07/Consultorios_Corte-min-scaled.png",
+    image: "/images/CM_10M_Vista_01_cropped.png",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <HeartPulse className="w-5 h-5 text-capelton-green" />,
   },
   {
     id: "almacenes",
     name: "Almacenes Industriales",
-    nameEn: "Industrial Warehouses",
+    nameEn: "Custom Builds",
     badge: "Gran Capacidad",
     badgeEn: "High Capacity",
     tagline:
-      "Soluciones de almacenamiento y bodegas industriales modulares de instalación inmediata.",
+      "Espacios de almacenamiento y distribución industrial adaptados a requerimientos específicos.",
     taglineEn:
-      "Modular storage and industrial warehouse solutions with immediate installation.",
-    modelsLabel: "Espacios Modulares",
-    modelsLabelEn: "Modular Spaces",
+      "Custom industrial storage and modular complexes built to operational specifications.",
+    modelsLabel: "A la Medida",
+    modelsLabelEn: "Custom",
     image: "/images/categoria-almacenes.png",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <Warehouse className="w-5 h-5 text-capelton-green" />,
@@ -180,24 +173,24 @@ export default function CategoryGrid() {
         {/* Section Header with FadeIn */}
         <FadeIn direction="up">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-base sm:text-lg font-semibold text-[#1d1d1f] mb-3">
-              {t("Sectores e industrias", "Sectors & Industries")}
-            </p>
+            <span className="text-xs sm:text-sm font-semibold text-capelton-green uppercase tracking-wider block mb-2">
+              {t("SOLUCIONES POR OPERACIÓN", "WORKSPACES BY APPLICATION")}
+            </span>
             <SciFiHeading
               text={t(
-                "Unidades a la medida de cada operación.",
-                "Tailored units for every operation."
+                "Espacios móviles diseñados para cada necesidad.",
+                "Mobile Workspaces Designed for Every Need."
               )}
               as="h2"
-              className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#1d1d1f] leading-[1.08] mb-4"
+              className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.1] mb-3"
               showLaser={false}
               showHudTag={false}
               duration={750}
             />
-            <p className="text-base text-[#6e6e73] font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-[#6e6e73] font-normal leading-relaxed">
               {t(
-                "Arquitectura modular para campamentos remotos, centros de mando y control perimetral.",
-                "Modular architecture for remote base camps, command centers, and perimeter security."
+                "Desde casetas individuales y oficinas ejecutivas hasta campamentos habitacionales y comedores industriales.",
+                "From portable booths and executive offices to complete crew quarters and industrial dining units."
               )}
             </p>
           </div>

@@ -39,111 +39,111 @@ interface Differentiator {
 
 const differentiators: Differentiator[] = [
   {
-    id: "manufactura",
-    eyebrow: "Ingeniería Estructural",
-    eyebrowEn: "Structural Engineering",
-    title: "Estructura monolítica en acero Calibre 14.",
-    titleEn: "Monolithic 14-Gauge Steel Structure.",
+    id: "operacion",
+    eyebrow: "Pilar 1 · Entendemos tu operación",
+    eyebrowEn: "Pillar 1 · Understand the Operation",
+    title: "Diseñadas para las personas y la rutina en campo.",
+    titleEn: "Engineered for Field Teams & Daily Operations.",
     description:
-      "Diseñadas y ensambladas en planta propia con chasis electrogalvanizado de máxima rigidez contra torsión en terracerías severas.",
+      "Pensamos en flujos reales de trabajo: ergonomía, distribución funcional, ventilación eficiente y espacios confortables tanto para supervisores como para cuadrillas completas.",
     descriptionEn:
-      "Designed and assembled in our own manufacturing plant with electrogalvanized chassis for maximum anti-torsion rigidity on severe terrain.",
-    image: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA1-scaled.png",
-    modalTitle: "Estructura Monolítica Calibre 14",
-    modalTitleEn: "14-Gauge Monolithic Structure",
-    modalSubtitle: "Fabricación 100% propia con estándares industriales de alto desempeño.",
-    modalSubtitleEn: "100% in-house manufacturing meeting high-performance industrial standards.",
+      "Designed around real daily workflows: functional layouts, ergonomics, reliable ventilation, and spaces tailored to both site supervisors and work crews.",
+    image: "/images/CM_10M_Vista_01_cropped.png",
+    modalTitle: "Entendemos tu Operación",
+    modalTitleEn: "Understand the Operation",
+    modalSubtitle: "Espacios de trabajo funcionales que responden a lo que realmente pasa en obra.",
+    modalSubtitleEn: "Functional workspaces designed around what actually happens on the jobsite.",
     points: [
-      "Chasis y postes rolados en acero electrogalvanizado Calibre 14 de alta resistencia.",
-      "Soldadura continua MIG/MAG certificada que soporta izaje, traslado constante y vibración.",
-      "Recubrimiento primario epóxico y esmalte de grado marino resistente a la intemperie.",
-      "Mayor durabilidad estructural que las adaptaciones comunes de contenedores marítimos usados."
+      "Distribuciones estudiadas para optimizar el paso, mobiliario y estaciones técnicas.",
+      "Espacios configurables: desde oficinas individuales hasta comedores masivos y dormitorios.",
+      "Acabados durables con pisos de SPC rígido de alta resistencia y muros lavables.",
+      "Flexibilidad operativa para adaptarse al tamaño y duración de cada proyecto."
     ],
     pointsEn: [
-      "Heavy-duty 14-gauge electrogalvanized cold-rolled steel chassis and structural posts.",
-      "Certified continuous MIG/MAG welding resisting hoisting, frequent transport, and vibration.",
-      "Epoxy primer coating and marine-grade weather-resistant protective enamel.",
-      "Significantly superior structural lifespan compared to standard used shipping container conversions."
+      "Floor plans tailored for workflow efficiency, technical stations, and circulation.",
+      "Configurable spaces: from compact guard booths to multi-station executive offices and crew quarters.",
+      "High-durability SPC rigid-core flooring and cleanable, impact-resistant wall surfaces.",
+      "Flexible layouts adaptable to specific jobsite constraints and project durations."
     ],
-    ctaText: "Cotizar modelo con estructura Cal. 14",
-    ctaTextEn: "Quote model with 14-gauge structure",
-    whatsappMessage: "Hola, me interesa conocer los modelos con chasis reforzado de acero Calibre 14."
+    ctaText: "Cotizar unidad para mi operación",
+    ctaTextEn: "Quote unit for my operation",
+    whatsappMessage: "Hola, me interesa una oficina móvil adaptada a las necesidades operativas de mi proyecto."
   },
   {
-    id: "aislamiento",
-    eyebrow: "Eficiencia Térmica",
-    eyebrowEn: "Thermal Efficiency",
-    title: "Aislamiento continuo para climas extremos.",
-    titleEn: "Continuous Insulation for Extreme Climates.",
+    id: "fabricacion",
+    eyebrow: "Pilar 2 · Fabricamos con propósito",
+    eyebrowEn: "Pillar 2 · Build with Purpose",
+    title: "Chasis estructural reforzado y techo de aluminio de una pieza.",
+    titleEn: "Reinforced Steel Chassis & One-Piece Aluminum Roof.",
     description:
-      "Poliuretano inyectado de alta densidad y doble barrera térmica que reducen hasta un 40% el consumo eléctrico en climatización.",
+      "Fabricamos en planta propia con chasis de acero rolado de alta resistencia, muros aislados y techo continuo de una sola pieza sin uniones para eliminar goteras por completo.",
     descriptionEn:
-      "High-density injected polyurethane and dual thermal barrier reducing HVAC power consumption by up to 40%.",
-    image: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA2-1-scaled.png",
-    modalTitle: "Aislamiento Termoacústico Continuo",
-    modalTitleEn: "Continuous Thermo-Acoustic Insulation",
-    modalSubtitle: "Confort climático y acústico garantizado en cualquier entorno operativo.",
-    modalSubtitleEn: "Guaranteed thermal and acoustic comfort in any operating environment.",
+      "Manufactured in-house with reinforced steel chassis, continuous thermal insulation panels, and seamless one-piece aluminum roof to eliminate water leaks.",
+    image: "/images/categoria-almacenes.png",
+    modalTitle: "Fabricamos con Propósito",
+    modalTitleEn: "Build with Purpose",
+    modalSubtitle: "Materiales certificados y ensamblaje industrial para resistir intemperie y traslado continuo.",
+    modalSubtitleEn: "Certified industrial materials engineered for harsh weather and repeated transport.",
     points: [
-      "Muros panel tipo sándwich con espuma rígida de poliuretano inyectado de alta densidad.",
-      "Rango de confort operativo estable en temperaturas extremas de -10°C a más de +45°C.",
-      "Atenuación acústica de hasta 32 dB frente al ruido de maquinaria pesada en obra.",
-      "Preparación integral para equipos minisplit inverter de bajo consumo energético."
+      "Chasis estructural reforzado con puntos de izaje seguros para grúa y transporte en cama baja.",
+      "Techo de aluminio continuo de una sola pieza: sin uniones vulnerables ni filtraciones de agua.",
+      "Aislamiento térmico perimetral que mantiene temperatura estable en calor o frío extremo.",
+      "Instalación eléctrica certificada con cableado de uso rudo y centro de carga protegido."
     ],
     pointsEn: [
-      "Sandwich panel walls with high-density rigid injected polyurethane core.",
-      "Stable operational comfort range under extreme temperatures from -10°C to over +45°C.",
-      "Acoustic attenuation up to 32 dB against heavy machinery noise on site.",
-      "Integrated electrical and structural prep for high-efficiency inverter minisplit systems."
+      "Heavy-duty structural steel chassis with certified lifting points and road transport durability.",
+      "Seamless one-piece aluminum roof: no vulnerable lap joints, eliminating leaks entirely.",
+      "Continuous thermal insulation maintaining stable interior climate in extreme weather.",
+      "Certified electrical system with heavy-duty wiring, dedicated breakers, and safety grounds."
     ],
-    ctaText: "Consultar especificación térmica",
-    ctaTextEn: "Check thermal specification",
-    whatsappMessage: "Hola, requiero información sobre el aislamiento térmico de los espacios modulares Capelton."
+    ctaText: "Consultar especificaciones de fabricación",
+    ctaTextEn: "Check manufacturing specifications",
+    whatsappMessage: "Hola, requiero conocer las especificaciones estructurales y de materiales de Capelton."
   },
   {
-    id: "despliegue",
-    eyebrow: "Despliegue Rápido",
-    eyebrowEn: "Rapid Deployment",
-    title: "Conéctala y empieza a operar en 24 horas.",
-    titleEn: "Plug & Play: Operational in 24 Hours.",
+    id: "acompanamiento",
+    eyebrow: "Pilar 3 · Acompañamos cada entrega",
+    eyebrowEn: "Pillar 3 · Deliver with Care",
+    title: "Soporte directo de planta y entrega puntual en tu obra.",
+    titleEn: "Direct Factory Support & Reliable On-Site Delivery.",
     description:
-      "Instalaciones eléctricas certificadas, iluminación LED, contactos y acabados listos para trabajar desde el primer minuto en obra.",
+      "Trato directo sin intermediarios. Coordinamos logística de traslado, maniobra de descarga y nivelación en sitio, respaldados con garantía y refacciones de fábrica.",
     descriptionEn:
-      "Certified electrical systems, LED lighting, power outlets, and finishes ready to work from minute one on site.",
-    image: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA3-scaled.png",
-    modalTitle: "Despliegue Inmediato Plug & Play",
-    modalTitleEn: "Plug & Play Immediate Deployment",
-    modalSubtitle: "Tu oficina o campamento listo para operar sin retrasos de construcción civil.",
-    modalSubtitleEn: "Your office or camp ready to operate without civil construction delays.",
+      "Direct relationship without brokers. We coordinate transport logistics, on-site crane positioning, and leveling, backed by direct factory warranty and support.",
+    image: "/images/proyectos/proyecto-1.jpg",
+    modalTitle: "Acompañamos Cada Entrega",
+    modalTitleEn: "Deliver with Care",
+    modalSubtitle: "Cero intermediarios: respaldo técnico antes, durante y después del montaje.",
+    modalSubtitleEn: "Direct manufacturer backing before, during, and after site deployment.",
     points: [
-      "Tablero de control y centro de carga homologado bajo norma oficial mexicana (NOM).",
-      "Iluminación LED perimetral de bajo consumo y larga vida útil preinstalada.",
-      "Contactos polarizados de uso rudo para computadoras, impresoras y servidores.",
-      "Acometida exterior rápida para conexión directa a red de obra o generador."
+      "Logística especializada y maniobra de posicionamiento en sitio en todo México.",
+      "Asesoría técnica para preparación de terreno, nivelación y acometidas de servicios.",
+      "Garantía directa de fábrica contra vicios ocultos y filtraciones.",
+      "Disponibilidad continua de refacciones, accesorios y mantenimiento preventivo."
     ],
     pointsEn: [
-      "Certified electrical panel and load center under Mexican Official Standard (NOM).",
-      "Pre-installed high-efficiency perimeter LED lighting with long service life.",
-      "Heavy-duty polarized outlets for workstations, printers, and computer servers.",
-      "Quick exterior utility connection for direct hookup to site grid or generator."
+      "Specialized transport and precision crane positioning to jobsite locations.",
+      "Technical guidance on ground preparation, leveling, and utility connections.",
+      "Direct factory warranty covering structural integrity and weather tightness.",
+      "Ongoing access to OEM replacement parts, accessories, and unit expansions."
     ],
-    ctaText: "Cotizar entrega inmediata 24-48h",
-    ctaTextEn: "Quote 24-48h immediate delivery",
-    whatsappMessage: "Hola, me gustaría cotizar una oficina móvil con entrega y despliegue rápido."
+    ctaText: "Hablar con un asesor técnico",
+    ctaTextEn: "Talk to a technical advisor",
+    whatsappMessage: "Hola, deseo coordinar una cotización con entrega y logística para mi proyecto."
   },
   {
     id: "esquemas",
-    eyebrow: "Modalidades de Adquisición",
-    eyebrowEn: "Acquisition Options",
-    title: "Venta o Renta flexible para tu presupuesto.",
-    titleEn: "Flexible Sale or Rental for Your Budget.",
+    eyebrow: "Flexibilidad Operativa",
+    eyebrowEn: "Operational Flexibility",
+    title: "Modalidades de Venta y Renta para tu proyecto.",
+    titleEn: "Purchase & Flexible Rental Options.",
     description:
-      "Arrendamiento operativo 100% deducible para campamentos temporales, o adquisición definitiva para patrimonio corporativo.",
+      "Renta mensual flexible para frentes de obra temporales o adquisición definitiva para patrimonio corporativo. Condiciones transparentes y facturación inmediata.",
     descriptionEn:
-      "100% tax-deductible operating lease for temporary camps, or permanent asset acquisition for corporate equity.",
+      "Flexible monthly rental terms for temporary worksites or direct purchase for long-term fleet assets. Clear terms and immediate corporate invoicing.",
     isCreditCard: true,
-    modalTitle: "Esquemas Financieros de Venta y Renta",
-    modalTitleEn: "Financial Sale and Rental Options",
+    modalTitle: "Modalidades de Adquisición",
+    modalTitleEn: "Acquisition & Rental Options",
     modalSubtitle: "Flexibilidad contractual diseñada para la administración de obras y finanzas corporativas.",
     modalSubtitleEn: "Contractual flexibility designed for project management and corporate finance.",
     points: [
@@ -160,69 +160,69 @@ const differentiators: Differentiator[] = [
     ],
     ctaText: "Cotizar esquema de renta o venta",
     ctaTextEn: "Quote rental or purchase plan",
-    whatsappMessage: "Hola, deseo solicitar una cotización formal bajo el esquema de Venta o Renta."
+    whatsappMessage: "Hola, deseo solicitar una cotización bajo el esquema de Venta o Renta."
   },
   {
-    id: "garantia",
-    eyebrow: "Garantía de Fábrica",
-    eyebrowEn: "Factory Warranty",
-    title: "Cero intermediarios. Soporte directo de planta.",
-    titleEn: "Zero Intermediaries. Direct Plant Support.",
+    id: "aislamiento",
+    eyebrow: "Confort Climático",
+    eyebrowEn: "Climate Comfort",
+    title: "Aislamiento termoacústico para climas severos.",
+    titleEn: "Continuous Thermo-Acoustic Comfort.",
     description:
-      "Póliza de garantía estructural y técnica respaldada por ingenieros certificados antes, durante y después del montaje.",
+      "Muros con aislamiento de alta densidad que protegen del calor del desierto o el frío de montaña, reduciendo el consumo eléctrico de aire acondicionado y el ruido exterior de obra.",
     descriptionEn:
-      "Structural and technical warranty policy backed by certified engineers before, during, and after assembly.",
-    image: "https://capeltonmexico.com/wp-content/uploads/2025/02/Oficinas_Corte.png",
-    modalTitle: "Garantía y Acompañamiento Técnico",
-    modalTitleEn: "Warranty and Technical Guidance",
-    modalSubtitle: "Respaldo directo de planta sin revendedores ni terceras partes.",
-    modalSubtitleEn: "Direct manufacturer backing without brokers or third parties.",
+      "Insulated sandwich panels protecting against extreme heat or cold, reducing HVAC energy load and dampening heavy machinery noise on site.",
+    image: "/images/proyectos/proyecto-3.jpg",
+    modalTitle: "Aislamiento Termoacústico Continuo",
+    modalTitleEn: "Continuous Thermo-Acoustic Insulation",
+    modalSubtitle: "Confort térmico y acústico garantizado en cualquier entorno operativo.",
+    modalSubtitleEn: "Guaranteed thermal and acoustic comfort in any operating environment.",
     points: [
-      "Póliza de garantía directa de fábrica contra vicios ocultos y filtraciones.",
-      "Acompañamiento técnico especializado para la preparación del terreno y nivelación en sitio.",
-      "Disponibilidad de refacciones originales, cerraduras y paneles de recambio inmediato.",
-      "Atención prioritaria y soporte postventa a nivel nacional."
+      "Muros panel tipo sándwich con espuma aislante de alta densidad.",
+      "Rango de confort operativo estable en temperaturas extremas de -10°C a más de +45°C.",
+      "Atenuación acústica frente al ruido de maquinaria pesada y tránsito en obra.",
+      "Preparación integral para minisplit inverter de bajo consumo energético."
     ],
     pointsEn: [
-      "Direct factory warranty against structural flaws and water leaks.",
-      "Specialized technical support for ground prep and site leveling.",
-      "Immediate availability of original spare parts, hardware, and replacement panels.",
-      "Priority customer service and nationwide post-sale technical support."
+      "Sandwich panel walls with high-density rigid insulating core.",
+      "Stable operational comfort range under extreme temperatures from -10°C to over +45°C.",
+      "Acoustic attenuation against heavy machinery noise and site transit.",
+      "Integrated electrical and structural prep for high-efficiency inverter minisplit systems."
     ],
-    ctaText: "Hablar con un asesor técnico",
-    ctaTextEn: "Talk to a technical advisor",
-    whatsappMessage: "Hola, me gustaría conocer la cobertura de garantía de los modelos Capelton."
+    ctaText: "Consultar especificación térmica",
+    ctaTextEn: "Check thermal specification",
+    whatsappMessage: "Hola, requiero información sobre el aislamiento térmico de los espacios Capelton."
   },
   {
-    id: "logistica",
-    eyebrow: "Logística y Cobertura",
-    eyebrowEn: "Nationwide Logistics",
-    title: "Entrega y maniobra en cualquier rincón del país.",
-    titleEn: "Delivery and Rigging to Every Corner of Mexico.",
+    id: "despliegue",
+    eyebrow: "Listas para Trabajar",
+    eyebrowEn: "Ready to Operate",
+    title: "Conéctala y empieza a trabajar de inmediato.",
+    titleEn: "Connect & Start Working Immediately.",
     description:
-      "Operativa de traslado terrestre, descarga especializada y nivelación en los 32 estados de la República Mexicana.",
+      "Instalación eléctrica certificada, iluminación LED, contactos de uso rudo y climatización preinstalada para empezar a operar desde el primer día en obra sin retrasos.",
     descriptionEn:
-      "Land transport, specialized crane offloading, and leveling across all 32 Mexican states.",
-    image: "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_10M_Vista_01.png",
-    modalTitle: "Cobertura y Logística en Todo México",
-    modalTitleEn: "Nationwide Coverage & Logistics",
-    modalSubtitle: "Presencia comprobada en megaproyectos y campamentos remotos.",
-    modalSubtitleEn: "Proven track record in megaprojects and remote industrial camps.",
+      "Certified electrical systems, LED lighting, heavy-duty outlets, and pre-installed climate control to start operating immediately on site without civil construction delays.",
+    image: "/images/categoria-almacenes.png",
+    modalTitle: "Despliegue Inmediato en Sitio",
+    modalTitleEn: "Immediate Jobsite Deployment",
+    modalSubtitle: "Tu oficina o espacio móvil listo para operar sin retrasos de construcción.",
+    modalSubtitleEn: "Your office or mobile workspace ready to operate without civil construction delays.",
     points: [
-      "Servicio de transporte en cama baja y maniobras de posicionamiento con grúa Hiab.",
-      "Presencia comprobada en obras como AIFA, CFE Presa Peñitas, Poder Judicial e industria minera.",
-      "Nivelación con gatos mecánicos de alta capacidad para terrenos irregulares o de terracería.",
-      "Gestión de permisos de traslado para carga sobredimensionada en carreteras federales."
+      "Tablero de control y centro de carga homologado bajo norma oficial (NOM).",
+      "Iluminación LED perimetral de bajo consumo y larga vida útil preinstalada.",
+      "Contactos polarizados de uso rudo para computadoras, impresoras y servidores.",
+      "Acometida exterior rápida para conexión directa a red de obra o generador."
     ],
     pointsEn: [
-      "Lowboy transportation service and precision positioning with Hiab articulated crane.",
-      "Proven delivery track record at AIFA airport, CFE Peñitas Dam, federal courts, and mining camps.",
-      "Heavy-duty mechanical leveling jacks for rough, unpaved terrain.",
-      "Full oversize transport permitting handled on federal highways."
+      "Certified electrical panel and load center under official safety standards.",
+      "Pre-installed high-efficiency perimeter LED lighting with long service life.",
+      "Heavy-duty polarized outlets for workstations, printers, and computer servers.",
+      "Quick exterior utility connection for direct hookup to site grid or generator."
     ],
-    ctaText: "Solicitar cotización de flete a mi estado",
-    ctaTextEn: "Request freight quote to my location",
-    whatsappMessage: "Hola, deseo cotizar el traslado y montaje de un espacio modular en mi ubicación."
+    ctaText: "Cotizar entrega y disponibilidad",
+    ctaTextEn: "Quote delivery & availability",
+    whatsappMessage: "Hola, me gustaría cotizar una oficina móvil con entrega y despliegue rápido."
   }
 ];
 
@@ -280,8 +280,14 @@ export default function WhyCapelton() {
         <FadeIn direction="up">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
+              <span className="text-xs sm:text-sm font-semibold text-capelton-green uppercase tracking-wider block mb-2">
+                {t(
+                  "Entendemos tu operación · Fabricamos con propósito · Acompañamos cada entrega",
+                  "Understand the Operation · Build with Purpose · Deliver with Care"
+                )}
+              </span>
               <SciFiHeading
-                text={t("Por qué Capelton es la mejor opción.", "Why Capelton is the best choice.")}
+                text={t("Por qué elegir espacios móviles Capelton.", "Why choose Capelton mobile workspaces.")}
                 as="h2"
                 align="left"
                 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.1]"

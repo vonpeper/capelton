@@ -13,7 +13,15 @@ interface LanguageContextType {
 
 // Diccionario de traducciones globales para soporte automático o guiado
 const DICTIONARY: Record<string, string> = {
-  // Navbar & Global
+  // Navbar & Global Proposed Navigation
+  "Productos": "Products",
+  "Proyectos": "Projects",
+  "Cómo construimos": "How We Build",
+  "Soluciones": "Solutions",
+  "Nosotros": "About",
+  "Venta y Renta": "Sales & Rentals",
+  "Venta renta": "Sales & Rentals",
+  "Cotización": "Request a Quote",
   "Innovación": "Innovation",
   "Modelos": "Models",
   "Comparador Duo": "Duo Comparator",
@@ -28,18 +36,25 @@ const DICTIONARY: Record<string, string> = {
   "Idioma / Language": "Language / Idioma",
   "Inicio": "Home",
 
-  // Categories
+  // Categories & US Official Terminology (PDF Page 4)
+  "Oficinas móviles": "Mobile Offices",
   "Oficinas Móviles": "Mobile Offices",
-  "Casetas": "Booths",
-  "Casetas de Vigilancia": "Guard & Security Booths",
-  "Dormitorios Móviles": "Mobile Sleeper Units",
-  "Sanitarios Móviles": "Mobile Restroom Units",
-  "Comedores Móviles": "Mobile Dining Units",
-  "Contenedores y Minibodegas": "Containers & Mini-Storage",
-  "Contenedores Marítimos": "Shipping Containers",
-  "Minibodegas y Almacenes": "Mini-Storage & Warehouses",
-  "Consultorios Móviles": "Mobile Medical Clinics",
-  "Almacenes Industriales": "Industrial Warehouses",
+  "Casetas": "Portable Booths",
+  "Casetas de Vigilancia": "Portable Booths",
+  "Dormitorios móviles": "Crew Quarters",
+  "Dormitorios Móviles": "Crew Quarters",
+  "Sanitarios móviles": "Restroom Units",
+  "Sanitarios Móviles": "Restroom Units",
+  "Comedores móviles": "Dining Units",
+  "Comedores Móviles": "Dining Units",
+  "Bodegas": "Storage Units",
+  "Contenedores y Minibodegas": "Storage Units",
+  "Contenedores Marítimos": "Storage Units",
+  "Minibodegas y Almacenes": "Storage Units",
+  "Consultorios móviles": "Mobile Medical Units",
+  "Consultorios Móviles": "Mobile Medical Units",
+  "Proyectos especiales": "Custom Builds",
+  "Espacios modulares": "Modular Spaces",
   "Espacios Modulares": "Modular Spaces",
   "1 modelo": "1 model",
   "2 modelos": "2 models",
@@ -55,7 +70,7 @@ const DICTIONARY: Record<string, string> = {
   "Servicio y Alimentos": "Food & Dining Service",
   "Resguardo Industrial": "Industrial Storage",
   "Salud y Brigadas": "Health & Field Care",
-  "Salud y Vacunación": "Health & Vaccines",
+  "Salud y Vacunación": "Health & Field Care",
   "Gran Capacidad": "High Capacity",
   "Bodega": "Storage",
   "Seguridad": "Security",
@@ -69,34 +84,51 @@ const DICTIONARY: Record<string, string> = {
   "Asesoría Técnica Directa": "Direct Technical Support",
   "Ver sección general en Home →": "View all in Home →",
 
-  // Hero
-  "Línea modular 2026": "2026 Modular Line",
-  "Espacios móviles.": "Mobile Spaces.",
-  "Redefinidos por la ingeniería.": "Redefined by Engineering.",
-  "Oficinas ejecutivas y casetas de alta especificación con entrega inmediata en todo México.":
-    "Executive offices and high-specification booths with immediate delivery across Mexico.",
-  "Cotizar Venta o Renta": "Quote Sale or Rental",
-  "Comparar modelos": "Compare Models",
+  // Hero Section
+  "Oficinas móviles diseñadas para tu operación.":
+    "Mobile Offices Built Around Your Operation.",
+  "Fabricamos espacios de trabajo móviles para la industria, la construcción y proyectos que necesitan soluciones prácticas, confiables y adaptadas a sus necesidades.":
+    "We design and manufacture mobile workspaces for jobsites, teams, and demanding operations. Standard configurations where they work. Custom solutions where they matter.",
+  "Explorar productos": "Explore Products",
+  "Solicitar cotización": "Request a Quote",
   "RED LOGÍSTICA CAPELTON MÉXICO • COBERTURA EN LOS 32 ESTADOS":
     "CAPELTON MEXICO LOGISTICS NETWORK • 32 STATES COVERAGE",
-  "NORMA NOM • ACERO CALIBRE 14 • MANIOBRA CERTIFICADA HIAB":
-    "NOM STANDARD • 14-GAUGE STEEL • HIAB CERTIFIED RIGGING",
-  "Modelo CM-10M • Acero Calibre 14 • Despliegue en 24h":
-    "Model CM-10M • 14-Gauge Steel • 24h Deployment",
+  "Unidad de referencia CM-10M. Las configuraciones y especificaciones varían por modelo.":
+    "Reference unit CM-10M. Configurations and specifications vary by model.",
   "PLANTA MATRIZ • DESPLIEGUE NACIONAL": "MAIN PLANT • NATIONWIDE DEPLOYMENT",
   "Flota Propia Grúa Hiab • 24-48h": "Own Hiab Crane Fleet • 24-48h",
   "Polo Industrial": "Industrial Hub",
 
-  // Duo Comparator
-  "Comparador Dinámico": "Dynamic Comparator",
-  "Comparador Dúo": "Duo Comparator",
-  "Enfrente dos unidades modulares lado a lado": "Compare two modular units side-by-side",
+  // Cómo construimos nuestros espacios móviles (Ficha técnica & Anatomía)
+  "Cómo construimos nuestros espacios móviles": "How We Build Our Mobile Spaces",
+  "Exteriores": "Exterior Architecture",
+  "Interiores": "Interior Systems",
+  "Perspectiva Exterior": "Exterior View",
+  "Detalle Interior": "Interior View",
+  "Chasis estructural reforzado": "Reinforced Steel Chassis",
+  "Muros aislados": "Insulated Walls",
+  "Techo de aluminio de una pieza": "One-Piece Aluminum Roof",
+  "Ventanas abatibles": "Awning Windows",
+  "Accesos y soportes": "Access & Leveling Supports",
+  "Piso SPC": "SPC Rigid Core Flooring",
+  "Iluminación LED": "LED Lighting",
+  "Sistema de aire acondicionado": "Air Conditioning System",
+  "Instalación eléctrica": "Electrical Installation",
+  "Distribución y mobiliario según configuración": "Custom Layout & Furniture by Config",
+
+  // Comparador de Modelos
+  "Encuentra la unidad adecuada para tu proyecto.":
+    "Find the Right Unit for Your Project.",
+  "Compara dimensiones, capacidad, distribución y equipamiento entre nuestros modelos. Apóyate de las fichas técnicas.":
+    "Compare dimensions, capacity, layout, and equipment between our models. Backed by official technical sheets.",
+  "Plano de Distribución Interior": "Interior Floor Plan",
+  "Equipamiento de Serie": "Standard Equipment",
+  "Diferencial y Ventaja del Modelo": "Model Differentiator & Advantages",
+  "Recomendación Operativa": "Operational Recommendation",
   "Seleccione Modelo A": "Select Model A",
   "Seleccione Modelo B": "Select Model B",
   "Dimensiones": "Dimensions",
   "Capacidad": "Capacity",
-  "Material": "Material",
-  "Tiempo de Entrega": "Delivery Time",
   "Medidas": "Dimensions",
   "Peso": "Weight",
   "Peso Neto": "Net Weight",
@@ -108,12 +140,49 @@ const DICTIONARY: Record<string, string> = {
   "Descargar ficha PDF": "Download PDF Sheet",
   "Disponible bajo solicitud": "Available upon request",
 
-  // Model Detail Page Specs
-  "Especificación Constructiva": "Constructive Specification",
-  "Equipamiento e Ingeniería de Serie": "Standard Equipment & Engineering",
-  "ACERO CAL. 14": "14-GAUGE STEEL",
-  "ACERO CALIBRE 14": "14-GAUGE STEEL",
-  "Otros Modelos en": "Other Models in",
+  // Catálogo Curado y General
+  "Selección curada de los módulos más solicitados por la industria y la construcción en México.":
+    "Curated selection of the most requested modular units across industry and construction in Mexico.",
+  "Selección curada de los módulos más solicitados":
+    "Curated selection of top modular units",
+  "Unidades a la medida de cada operación.":
+    "Tailored units for every operation.",
+  "UNIDADES A LA MEDIDA DE CADA OPERACIÓN":
+    "TAILORED UNITS FOR EVERY OPERATION",
+
+  // Proyectos y Clientes
+  "Clientes que confían en Capelton": "Clients who trust Capelton",
+  "Instalaciones y Proyectos": "Installations & Projects",
+  "Alianzas y Distribuidores": "Alliances & Distributors",
+  "Distribuidor Autorizado Oficial": "Official Authorized Distributor",
+  "Empresa Hermana de Capelton": "Capelton Sister Company",
+  "Necesidad": "Client Need",
+  "Solución entregada": "Delivered Solution",
+  "Aplicación real": "Field Application",
+
+  // Por Qué Capelton (3 Fundamentos)
+  "Entendemos tu operación": "Understand the Operation",
+  "Consideramos quién utilizará la unidad, qué actividades realizará y cuáles son las condiciones del entorno.":
+    "We consider who will use the unit, the activities performed, and specific environmental conditions.",
+  "Fabricamos con propósito": "Build with Purpose",
+  "Partimos de soluciones probadas y adaptamos distribuciones, acabados y equipamiento cuando el proyecto lo requiere.":
+    "We start from proven solutions and adapt layouts, finishes, and equipment when the project requires it.",
+  "Acompañamos cada entrega": "Deliver with Care",
+  "Coordinamos la preparación y el traslado para que cada espacio llegue donde la operación lo necesita.":
+    "We coordinate preparation and logistics so each space arrives exactly where your operation demands.",
+
+  // WhatsApp & Asesoría
+  "Hablemos de lo que necesita tu proyecto.":
+    "Let's talk about what your project needs.",
+  "Nuestro equipo puede ayudarte a revisar configuraciones, especificaciones y opciones de entrega para encontrar una solución adecuada.":
+    "Our team can help you review configurations, specifications, and delivery options to find the right solution.",
+
+  // Capelton en Acción
+  "Capelton en Acción.": "Capelton in Action.",
+  "Historias de nuestros proyectos": "Stories from our projects",
+  "Videos en planta y campo": "Factory & field videos",
+  "Procesos reales de fabricación, pruebas de calidad y maniobras de entrega en campo.":
+    "Real manufacturing processes, quality testing, and on-site delivery maneuvers.",
 
   // Common CTAs & Buttons
   "Conocer más": "Learn more",
@@ -135,10 +204,8 @@ const DICTIONARY: Record<string, string> = {
   "Venta Directa": "Direct Purchase",
   "Renta Flexible": "Flexible Rental",
   "Patrimonio Permanente": "Permanent Asset",
-  "100% Deducible (OPEX)": "100% Tax-Deductible (OPEX)",
   "Cotizar en Venta": "Get Purchase Quote",
   "Cotizar en Renta": "Get Rental Quote",
-  "Cotizaciones formales en menos de 2 horas": "Formal quotes delivered in under 2 hours",
   "Disponibilidad inmediata con cobertura en toda la República": "Immediate availability with nationwide coverage",
 
   // Footer

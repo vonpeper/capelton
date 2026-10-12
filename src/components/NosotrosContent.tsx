@@ -100,37 +100,37 @@ export default function NosotrosContent() {
       title: "Campamento CFE Presa Peñitas",
       location: "Chiapas",
       type: t("Complejo Habitacional & Comedor", "Housing Complex & Dining"),
-      image: "https://capeltonmexico.com/wp-content/uploads/2024/10/Penitas.png",
+      image: "/images/proyectos/proyecto-1.jpg",
     },
     {
       title: "Secretaría de Marina (SEMAR)",
       location: "AIFA, Zumpango",
       type: t("Centro de Mando CM-17M", "Command Center CM-17M"),
-      image: "https://capeltonmexico.com/wp-content/uploads/2024/10/Sedena.png",
+      image: "/images/proyectos/proyecto-2.jpg",
     },
     {
       title: "Liverpool Car Center",
       location: "Polanco, CDMX",
       type: t("Módulo Comercial y Logístico", "Commercial & Logistics Unit"),
-      image: "https://capeltonmexico.com/wp-content/uploads/2024/10/Liverpool.png",
+      image: "/images/proyectos/proyecto-3.jpg",
     },
     {
       title: "Michelin Car Center",
       location: "Polanco, CDMX",
       type: t("Centro de Operaciones", "Operations Center"),
-      image: "https://capeltonmexico.com/wp-content/uploads/2024/10/Michelin.png",
+      image: "/images/proyectos/proyecto-4.jpg",
     },
     {
       title: "Juzgado Itinerante Poder Judicial",
       location: "Toluca, Méx.",
       type: t("Salas de Audiencia Móviles", "Mobile Courtrooms"),
-      image: "https://capeltonmexico.com/wp-content/uploads/2024/10/Poder_Judicial.png",
+      image: "/images/proyectos/proyecto-5.jpg",
     },
     {
       title: "Unidad Móvil de Salud (ISEM)",
       location: "Tlalnepantla, Méx.",
       type: t("Clínica de Mastografía", "Mammography Clinic"),
-      image: "https://capeltonmexico.com/wp-content/uploads/2024/10/Mastografia.png",
+      image: "/images/proyectos/proyecto-6.jpg",
     },
   ];
 

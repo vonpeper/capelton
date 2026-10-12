@@ -15,6 +15,7 @@ export interface ProductModel {
   technicalSheetUrl: string;
   blueprintUrl?: string;
   tagline: string;
+  taglineEn?: string;
   isFlagship?: boolean;
 }
 

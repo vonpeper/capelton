@@ -6,8 +6,6 @@ import {
   MessageCircle,
   FileText,
   Check,
-  Lock,
-  Unlock,
   ChevronDown,
   Building2,
   Shield,
@@ -16,8 +14,11 @@ import {
   UtensilsCrossed,
   Boxes,
   HeartPulse,
+  Compass,
+  Sparkles,
+  Maximize2,
+  Info,
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { products, categories } from "@/lib/data";
 import { ProductModel } from "@/lib/types";
 import FadeIn from "@/components/FadeIn";
@@ -42,13 +43,13 @@ const DUO_FEATURE_MAP: Record<string, string> = {
 };
 
 const DEFAULT_DUO_SPECS_ES = [
-  "Chasis estructural monolítico Calibre 14",
+  "Chasis estructural monolítico reforzado",
   "Aislamiento termoacústico continuo",
   "Instalación eléctrica bajo norma NOM",
 ];
 
 const DEFAULT_DUO_SPECS_EN = [
-  "14-Gauge monolithic structural chassis",
+  "Reinforced monolithic structural chassis",
   "Continuous thermoacoustic insulation",
   "NOM-certified electrical installation",
 ];
@@ -90,11 +91,11 @@ const MODEL_LABELS: Record<string, { es: string; en: string }> = {
   cmv6m2: { es: "CMVC-6M2 (Caseta 2.4×2.4m · 2 pers)", en: "CMVC-6M2 (Booth 2.4×2.4m · 2 pers)" },
 
   // Dormitorios Móviles
-  cmd4ib: { es: "CMD-4IB (Dormitorio 4m · 4-8 pers)", en: "CMD-4IB (Sleeper 4m · 4-8 pers)" },
-  cmdbc6m: { es: "CMDBC6M (Dormitorio 6m · 2-4 pers)", en: "CMDBC6M (Sleeper 6m · 2-4 pers)" },
-  cmd10br: { es: "CMD-10BR (Dormitorio / Baño 10m)", en: "CMD-10BR (Dorm / Restroom 10m)" },
-  cmdc10m: { es: "CMDC-10M (Dormitorio Compartido 10m)", en: "CMDC-10M (Shared Dorm 10m)" },
-  cmd12m: { es: "CMD-12M (Dormitorio Masivo 12m)", en: "CMD-12M (Mass Sleeper 12m)" },
+  cmd4ib: { es: "CMD-4IB (Dormitorio 4m · 4-8 pers)", en: "CMD-4IB (Crew Quarters 4m · 4-8 pers)" },
+  cmdbc6m: { es: "CMDBC6M (Dormitorio 6m · 2-4 pers)", en: "CMDBC6M (Crew Quarters 6m · 2-4 pers)" },
+  cmd10br: { es: "CMD-10BR (Dormitorio / Baño 10m)", en: "CMD-10BR (Quarters / Restroom 10m)" },
+  cmdc10m: { es: "CMDC-10M (Dormitorio Compartido 10m)", en: "CMDC-10M (Shared Quarters 10m)" },
+  cmd12m: { es: "CMD-12M (Dormitorio Masivo 12m)", en: "CMD-12M (Mass Quarters 12m)" },
   cmd12x60: { es: "CMD-12X60 (Campamento Modular 17m)", en: "CMD-12X60 (Modular Camp 17m)" },
   hotel12x60: { es: "HOTEL 12X60 (Campamento Hotel 17m)", en: "HOTEL 12X60 (Work Camp Hotel 17m)" },
 
@@ -109,14 +110,14 @@ const MODEL_LABELS: Record<string, { es: string; en: string }> = {
   cmm12co: { es: "CMM-12CO (Comedor Masivo 12m · 35-37 pers)", en: "CMM-12CO (Mass Dining 12m · 35-37 pers)" },
 
   // Contenedores y Bodegas
-  bodega8x32: { es: "BODEGA 8X32 (Almacén Móvil 8.5m)", en: "BODEGA 8X32 (Mobile Warehouse 8.5m)" },
-  "minibodega-casa-seca": { es: "Minibodega Caja Seca (Resguardo)", en: "Dry Box Mini-Storage (Shelter)" },
-  "minibodega-contenedor": { es: "Minibodega Contenedor (Seguridad)", en: "Container Mini-Storage (Security)" },
+  bodega8x32: { es: "BODEGA 8X32 (Almacén Móvil 8.5m)", en: "BODEGA 8X32 (Storage Unit 8.5m)" },
+  "minibodega-casa-seca": { es: "Minibodega Caja Seca (Resguardo)", en: "Dry Box Storage (Shelter)" },
+  "minibodega-contenedor": { es: "Minibodega Contenedor (Seguridad)", en: "Container Storage (Security)" },
 
   // Consultorios Médicos
-  "cm4-mm": { es: "CM-4MM (Consultorio Básico 4m)", en: "CM-4MM (Basic Clinic 4m)" },
-  "cm6-mm": { es: "CM-6MM (Consultorio Clínico 6m)", en: "CM-6MM (Clinical Office 6m)" },
-  "cm8-mm": { es: "CM-8MM (Consultorio Integral 8m)", en: "CM-8MM (Integral Clinic 8m)" },
+  "cm4-mm": { es: "CM-4MM (Consultorio Básico 4m)", en: "CM-4MM (Basic Medical Unit 4m)" },
+  "cm6-mm": { es: "CM-6MM (Consultorio Clínico 6m)", en: "CM-6MM (Clinical Unit 6m)" },
+  "cm8-mm": { es: "CM-8MM (Consultorio Integral 8m)", en: "CM-8MM (Integral Medical Unit 8m)" },
   "cm10-mm": { es: "CM-10MM (Clínica Médica 10m)", en: "CM-10MM (Mobile Clinic 10m)" },
 };
 
@@ -124,44 +125,118 @@ const CATEGORY_META: Record<
   string,
   {
     icon: React.ComponentType<{ className?: string }>;
-    code: string;
-    specs: { es: string; en: string };
+    labelEs: string;
+    labelEn: string;
   }
 > = {
-  oficinas: {
-    icon: Building2,
-    code: "SEC-01",
-    specs: { es: "9 Modelos · Oficinas Ejecutivas y Mando", en: "9 Models · Executive & Command Offices" },
+  oficinas: { icon: Building2, labelEs: "Oficinas Móviles", labelEn: "Mobile Offices" },
+  casetas: { icon: Shield, labelEs: "Casetas", labelEn: "Portable Booths" },
+  dormitorios: { icon: BedDouble, labelEs: "Dormitorios Móviles", labelEn: "Crew Quarters" },
+  sanitarios: { icon: Bath, labelEs: "Sanitarios Móviles", labelEn: "Restroom Units" },
+  comedores: { icon: UtensilsCrossed, labelEs: "Comedores Móviles", labelEn: "Dining Units" },
+  contenedores: { icon: Boxes, labelEs: "Bodegas y Resguardo", labelEn: "Storage Units" },
+  consultorios: { icon: HeartPulse, labelEs: "Consultorios Móviles", labelEn: "Mobile Medical Units" },
+};
+
+// Perfiles descriptivos y recomendaciones comerciales específicas para ayudar al comprador a decidir
+const MODEL_PROFILES: Record<
+  string,
+  {
+    diffEs: string;
+    diffEn: string;
+    recomEs: string;
+    recomEn: string;
+  }
+> = {
+  cm3m: {
+    diffEs: "Huella mínima (3m) de colocación rápida en accesos reducidos.",
+    diffEn: "Minimal 3m footprint for rapid deployment in restricted access points.",
+    recomEs: "Supervisión técnica individual o caseta de control en espacios estrechos.",
+    recomEn: "Individual technical supervision or control booth in tight spaces.",
   },
-  casetas: {
-    icon: Shield,
-    code: "SEC-02",
-    specs: { es: "2 Modelos · Control Perimetral 360°", en: "2 Models · 360° Perimeter Control" },
+  cm3mr: {
+    diffEs: "Chasis remolque con tirón y eje para reubicación diaria continua.",
+    diffEn: "Towable trailer chassis with hitch and axle for agile continuous transit.",
+    recomEs: "Obras carreteras lineales, tendido de ductos y frentes móviles.",
+    recomEn: "Linear road construction, pipeline installations, and moving crews.",
   },
-  dormitorios: {
-    icon: BedDouble,
-    code: "SEC-03",
-    specs: { es: "7 Modelos · Campamentos de Obra", en: "7 Models · Field Work Camps" },
+  cm4m: {
+    diffEs: "Oficina estándar de 4m: maniobra rápida y espacio para 2 a 4 ingenieros.",
+    diffEn: "Standard 4m office: quick hoisting and functional layout for 2 to 4 engineers.",
+    recomEs: "Supervisión de obra civil directa, contratistas y oficinas de frente de trabajo.",
+    recomEn: "Direct civil supervision, on-site contractors, and front-of-work offices.",
   },
-  sanitarios: {
-    icon: Bath,
-    code: "SEC-04",
-    specs: { es: "3 Modelos · Módulos y Regaderas", en: "3 Models · Restrooms & Showers" },
+  cm6m: {
+    diffEs: "Equilibrio ideal (6m) entre espacio de trabajo y versatilidad logística.",
+    diffEn: "Ideal 6m balance between productive workspace and logistics versatility.",
+    recomEs: "Jefaturas de turno, laboratorios de control de calidad y salas técnicas.",
+    recomEn: "Shift coordinators, on-site QA testing labs, and technical command rooms.",
   },
-  comedores: {
-    icon: UtensilsCrossed,
-    code: "SEC-05",
-    specs: { es: "3 Modelos · Cocina & Comedor Masivo", en: "3 Models · Kitchen & Dining" },
+  cm8m: {
+    diffEs: "Espacio de 8m que permite integrar privado gerencial y área de trabajo.",
+    diffEn: "8m space allowing a private executive suite alongside workstations.",
+    recomEs: "Coordinación de plantas industriales, campamentos y supervisión corporativa.",
+    recomEn: "Industrial coordination, mining support bases, and corporate project teams.",
   },
-  contenedores: {
-    icon: Boxes,
-    code: "SEC-06",
-    specs: { es: "3 Modelos · Bodegas y Resguardo", en: "3 Models · Storage & Shelters" },
+  cm10m: {
+    diffEs: "Módulo insignia de 10m con máxima amplitud ejecutiva, privado y baño.",
+    diffEn: "Flagship 10m unit with executive capacity, private office, and restroom.",
+    recomEs: "Gerencias generales de obra, consorcios de infraestructura y proyectos medianos/largos.",
+    recomEn: "General site directors, infrastructure consortia, and mid-to-long term projects.",
   },
-  consultorios: {
-    icon: HeartPulse,
-    code: "SEC-07",
-    specs: { es: "4 Modelos · Clínicas Médicas NOM", en: "4 Models · Mobile Medical NOM" },
+  cm12m: {
+    diffEs: "Macro-espacio de 12m para consolidar múltiples departamentos técnicos.",
+    diffEn: "12m macro-space consolidating multiple engineering teams in one footprint.",
+    recomEs: "Centros administrativos de obra pesada y corporativos en planta.",
+    recomEn: "Heavy construction administrative centers and plant management hubs.",
+  },
+  cm14m: {
+    diffEs: "Oficina corporativa de 14m con doble privado ejecutivo y sala de juntas.",
+    diffEn: "14m corporate office featuring dual executive suites and board room.",
+    recomEs: "Direcciones de megaproyectos, dependencias gubernamentales y auditorías.",
+    recomEn: "Megaproject directorates, government agencies, and on-site audit teams.",
+  },
+  cm17m: {
+    diffEs: "Máxima escala modular (17m) para operaciones corporativas completas.",
+    diffEn: "Maximum modular scale (17m) for full-scale on-site corporate operations.",
+    recomEs: "Centros estratégicos de control, consorcios multinacionales y terminales.",
+    recomEn: "Strategic command centers, multinational consortia, and logistics hubs.",
+  },
+  cmvc3m2: {
+    diffEs: "Caseta compacta 2.4×1.2m con visibilidad 360° para 1 guardia.",
+    diffEn: "Compact 2.4×1.2m booth with 360° visibility for 1 security guard.",
+    recomEs: "Filtros peatonales, plumas vehiculares y casetas de control individual.",
+    recomEn: "Pedestrian checkpoints, barrier gates, and single-operator security points.",
+  },
+  cmv6m2: {
+    diffEs: "Caseta amplia 2.4×2.4m para 2 oficiales con espacio para CCTV.",
+    diffEn: "Spacious 2.4×2.4m booth for 2 officers with space for CCTV consoles.",
+    recomEs: "Accesos principales a parques industriales, aduanas y vigilancia 24/7.",
+    recomEn: "Main industrial park entrances, customs checkpoints, and 24/7 monitoring.",
+  },
+  cmd10br: {
+    diffEs: "Dormitorio de obra con baño privado y regadera para cuadrillas en campo.",
+    diffEn: "Field quarters with private bathroom and shower for site crews.",
+    recomEs: "Campamentos mineros, plantas fotovoltaicas y cuadrillas en sitios remotos.",
+    recomEn: "Mining base camps, solar farms, and remote infrastructure projects.",
+  },
+  hotel12x60: {
+    diffEs: "Complejo habitacional masivo modular tipo hotel para alta densidad.",
+    diffEn: "High-density modular hotel-style living complex for workforce lodging.",
+    recomEs: "Campamentos masivos de infraestructura y desarrollos energéticos.",
+    recomEn: "Massive infrastructure work camps and energy development projects.",
+  },
+  cms10m: {
+    diffEs: "Módulo sanitario industrial de alta capacidad con divisiones independientes.",
+    diffEn: "High-capacity industrial restroom module with independent sanitary stalls.",
+    recomEs: "Obras con cuadrillas de más de 30 trabajadores y eventos industriales.",
+    recomEn: "Worksites with 30+ workers and heavy industrial turnaround operations.",
+  },
+  cml6x16: {
+    diffEs: "Remolque sanitario móvil de rápido traslado con servicios autónomos.",
+    diffEn: "Mobile restroom trailer with swift road transit and self-contained utilities.",
+    recomEs: "Obras viales lineales, brigadas médicas y eventos corporativos.",
+    recomEn: "Linear road works, health brigades, and corporate field events.",
   },
 };
 
@@ -174,7 +249,7 @@ function cleanDuoFeatures(features: string[], language: string): string[] {
       f.trim().length > 4
   );
   if (filtered.length >= 3) {
-    return filtered.slice(0, 3).map((f) => {
+    return filtered.slice(0, 4).map((f) => {
       if (language === "en") {
         return DUO_FEATURE_MAP[f.toLowerCase().trim()] || f;
       }
@@ -182,6 +257,31 @@ function cleanDuoFeatures(features: string[], language: string): string[] {
     });
   }
   return language === "en" ? DEFAULT_DUO_SPECS_EN : DEFAULT_DUO_SPECS_ES;
+}
+
+function getModelPlantaImage(model: ProductModel): string | null {
+  const localPlanta = model.images.find(
+    (img) => (img.toLowerCase().includes("planta") || img.includes("blueprints")) && !img.startsWith("http")
+  );
+  if (localPlanta) return localPlanta;
+  if (model.category === "casetas") {
+    return "/images/blueprints/planta-caseta.svg";
+  }
+  return "/images/blueprints/planta-oficina.svg";
+}
+
+function getModelInteriorImage(model: ProductModel): string | null {
+  const localInterior = model.images.find(
+    (img) =>
+      (img.toLowerCase().includes("vista_02") ||
+        img.toLowerCase().includes("vista2") ||
+        img.toLowerCase().includes("vista3") ||
+        img.toLowerCase().includes("interior")) &&
+      !img.toLowerCase().includes("planta") &&
+      !img.startsWith("http")
+  );
+  if (localInterior) return localInterior;
+  return "/images/categoria-almacenes.png";
 }
 
 function getModelOptionLabel(model: ProductModel, language: string): string {
@@ -197,28 +297,6 @@ export default function DuoSwitcher() {
   const [activeCategoryId, setActiveCategoryId] = useState<string>("oficinas");
   const [modelAId, setModelAId] = useState<string>("cm4m");
   const [modelBId, setModelBId] = useState<string>("cm10m");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  // Close dropdown on outside click or Escape
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
-      }
-    }
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setIsDropdownOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
 
   // Filter only categories that have available models
   const availableCategories = useMemo(() => {
@@ -248,7 +326,6 @@ export default function DuoSwitcher() {
     products[1];
 
   const currentCategory = categories.find((c) => c.id === activeCategoryId);
-  const currentMeta = CATEGORY_META[activeCategoryId];
 
   const handleCategoryChange = (newCatId: string) => {
     setActiveCategoryId(newCatId);
@@ -268,236 +345,87 @@ export default function DuoSwitcher() {
     }
   };
 
+  const modelAProfile = MODEL_PROFILES[modelA.slug];
+  const modelBProfile = MODEL_PROFILES[modelB.slug];
+
+  const plantaA = getModelPlantaImage(modelA);
+  const plantaB = getModelPlantaImage(modelB);
+
+  const interiorA = getModelInteriorImage(modelA);
+  const interiorB = getModelInteriorImage(modelB);
+
   return (
-    <section id="duo-comparator" className="py-20 sm:py-28 bg-white text-[#1d1d1f] relative overflow-hidden">
+    <section id="duo-comparator" className="py-20 sm:py-28 bg-white text-[#1d1d1f] relative overflow-hidden border-t border-black/5 scroll-mt-20">
       {/* Ambient Breathing Radial Pulse in Capelton Green */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-r from-capelton-green/10 via-capelton-green/3 to-transparent rounded-full blur-[150px] pointer-events-none animate-pulse duration-[6000ms]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+        {/* Section Header: Explicitly guided by the project leader */}
         <FadeIn direction="up">
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-            <p className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-capelton-green mb-2">
-              {t("Comparador Dúo Especializado", "Specialized Duo Comparator")}
-            </p>
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+            <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-capelton-green block mb-2">
+              {t("Herramienta Comercial de Decisión", "Commercial Decision Tool")}
+            </span>
             <SciFiHeading
-              text={t("Compara modelos de la misma categoría.", "Compare models within the same category.")}
+              text={t(
+                "Encuentra la unidad adecuada para tu proyecto.",
+                "Find the Right Unit for Your Project."
+              )}
               as="h2"
-              className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.1] mb-3"
+              className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.12] mb-3"
               showLaser={false}
               showHudTag={false}
               duration={700}
             />
-            <p className="text-sm sm:text-base text-[#6e6e73] font-normal">
+            <p className="text-sm sm:text-base text-[#6e6e73] font-normal leading-relaxed max-w-2xl mx-auto">
               {t(
-                "Selecciona una categoría para analizar dimensiones, aforo y equipamiento con precisión.",
-                "Select a category to analyze dimensions, headcount, and standard equipment with precision."
+                "Compara dimensiones, capacidad, distribución y equipamiento entre nuestros modelos. Apóyate de las fichas técnicas.",
+                "Compare dimensions, capacity, layout, and equipment between our models. Backed by official technical sheets."
               )}
             </p>
           </div>
         </FadeIn>
 
-        {/* Dynamic Heavy-Duty Industrial Lock / Rotary Latch Category Selector */}
+        {/* Clean, Elegant Category Selector (Replaces heavy lock mechanism with clarity) */}
         <FadeIn direction="up" delay={80}>
-          <div ref={dropdownRef} className="relative max-w-xl mx-auto mb-10 z-40">
-            {/* Main Mechanical Lock Trigger Button */}
-            <button
-              type="button"
-              onClick={() => setIsDropdownOpen((prev) => !prev)}
-              aria-expanded={isDropdownOpen}
-              aria-haspopup="listbox"
-              className="w-full relative group rounded-2xl bg-gradient-to-b from-[#252529] via-[#1a1a1d] to-[#121214] p-3 sm:p-3.5 border-2 border-neutral-700/80 hover:border-capelton-green/70 shadow-[0_10px_35px_rgba(0,0,0,0.25)] transition-all duration-300 text-left flex items-center justify-between cursor-pointer focus:outline-none focus:ring-2 focus:ring-capelton-green/50"
-            >
-              {/* 4 Corner Industrial Mechanical Rivets */}
-              <span className="absolute top-1.5 left-1.5 w-1.5 h-1.5 rounded-full bg-neutral-600 border border-neutral-900 pointer-events-none" />
-              <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-neutral-600 border border-neutral-900 pointer-events-none" />
-              <span className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 rounded-full bg-neutral-600 border border-neutral-900 pointer-events-none" />
-              <span className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-neutral-600 border border-neutral-900 pointer-events-none" />
+          <div className="max-w-3xl mx-auto mb-10">
+            <div className="flex items-center justify-center gap-2 flex-wrap">
+              {availableCategories.map((cat) => {
+                const isActive = activeCategoryId === cat.id;
+                const meta = CATEGORY_META[cat.id];
+                const IconComp = meta?.icon || Building2;
+                const catName = language === "en" ? cat.nameEn || cat.name : cat.name;
 
-              {/* Left: Heavy-Duty Rotary Cylinder / Tumbler Lock */}
-              <div className="flex items-center gap-3.5 sm:gap-4 pl-1">
-                <div
-                  className={`relative w-12 h-12 rounded-xl bg-gradient-to-br from-neutral-700 via-neutral-900 to-black border-2 transition-all duration-500 flex items-center justify-center shadow-inner ${
-                    isDropdownOpen
-                      ? "border-capelton-green shadow-[0_0_15px_rgba(0,177,64,0.4)] rotate-90"
-                      : "border-neutral-600 group-hover:border-neutral-500"
-                  }`}
-                >
-                  {/* Mechanical dial notch marks */}
-                  <span className="absolute top-1 w-1.5 h-0.5 bg-neutral-400 rounded-full" />
-                  <span className="absolute bottom-1 w-1.5 h-0.5 bg-neutral-400 rounded-full" />
-                  <span className="absolute left-1 w-0.5 h-1.5 bg-neutral-400 rounded-full" />
-                  <span className="absolute right-1 w-0.5 h-1.5 bg-neutral-400 rounded-full" />
-
-                  {/* Animated Lock State */}
-                  {isDropdownOpen ? (
-                    <Unlock className="w-5 h-5 text-capelton-green transition-transform -rotate-90 animate-in zoom-in-75 duration-200" />
-                  ) : (
-                    <Lock className="w-5 h-5 text-capelton-green group-hover:scale-110 transition-transform" />
-                  )}
-
-                  {/* Status Diode LED */}
-                  <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-capelton-green opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-capelton-green border border-black shadow-[0_0_8px_#00b140]" />
-                  </span>
-                </div>
-
-                {/* Center: Sector Details */}
-                <div className="flex flex-col">
-                  <div className="flex items-center gap-2 mb-0.5">
-                    <span className="text-[9px] font-mono tracking-[0.22em] text-[#a1a1aa] uppercase font-semibold">
-                      {t("CERRADURA DE SECTOR", "SECTOR CAM-LOCK")} • {currentMeta?.code || "SEC-01"}
-                    </span>
-                    <span className="inline-flex items-center gap-1 px-1.5 py-0.2 rounded-full text-[8.5px] font-mono font-bold bg-capelton-green/15 text-capelton-green border border-capelton-green/30">
-                      <span className="w-1 h-1 rounded-full bg-capelton-green animate-pulse" />
-                      {isDropdownOpen ? t("ABIERTO", "UNLOCKED") : t("BLOQUEADO", "LOCKED")}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                      {language === "en" ? currentCategory?.nameEn || currentCategory?.name : currentCategory?.name}
-                    </h3>
-                    <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 border border-white/10">
-                      {currentCategory?.modelsCount || 9} {language === "en" ? "MODELS" : "MODELOS"}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right: Rotary Mechanical Latch Toggle */}
-              <div className="pr-1.5 flex items-center">
-                <div
-                  className={`w-9 h-9 rounded-xl bg-black/60 border flex items-center justify-center transition-all duration-300 shadow-sm ${
-                    isDropdownOpen
-                      ? "border-capelton-green text-capelton-green bg-capelton-green/10"
-                      : "border-neutral-700 text-neutral-400 group-hover:text-white group-hover:border-neutral-500"
-                  }`}
-                >
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-300 ${
-                      isDropdownOpen ? "rotate-180" : ""
+                return (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    onClick={() => handleCategoryChange(cat.id)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer border ${
+                      isActive
+                        ? "bg-black text-white border-black shadow-sm"
+                        : "bg-[#f5f5f7] hover:bg-neutral-200 text-[#515154] border-transparent hover:text-black"
                     }`}
-                  />
-                </div>
-              </div>
-            </button>
-
-            {/* Heavy-Duty Industrial Vault Selection Panel (Dropdown Popover) */}
-            <AnimatePresence>
-              {isDropdownOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8, scale: 0.98 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -6, scale: 0.98 }}
-                  transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-                  style={{ backgroundColor: "#141416" }}
-                  className="absolute top-full mt-2.5 left-0 right-0 border-2 border-neutral-700 rounded-2xl shadow-[0_30px_70px_rgba(0,0,0,0.7)] p-3 z-50 overflow-hidden ring-1 ring-white/10"
-                >
-                  {/* Header bar of the panel */}
-                  <div className="flex items-center justify-between px-3 py-2.5 mb-2 rounded-xl bg-black/60 border border-neutral-800 text-[11px] font-mono text-neutral-300 uppercase tracking-wider">
-                    <span className="flex items-center gap-2 font-bold text-white">
-                      <span className="w-2 h-2 rounded-full bg-capelton-green shadow-[0_0_8px_#00b140]" />
-                      {t("LÍNEAS MODULARES EN OBRA", "ACTIVE ON-SITE MODULAR LINES")}
+                  >
+                    <IconComp className={`w-3.5 h-3.5 ${isActive ? "text-capelton-green" : "text-[#86868b]"}`} />
+                    <span>{catName}</span>
+                    <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? "bg-white/20 text-white" : "bg-black/5 text-[#86868b]"}`}>
+                      {cat.modelsCount}
                     </span>
-                    <span className="px-2 py-0.5 rounded-full bg-neutral-800 text-capelton-green font-bold border border-neutral-700 text-[10px]">
-                      {availableCategories.length} {t("SECTORES", "SECTORS")}
-                    </span>
-                  </div>
-
-                  {/* Category Options List */}
-                  <div className="flex flex-col gap-1.5 max-h-[390px] overflow-y-auto pr-1">
-                    {availableCategories.map((cat) => {
-                      const isActive = activeCategoryId === cat.id;
-                      const meta = CATEGORY_META[cat.id];
-                      const IconComp = meta?.icon || Building2;
-                      const catName = language === "en" ? cat.nameEn || cat.name : cat.name;
-                      const catSpecs = meta ? (language === "en" ? meta.specs.en : meta.specs.es) : "";
-
-                      return (
-                        <button
-                          key={cat.id}
-                          type="button"
-                          onClick={() => {
-                            handleCategoryChange(cat.id);
-                            setIsDropdownOpen(false);
-                          }}
-                          className={`w-full flex items-center justify-between p-3 rounded-xl text-left transition-all duration-200 cursor-pointer border group ${
-                            isActive
-                              ? "bg-[#002a10] border-2 border-capelton-green text-white shadow-[0_0_20px_rgba(0,177,64,0.18)]"
-                              : "bg-[#1c1c20] hover:bg-[#26262c] border border-neutral-800 hover:border-neutral-600 text-white"
-                          }`}
-                        >
-                          <div className="flex items-center gap-3.5">
-                            <div
-                              className={`w-9 h-9 rounded-lg flex items-center justify-center border transition-colors ${
-                                isActive
-                                  ? "bg-capelton-green text-black border-capelton-green shadow-[0_0_12px_rgba(0,177,64,0.5)] font-bold"
-                                  : "bg-black/70 text-neutral-300 border-neutral-700 group-hover:text-capelton-green group-hover:border-capelton-green/60"
-                              }`}
-                            >
-                              <IconComp className="w-4 h-4" />
-                            </div>
-                            <div>
-                              <div className="flex items-center gap-2">
-                                <span className={`text-sm sm:text-base font-bold transition-colors ${
-                                  isActive ? "text-white font-extrabold" : "text-white group-hover:text-capelton-green"
-                                }`}>
-                                  {catName}
-                                </span>
-                                {meta && (
-                                  <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded border ${
-                                    isActive
-                                      ? "text-capelton-green bg-capelton-green/20 border-capelton-green/40 font-bold"
-                                      : "text-neutral-400 bg-black/40 border-neutral-700"
-                                  }`}>
-                                    {meta.code}
-                                  </span>
-                                )}
-                              </div>
-                              <span className={`text-xs block mt-0.5 leading-snug ${
-                                isActive ? "text-emerald-100 font-medium" : "text-neutral-300 group-hover:text-neutral-100"
-                              }`}>
-                                {catSpecs || cat.tagline}
-                              </span>
-                            </div>
-                          </div>
-
-                          {/* Lock Pin Indicator */}
-                          <div className="flex items-center gap-2.5 pl-3">
-                            <span
-                              className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-md border ${
-                                isActive
-                                  ? "bg-capelton-green text-black border-capelton-green shadow-xs"
-                                  : "bg-black/50 text-neutral-300 border-neutral-700"
-                              }`}
-                            >
-                              {cat.modelsCount} mod
-                            </span>
-                            {isActive ? (
-                              <Lock className="w-4 h-4 text-capelton-green fill-capelton-green" />
-                            ) : (
-                              <div className="w-4 h-4 rounded-full border-2 border-neutral-600 group-hover:border-capelton-green transition-colors" />
-                            )}
-                          </div>
-                        </button>
-                      );
-                    })}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </FadeIn>
 
-        {/* Apple-style Comparison Matrix Card */}
+        {/* Side-by-Side Model Comparison Matrix */}
         <FadeIn direction="up" delay={140}>
-          <div className="bg-[#fbfbfd] border border-black/8 rounded-[32px] sm:rounded-[40px] p-5 sm:p-8 lg:p-10 max-w-4xl mx-auto shadow-[0_10px_35px_rgba(0,0,0,0.03)]">
+          <div className="bg-[#fafafc] border border-black/8 rounded-[32px] sm:rounded-[40px] p-5 sm:p-8 lg:p-10 max-w-5xl mx-auto shadow-sm">
             {/* Top Products Comparison Row */}
             <div className="grid grid-cols-2 gap-4 sm:gap-10 pb-8 border-b border-black/8">
-              {/* Model A Header Card */}
+              {/* Model A Card */}
               <div className="flex flex-col items-center text-center">
-                {/* Selector Dropdown */}
                 <div className="mb-4 w-full max-w-xs">
                   <label className="text-[10px] uppercase font-bold tracking-wider text-[#86868b] block mb-1.5">
                     {t("Modelo A", "Model A")}
@@ -505,7 +433,7 @@ export default function DuoSwitcher() {
                   <select
                     value={modelA.slug}
                     onChange={(e) => setModelAId(e.target.value)}
-                    className="w-full bg-white border border-black/12 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-black focus:outline-none focus:border-capelton-green transition-all shadow-sm cursor-pointer"
+                    className="w-full bg-white border border-black/12 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-black focus:outline-none focus:border-capelton-green transition-all shadow-2xs cursor-pointer"
                   >
                     {categoryModels.map((m) => (
                       <option key={m.slug} value={m.slug} className="text-black">
@@ -515,22 +443,25 @@ export default function DuoSwitcher() {
                   </select>
                 </div>
 
-                {/* Floating Product Render */}
                 <div className="relative w-full h-32 sm:h-44 mb-3 flex items-center justify-center">
                   {modelA.images[0] ? (
                     <Image
                       src={modelA.images[0]}
                       alt={modelA.title}
                       fill
-                      sizes="(max-width: 1024px) 50vw, 360px"
+                      sizes="(max-width: 1024px) 50vw, 380px"
                       className="object-contain filter drop-shadow-[0_10px_16px_rgba(0,0,0,0.06)]"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.srcset = "";
+                        target.src = "/images/CM_10M_Vista_01_cropped.png";
+                      }}
                     />
                   ) : (
                     <div className="text-xs text-[#86868b]">{t("Render disponible", "Render available")}</div>
                   )}
                 </div>
 
-                {/* Title & Tagline */}
                 <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-black mb-0.5">
                   {modelA.modelCode}
                 </h3>
@@ -538,7 +469,6 @@ export default function DuoSwitcher() {
                   {language === "en" ? currentCategory?.nameEn || currentCategory?.name : currentCategory?.name}
                 </span>
 
-                {/* Primary Action Button */}
                 <a
                   href={`https://wa.me/525529640104?text=${encodeURIComponent(
                     language === "en"
@@ -548,16 +478,15 @@ export default function DuoSwitcher() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsAppClick("ventas", `duo_quote_${modelA.modelCode}`)}
-                  className="w-full max-w-xs py-2.5 px-3 rounded-full bg-black hover:bg-capelton-green text-white font-semibold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5"
+                  className="w-full max-w-xs py-2.5 px-3 rounded-full bg-capelton-green hover:bg-capelton-darkgreen text-white font-bold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5"
                 >
                   <MessageCircle className="w-3.5 h-3.5 fill-white" />
                   <span>{t(`Cotizar ${modelA.modelCode}`, `Quote ${modelA.modelCode}`)}</span>
                 </a>
               </div>
 
-              {/* Model B Header Card */}
+              {/* Model B Card */}
               <div className="flex flex-col items-center text-center">
-                {/* Selector Dropdown */}
                 <div className="mb-4 w-full max-w-xs">
                   <label className="text-[10px] uppercase font-bold tracking-wider text-[#86868b] block mb-1.5">
                     {t("Modelo B", "Model B")}
@@ -565,7 +494,7 @@ export default function DuoSwitcher() {
                   <select
                     value={modelB.slug}
                     onChange={(e) => setModelBId(e.target.value)}
-                    className="w-full bg-white border border-black/12 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-black focus:outline-none focus:border-capelton-green transition-all shadow-sm cursor-pointer"
+                    className="w-full bg-white border border-black/12 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-black focus:outline-none focus:border-capelton-green transition-all shadow-2xs cursor-pointer"
                   >
                     {categoryModels.map((m) => (
                       <option key={m.slug} value={m.slug} className="text-black">
@@ -575,22 +504,25 @@ export default function DuoSwitcher() {
                   </select>
                 </div>
 
-                {/* Floating Product Render */}
                 <div className="relative w-full h-32 sm:h-44 mb-3 flex items-center justify-center">
                   {modelB.images[0] ? (
                     <Image
                       src={modelB.images[0]}
                       alt={modelB.title}
                       fill
-                      sizes="(max-width: 1024px) 50vw, 360px"
+                      sizes="(max-width: 1024px) 50vw, 380px"
                       className="object-contain filter drop-shadow-[0_10px_16px_rgba(0,0,0,0.06)]"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.srcset = "";
+                        target.src = "/images/CM_10M_Vista_01_cropped.png";
+                      }}
                     />
                   ) : (
                     <div className="text-xs text-[#86868b]">{t("Render disponible", "Render available")}</div>
                   )}
                 </div>
 
-                {/* Title & Tagline */}
                 <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-black mb-0.5">
                   {modelB.modelCode}
                 </h3>
@@ -598,7 +530,6 @@ export default function DuoSwitcher() {
                   {language === "en" ? currentCategory?.nameEn || currentCategory?.name : currentCategory?.name}
                 </span>
 
-                {/* Primary Action Button */}
                 <a
                   href={`https://wa.me/525529640104?text=${encodeURIComponent(
                     language === "en"
@@ -608,7 +539,7 @@ export default function DuoSwitcher() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsAppClick("ventas", `duo_quote_${modelB.modelCode}`)}
-                  className="w-full max-w-xs py-2.5 px-3 rounded-full bg-black hover:bg-capelton-green text-white font-semibold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5"
+                  className="w-full max-w-xs py-2.5 px-3 rounded-full bg-capelton-green hover:bg-capelton-darkgreen text-white font-bold text-xs text-center transition-all shadow-sm flex items-center justify-center gap-1.5"
                 >
                   <MessageCircle className="w-3.5 h-3.5 fill-white" />
                   <span>{t(`Cotizar ${modelB.modelCode}`, `Quote ${modelB.modelCode}`)}</span>
@@ -616,10 +547,10 @@ export default function DuoSwitcher() {
               </div>
             </div>
 
-            {/* Structured Side-by-Side Comparison Matrix - Compact & Space-Efficient */}
-            <div className="mt-6 bg-white rounded-2xl sm:rounded-3xl border border-black/8 overflow-hidden shadow-sm divide-y divide-black/5 text-xs sm:text-sm">
+            {/* Comprehensive Side-by-Side Comparison Matrix */}
+            <div className="mt-6 bg-white rounded-2xl sm:rounded-3xl border border-black/8 overflow-hidden shadow-xs divide-y divide-black/5 text-xs sm:text-sm">
               {/* Row 1: Dimensiones */}
-              <div className="py-3 px-4 sm:px-6">
+              <div className="py-3.5 px-4 sm:px-6">
                 <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-[#86868b] block text-center mb-1">
                   {t("Dimensiones (Largo × Ancho × Alto)", "Dimensions (Length × Width × Height)")}
                 </span>
@@ -630,9 +561,9 @@ export default function DuoSwitcher() {
               </div>
 
               {/* Row 2: Aforo y Capacidad */}
-              <div className="py-3 px-4 sm:px-6 bg-[#fbfbfd]">
+              <div className="py-3.5 px-4 sm:px-6 bg-[#fbfbfd]">
                 <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-[#86868b] block text-center mb-1">
-                  {t("Aforo y capacidad sugerida", "Suggested Headcount & Capacity")}
+                  {t("Capacidad sugerida de personal", "Suggested Personnel Capacity")}
                 </span>
                 <div className="grid grid-cols-2 gap-4 sm:gap-8 text-center">
                   <span className="text-sm sm:text-base font-bold text-capelton-green">{modelA.peopleCapacity}</span>
@@ -640,10 +571,164 @@ export default function DuoSwitcher() {
                 </div>
               </div>
 
-              {/* Row 3: Peso y Carga Máxima (Consolidado) */}
-              <div className="py-3 px-4 sm:px-6">
+              {/* Row 3: Plano de Distribución Interior (Planta) */}
+              <div className="py-4 px-4 sm:px-6">
+                <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-[#86868b] block text-center mb-2">
+                  {t("Plano de Distribución Interior (Planta)", "Interior Floor Plan")}
+                </span>
+                <div className="grid grid-cols-2 gap-4 sm:gap-8 items-center">
+                  <div className="relative w-full h-24 sm:h-32 bg-[#f5f5f7] rounded-xl p-2 flex items-center justify-center border border-black/5">
+                    {plantaA ? (
+                      <Image
+                        src={plantaA}
+                        alt={`Planta ${modelA.modelCode}`}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 240px"
+                        className="object-contain p-1"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.srcset = "";
+                          target.src = "/images/blueprints/planta-oficina.svg";
+                        }}
+                      />
+                    ) : (
+                      <span className="text-[11px] text-[#86868b]">{t("Planta en ficha técnica", "Floor plan in spec sheet")}</span>
+                    )}
+                  </div>
+                  <div className="relative w-full h-24 sm:h-32 bg-[#f5f5f7] rounded-xl p-2 flex items-center justify-center border border-black/5">
+                    {plantaB ? (
+                      <Image
+                        src={plantaB}
+                        alt={`Planta ${modelB.modelCode}`}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 240px"
+                        className="object-contain p-1"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.srcset = "";
+                          target.src = "/images/blueprints/planta-oficina.svg";
+                        }}
+                      />
+                    ) : (
+                      <span className="text-[11px] text-[#86868b]">{t("Planta en ficha técnica", "Floor plan in spec sheet")}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 4: Perspectiva Interior */}
+              {(interiorA || interiorB) && (
+                <div className="py-4 px-4 sm:px-6 bg-[#fbfbfd]">
+                  <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-[#86868b] block text-center mb-2">
+                    {t("Perspectiva de Interiores", "Interior Perspective")}
+                  </span>
+                  <div className="grid grid-cols-2 gap-4 sm:gap-8 items-center">
+                    <div className="relative w-full h-24 sm:h-32 bg-white rounded-xl p-1 flex items-center justify-center border border-black/5 overflow-hidden">
+                      {interiorA ? (
+                        <Image
+                          src={interiorA}
+                          alt={`Interior ${modelA.modelCode}`}
+                          fill
+                          sizes="(max-width: 768px) 50vw, 240px"
+                          className="object-contain"
+                          onError={(e) => {
+                            const target = e.currentTarget as HTMLImageElement;
+                            target.srcset = "";
+                            target.src = "/images/categoria-almacenes.png";
+                          }}
+                        />
+                      ) : (
+                        <span className="text-[11px] text-[#86868b]">{t("Disponible", "Available")}</span>
+                      )}
+                    </div>
+                    <div className="relative w-full h-24 sm:h-32 bg-white rounded-xl p-1 flex items-center justify-center border border-black/5 overflow-hidden">
+                      {interiorB ? (
+                        <Image
+                          src={interiorB}
+                          alt={`Interior ${modelB.modelCode}`}
+                          fill
+                          sizes="(max-width: 768px) 50vw, 240px"
+                          className="object-contain"
+                          onError={(e) => {
+                            const target = e.currentTarget as HTMLImageElement;
+                            target.srcset = "";
+                            target.src = "/images/categoria-almacenes.png";
+                          }}
+                        />
+                      ) : (
+                        <span className="text-[11px] text-[#86868b]">{t("Disponible", "Available")}</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Row 5: Diferencial y Ventaja del Modelo (¿Por qué elegir uno sobre el otro?) */}
+              <div className="py-3.5 px-4 sm:px-6">
                 <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-[#86868b] block text-center mb-1">
-                  {t("Estructura y capacidad de carga", "Structural Weight & Load Capacity")}
+                  {t("¿Por qué elegir esta unidad?", "Why choose this unit?")}
+                </span>
+                <div className="grid grid-cols-2 gap-4 sm:gap-8 text-center sm:text-left">
+                  <div className="bg-[#f5f5f7] p-3 rounded-xl border border-black/5">
+                    <span className="text-[11px] font-bold text-black block mb-0.5">
+                      {modelA.modelCode}
+                    </span>
+                    <p className="text-[11px] text-[#515154] leading-relaxed">
+                      {modelAProfile
+                        ? language === "en"
+                          ? modelAProfile.diffEn
+                          : modelAProfile.diffEs
+                        : modelA.tagline}
+                    </p>
+                  </div>
+                  <div className="bg-[#f5f5f7] p-3 rounded-xl border border-black/5">
+                    <span className="text-[11px] font-bold text-black block mb-0.5">
+                      {modelB.modelCode}
+                    </span>
+                    <p className="text-[11px] text-[#515154] leading-relaxed">
+                      {modelBProfile
+                        ? language === "en"
+                          ? modelBProfile.diffEn
+                          : modelBProfile.diffEs
+                        : modelB.tagline}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 6: Recomendación Operativa */}
+              <div className="py-3.5 px-4 sm:px-6 bg-[#fbfbfd]">
+                <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-[#86868b] block text-center mb-1">
+                  {t("Recomendación de Aplicación Operativa", "Operational Recommendation")}
+                </span>
+                <div className="grid grid-cols-2 gap-4 sm:gap-8 text-center sm:text-left">
+                  <div className="flex items-start gap-2">
+                    <Compass className="w-4 h-4 text-capelton-green shrink-0 mt-0.5" />
+                    <span className="text-xs text-[#1d1d1f] font-medium leading-relaxed">
+                      {modelAProfile
+                        ? language === "en"
+                          ? modelAProfile.recomEn
+                          : modelAProfile.recomEs
+                        : t("Apto para operaciones en campo.", "Suitable for field operations.")}
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Compass className="w-4 h-4 text-capelton-green shrink-0 mt-0.5" />
+                    <span className="text-xs text-[#1d1d1f] font-medium leading-relaxed">
+                      {modelBProfile
+                        ? language === "en"
+                          ? modelBProfile.recomEn
+                          : modelBProfile.recomEs
+                        : t("Apto para operaciones en campo.", "Suitable for field operations.")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 7: Estructura, Peso y Capacidad de Carga */}
+              <div className="py-3.5 px-4 sm:px-6">
+                <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-[#86868b] block text-center mb-1">
+                  {t("Peso y capacidad de carga", "Weight & Load Capacity")}
                 </span>
                 <div className="grid grid-cols-2 gap-4 sm:gap-8 text-center">
                   <div>
@@ -661,13 +746,12 @@ export default function DuoSwitcher() {
                 </div>
               </div>
 
-              {/* Row 4: Equipamiento de Serie */}
-              <div className="py-3 px-4 sm:px-6 bg-[#fbfbfd]">
+              {/* Row 8: Equipamiento de Serie */}
+              <div className="py-3.5 px-4 sm:px-6 bg-[#fbfbfd]">
                 <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-[#86868b] block text-center mb-2">
-                  {t("Equipamiento de serie", "Standard Equipment")}
+                  {t("Equipamiento base", "Standard Equipment")}
                 </span>
                 <div className="grid grid-cols-2 gap-4 sm:gap-8">
-                  {/* Features Model A */}
                   <ul className="space-y-1.5 max-w-xs mx-auto text-left">
                     {cleanDuoFeatures(modelA.features, language).map((f, i) => (
                       <li key={i} className="flex items-start gap-1.5 text-xs text-[#434344]">
@@ -677,7 +761,6 @@ export default function DuoSwitcher() {
                     ))}
                   </ul>
 
-                  {/* Features Model B */}
                   <ul className="space-y-1.5 max-w-xs mx-auto text-left">
                     {cleanDuoFeatures(modelB.features, language).map((f, i) => (
                       <li key={i} className="flex items-start gap-1.5 text-xs text-[#434344]">
@@ -689,8 +772,8 @@ export default function DuoSwitcher() {
                 </div>
               </div>
 
-              {/* Row 5: Ficha Técnica PDF */}
-              <div className="py-2.5 px-4 sm:px-6">
+              {/* Row 9: Ficha Técnica PDF */}
+              <div className="py-3 px-4 sm:px-6">
                 <div className="grid grid-cols-2 gap-4 sm:gap-8 text-center">
                   <div>
                     {modelA.technicalSheetUrl ? (

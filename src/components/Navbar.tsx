@@ -138,33 +138,26 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-semibold tracking-wide uppercase">
-            <Link
-              href="/#scrollytelling"
-              className="text-[#515154] hover:text-black transition-colors duration-200"
-            >
-              {t("Innovación", "Innovation")}
-            </Link>
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-xs font-semibold tracking-wide uppercase">
             <Link
               href="/#modelos"
               className="text-[#515154] hover:text-black transition-colors duration-200"
             >
-              {t("Modelos", "Models")}
+              {t("Productos", "Products")}
             </Link>
             <Link
-              href="/#duo-comparator"
-              className="text-[#515154] hover:text-black transition-colors duration-200 flex items-center gap-1.5"
-            >
-              <span>{t("Comparador Duo", "Duo Comparator")}</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-capelton-green animate-pulse"></span>
-            </Link>
-            <Link
-              href="/#por-que-capelton"
+              href="/#proyectos"
               className="text-[#515154] hover:text-black transition-colors duration-200"
             >
-              {t("Diferenciales", "Advantages")}
+              {t("Proyectos", "Projects")}
             </Link>
-            {/* Categorías Dropdown Trigger & Popover */}
+            <Link
+              href="/#como-construimos"
+              className="text-[#515154] hover:text-black transition-colors duration-200"
+            >
+              {t("Cómo construimos", "How We Build")}
+            </Link>
+            {/* Categorías / Soluciones Dropdown Trigger & Popover */}
             <div
               ref={dropdownRef}
               className="relative"
@@ -179,7 +172,7 @@ export default function Navbar() {
                 }`}
                 aria-expanded={categoriesDropdownOpen}
               >
-                <span>{t("Categorías", "Categories")}</span>
+                <span>{t("Soluciones", "Solutions")}</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${
                     categoriesDropdownOpen ? "rotate-180 text-capelton-green" : "text-[#86868b]"
@@ -263,35 +256,59 @@ export default function Navbar() {
               href="/nosotros"
               className="text-[#515154] hover:text-black transition-colors duration-200"
             >
-              {t("Sobre Nosotros", "About Us")}
+              {t("Nosotros", "About")}
             </Link>
+            {/* Solo en México se incluye Venta / Renta como enlace */}
+            {useLanguage().language === "es" && (
+              <Link
+                href="/#modalidades"
+                className="text-[#515154] hover:text-black transition-colors duration-200"
+              >
+                {t("Venta renta", "Sales & Rentals")}
+              </Link>
+            )}
           </nav>
 
-          {/* CTA Buttons & Language Switcher (Ventas & Rentas) */}
+          {/* CTA Buttons & Language Switcher (Ventas & Rentas / Request a Quote) */}
           <div className="hidden sm:flex items-center gap-2 shrink-0">
-            <a
-              href={CONTACT_INFO.ventas.waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick("ventas", "navbar_desktop_cta")}
-              title={t("WhatsApp Ventas Directas: 55 2964 0104", "WhatsApp Sales: +52 55 2964 0104")}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_2px_10px_rgba(0,177,64,0.3)] hover:shadow-[0_4px_15px_rgba(0,177,64,0.45)]"
-            >
-              <MessageCircle className="w-3.5 h-3.5 fill-white" />
-              <span>{t("Ventas", "Sales")}</span>
-            </a>
+            {useLanguage().language === "es" ? (
+              <>
+                <a
+                  href={CONTACT_INFO.ventas.waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("ventas", "navbar_desktop_cta")}
+                  title={t("WhatsApp Ventas Directas: 55 2964 0104", "WhatsApp Sales: +52 55 2964 0104")}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_2px_10px_rgba(0,177,64,0.3)] hover:shadow-[0_4px_15px_rgba(0,177,64,0.45)]"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 fill-white" />
+                  <span>{t("Ventas", "Sales")}</span>
+                </a>
 
-            <a
-              href={CONTACT_INFO.rentas.waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick("rentas", "navbar_desktop_cta")}
-              title={t("WhatsApp Rentas y Arrendamiento: 55 7948 3632", "WhatsApp Rentals: +52 55 7948 3632")}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#1d1d1f] bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all duration-300"
-            >
-              <MessageCircle className="w-3.5 h-3.5 text-capelton-green" />
-              <span>{t("Rentas", "Rentals")}</span>
-            </a>
+                <a
+                  href={CONTACT_INFO.rentas.waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("rentas", "navbar_desktop_cta")}
+                  title={t("WhatsApp Rentas y Arrendamiento: 55 7948 3632", "WhatsApp Rentals: +52 55 7948 3632")}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-[#1d1d1f] bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all duration-300"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-capelton-green" />
+                  <span>{t("Rentas", "Rentals")}</span>
+                </a>
+              </>
+            ) : (
+              <a
+                href={CONTACT_INFO.ventas.waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("ventas", "navbar_desktop_cta_en")}
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_2px_10px_rgba(0,177,64,0.3)] hover:shadow-[0_4px_15px_rgba(0,177,64,0.45)]"
+              >
+                <MessageCircle className="w-3.5 h-3.5 fill-white" />
+                <span>{t("Cotización", "Request a Quote")}</span>
+              </a>
+            )}
 
             {/* Selector de Idioma con ambas banderas: México y USA */}
             <LanguageSwitcher />
@@ -314,44 +331,37 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div className="lg:hidden mt-4 pt-4 border-t border-black/10 flex flex-col gap-4 animate-fade-in bg-white/95 p-4 rounded-2xl shadow-xl">
             <Link
-              href="/#scrollytelling"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-sm font-semibold text-black hover:text-capelton-green"
-            >
-              {t("Innovación y Despiece", "Innovation & Breakdown")}
-            </Link>
-            <Link
               href="/#modelos"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-semibold text-black hover:text-capelton-green"
             >
-              {t("Catálogo de Modelos", "Models Catalog")}
+              {t("Productos", "Products")}
             </Link>
             <Link
-              href="/#duo-comparator"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-sm font-semibold text-black hover:text-capelton-green flex items-center justify-between"
-            >
-              <span>{t("Comparador Duo", "Duo Comparator")}</span>
-              <span className="text-[10px] bg-capelton-green/10 text-capelton-green font-bold px-2 py-0.5 rounded-full">
-                {t("Interactivo", "Interactive")}
-              </span>
-            </Link>
-            <Link
-              href="/#por-que-capelton"
+              href="/#proyectos"
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-semibold text-black hover:text-capelton-green"
             >
-              {t("Por qué Capelton", "Why Capelton")}
+              {t("Proyectos", "Projects")}
             </Link>
-            {/* Categorías Accordion */}
+            <Link
+              href="/#como-construimos"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-semibold text-black hover:text-capelton-green flex items-center justify-between"
+            >
+              <span>{t("Cómo construimos", "How We Build")}</span>
+              <span className="text-[10px] bg-capelton-green/10 text-capelton-green font-bold px-2 py-0.5 rounded-full">
+                {t("Ficha & Anatomía", "Specs & Engineering")}
+              </span>
+            </Link>
+            {/* Categorías / Soluciones Accordion */}
             <div className="flex flex-col border-y border-black/5 py-1">
               <button
                 type="button"
                 onClick={() => setMobileCategoriesOpen(!mobileCategoriesOpen)}
                 className="text-sm font-semibold text-black hover:text-capelton-green flex items-center justify-between py-1.5"
               >
-                <span>{t("Categorías", "Categories")}</span>
+                <span>{t("Soluciones", "Solutions")}</span>
                 <ChevronDown
                   className={`w-4 h-4 text-[#86868b] transition-transform duration-200 ${
                     mobileCategoriesOpen ? "rotate-180 text-capelton-green" : ""
@@ -399,35 +409,59 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="text-sm font-semibold text-black hover:text-capelton-green"
             >
-              {t("Sobre Nosotros", "About Us")}
+              {t("Nosotros", "About")}
             </Link>
+            {useLanguage().language === "es" && (
+              <Link
+                href="/#modalidades"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-sm font-semibold text-black hover:text-capelton-green"
+              >
+                {t("Venta renta", "Sales & Rentals")}
+              </Link>
+            )}
             <div className="pt-3 border-t border-black/8 flex flex-col gap-3">
               <div className="flex items-center justify-between px-1">
                 <span className="text-xs font-semibold text-[#515154]">{t("Idioma / Language", "Language / Idioma")}</span>
                 <LanguageSwitcher />
               </div>
-              <div className="grid grid-cols-2 gap-2 pt-1">
-                <a
-                  href={CONTACT_INFO.ventas.waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick("ventas", "navbar_mobile_menu")}
-                  className="w-full text-center py-2.5 rounded-full text-xs font-bold text-white bg-capelton-green shadow-md hover:bg-capelton-darkgreen transition-colors flex items-center justify-center gap-1.5"
-                >
-                  <MessageCircle className="w-3.5 h-3.5 fill-white" />
-                  <span>{t("Ventas", "Sales")}</span>
-                </a>
-                <a
-                  href={CONTACT_INFO.rentas.waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick("rentas", "navbar_mobile_menu")}
-                  className="w-full text-center py-2.5 rounded-full text-xs font-bold text-black bg-black/[0.05] hover:bg-black/[0.08] border border-black/10 transition-colors flex items-center justify-center gap-1.5"
-                >
-                  <MessageCircle className="w-3.5 h-3.5 text-capelton-green" />
-                  <span>{t("Rentas", "Rentals")}</span>
-                </a>
-              </div>
+              {useLanguage().language === "es" ? (
+                <div className="grid grid-cols-2 gap-2 pt-1">
+                  <a
+                    href={CONTACT_INFO.ventas.waLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("ventas", "navbar_mobile_menu")}
+                    className="w-full text-center py-2.5 rounded-full text-xs font-bold text-white bg-capelton-green shadow-md hover:bg-capelton-darkgreen transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 fill-white" />
+                    <span>{t("Ventas", "Sales")}</span>
+                  </a>
+                  <a
+                    href={CONTACT_INFO.rentas.waLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("rentas", "navbar_mobile_menu")}
+                    className="w-full text-center py-2.5 rounded-full text-xs font-bold text-black bg-black/[0.05] hover:bg-black/[0.08] border border-black/10 transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 text-capelton-green" />
+                    <span>{t("Rentas", "Rentals")}</span>
+                  </a>
+                </div>
+              ) : (
+                <div className="pt-1">
+                  <a
+                    href={CONTACT_INFO.ventas.waLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("ventas", "navbar_mobile_menu_en")}
+                    className="w-full text-center py-3 rounded-full text-xs font-bold text-white bg-capelton-green shadow-md hover:bg-capelton-darkgreen transition-colors flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4 fill-white" />
+                    <span>{t("Cotización", "Request a Quote")}</span>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         )}

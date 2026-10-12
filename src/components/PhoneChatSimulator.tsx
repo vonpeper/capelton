@@ -15,27 +15,27 @@ export default function PhoneChatSimulator() {
 
   const quickReplies = [
     {
-      id: "venta",
-      label: t("🏢 Cotizar Venta Directa", "🏢 Direct Purchase Quote"),
+      id: "obra",
+      label: t("🏢 Cotizar Oficina para mi Obra", "🏢 Quote Field Office for My Site"),
       msg: t(
-        "Hola, me gustaría cotizar la compra de una caseta u oficina móvil para entrega en mi obra.",
-        "Hello, I would like to quote the purchase of a guard booth or mobile office for on-site delivery."
+        "Hola, me gustaría cotizar una oficina móvil para un equipo de trabajo en mi obra.",
+        "Hello, I would like to quote a mobile office for a field crew on my jobsite."
       ),
     },
     {
-      id: "renta",
-      label: t("🔄 Cotizar Renta 100% Deducible", "🔄 100% Tax-Deductible Rental"),
+      id: "fichas",
+      label: t("📄 Solicitar Fichas Técnicas y Planos", "📄 Request Technical Specs & Plans"),
       msg: t(
-        "Hola, requiero cotizar el arrendamiento mensual de un espacio modular con entrega rápida.",
-        "Hello, I need to quote a monthly modular space rental with rapid delivery."
+        "Hola, deseo recibir las fichas técnicas con planos de distribución de los modelos disponibles.",
+        "Hello, I would like to receive the technical spec sheets with layout floor plans."
       ),
     },
     {
-      id: "catalogo",
-      label: t("📄 Solicitar Catálogo y Fichas PDF", "📄 Request Catalog & PDF Specs"),
+      id: "asesor",
+      label: t("💬 Hablar con un Asesor Técnico", "💬 Speak with a Technical Advisor"),
       msg: t(
-        "Hola, deseo recibir el catálogo completo de modelos y fichas técnicas de Capelton.",
-        "Hello, I would like to receive Capelton's complete catalog of models and technical spec sheets."
+        "Hola, requiero asesoría técnica sobre configuraciones y tiempos de entrega en sitio.",
+        "Hello, I need technical guidance on workspace configurations and on-site delivery timelines."
       ),
     },
   ];
@@ -51,24 +51,24 @@ export default function PhoneChatSimulator() {
           <div className="lg:col-span-6">
             <FadeIn direction="up">
               <span className="text-xs sm:text-sm font-semibold text-capelton-green uppercase tracking-wider block mb-3">
-                {t("Atención Técnica Inmediata", "Immediate Technical Consultation")}
+                {t("Asesoría Comercial y Técnica", "Commercial & Technical Guidance")}
               </span>
               <SciFiHeading
                 text={t(
-                  "Respuestas al instante. Tu cotización en minutos.",
-                  "Instant responses. Your quotation in minutes."
+                  "Hablemos de lo que necesita tu proyecto.",
+                  "Let's talk about what your project needs."
                 )}
                 as="h2"
                 align="left"
-                className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#1d1d1f] leading-[1.08] mb-6"
+                className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.1] mb-5"
                 showLaser={false}
                 showHudTag={false}
                 duration={750}
               />
               <p className="text-base text-[#6e6e73] font-normal leading-relaxed mb-8">
                 {t(
-                  "Sin trámites engorrosos ni esperas de días. Habla directamente con nuestros ingenieros especialistas y recibe propuestas técnicas formales con flete, maniobra y especificaciones exactas.",
-                  "No tedious paperwork or days of waiting. Speak directly with our specialist engineers and receive formal technical proposals including freight, certified rigging, and exact specifications."
+                  "Nuestro equipo puede ayudarte a revisar configuraciones, especificaciones técnicas y opciones de entrega para encontrar una solución adecuada a tus tiempos y presupuesto.",
+                  "Our team can help you review configurations, technical specifications, and delivery options to find the right fit for your schedule and budget."
                 )}
               </p>
 
@@ -106,7 +106,7 @@ export default function PhoneChatSimulator() {
                   </div>
                   <div>
                     <span className="text-[11px] text-[#86868b] block font-medium">
-                      {t("WhatsApp Rentas y Arrendamiento", "Rentals WhatsApp")}
+                      {t("WhatsApp Rentas y Logística", "Rentals & Logistics WhatsApp")}
                     </span>
                     <strong className="text-sm font-bold text-black group-hover:text-capelton-green transition-colors">
                       {CONTACT_INFO.rentas.phone}
@@ -115,7 +115,7 @@ export default function PhoneChatSimulator() {
                 </a>
               </div>
 
-              {/* Action Buttons for Ventas & Rentas */}
+              {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center gap-3">
                 <a
                   href={CONTACT_INFO.ventas.waLink}
@@ -125,19 +125,8 @@ export default function PhoneChatSimulator() {
                   className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs sm:text-sm font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all shadow-[0_4px_15px_rgba(0,177,64,0.3)] hover:shadow-[0_8px_25px_rgba(0,177,64,0.45)] flex items-center justify-center gap-2 group"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
-                  <span>{t("Chatear con Ventas", "Chat with Sales")}</span>
+                  <span>{t("Iniciar conversación por WhatsApp", "Start Conversation on WhatsApp")}</span>
                   <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </a>
-
-                <a
-                  href={CONTACT_INFO.rentas.waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick("rentas", "chat_simulator_cta")}
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs sm:text-sm font-bold text-black bg-black/[0.05] hover:bg-black/[0.1] border border-black/10 transition-all flex items-center justify-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4 text-capelton-green" />
-                  <span>{t("Chatear con Rentas", "Chat with Rentals")}</span>
                 </a>
               </div>
 
@@ -149,7 +138,7 @@ export default function PhoneChatSimulator() {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5 text-capelton-green" />
-                  {t("Tiempo de respuesta < 5 min", "Response time < 5 min")}
+                  {t("Atención inmediata de planta", "Direct manufacturer support")}
                 </span>
               </div>
             </FadeIn>
@@ -194,64 +183,85 @@ export default function PhoneChatSimulator() {
                   </div>
 
                   {/* Chat Dialogue Message Feed */}
-                  <div className="p-4 space-y-3.5 overflow-y-auto flex-1 text-xs">
+                  <div className="p-4 space-y-3 overflow-y-auto flex-1 text-xs">
                     {/* Date Divider */}
-                    <div className="text-center my-1">
+                    <div className="text-center my-0.5">
                       <span className="text-[9px] text-[#86868b] uppercase tracking-wider bg-white/80 px-2 py-0.5 rounded-full border border-black/5">
                         {t("Hoy", "Today")}
                       </span>
                     </div>
 
-                    {/* Client Bubble */}
+                    {/* Client Bubble 1 */}
                     <div className="flex flex-col items-end">
-                      <div className="bg-[#e1f3e7] text-neutral-900 p-3 rounded-2xl rounded-tr-xs max-w-[85%] shadow-xs leading-relaxed">
+                      <div className="bg-[#e1f3e7] text-neutral-900 p-2.5 rounded-2xl rounded-tr-xs max-w-[85%] shadow-2xs leading-relaxed">
                         {t(
-                          "Hola, necesito una caseta de 6M y una oficina móvil para entrega en Querétaro el próximo lunes. ¿Tienen stock disponible?",
-                          "Hello, I need a 6M guard booth and a mobile office for delivery in Querétaro next Monday. Do you have units in stock?"
+                          "Hola, necesitamos equipar un frente de obra en Querétaro para unas 8 personas. ¿Qué opción nos recomiendan?",
+                          "Hello, we need to equip a jobsite in Querétaro for around 8 people. What unit do you recommend?"
                         )}
                       </div>
-                      <span className="text-[9px] text-[#86868b] mt-1 flex items-center gap-0.5">
+                      <span className="text-[9px] text-[#86868b] mt-0.5 flex items-center gap-0.5">
                         09:41 AM <CheckCheck className="w-3 h-3 text-blue-500" />
                       </span>
                     </div>
 
-                    {/* Capelton Advisor Bubble */}
+                    {/* Capelton Advisor Bubble 1 */}
                     <div className="flex flex-col items-start">
-                      <div className="bg-white text-neutral-900 p-3 rounded-2xl rounded-tl-xs max-w-[90%] shadow-xs border border-black/5 leading-relaxed">
+                      <div className="bg-white text-neutral-900 p-2.5 rounded-2xl rounded-tl-xs max-w-[90%] shadow-2xs border border-black/5 leading-relaxed">
                         {t(
-                          "¡Hola! 👋 Con gusto. Tenemos unidades listas en planta con chasis Calibre 14 y entrega garantizada en 24-48h con maniobra incluida.",
-                          "Hello! 👋 Gladly. We have units ready at our plant with 14-Gauge chassis and guaranteed 24-48h delivery with placement included."
+                          "¡Hola! Con gusto. Para 8 personas te sugiero la oficina CM-6M o la CM-8M si necesitan privado gerencial y medio baño integrado.",
+                          "Hello! Gladly. For 8 people we recommend the CM-6M office, or the CM-8M if you need an executive office and private restroom."
                         )}
                       </div>
-                      <div className="bg-white text-neutral-900 p-3 rounded-2xl max-w-[90%] shadow-xs border border-black/5 mt-1 leading-relaxed">
-                        {language === "en" ? (
-                          <>Do you prefer a <strong>100% tax-deductible monthly Rental (OPEX)</strong> or a <strong>Direct asset purchase</strong>?</>
-                        ) : (
-                          <>¿Prefieres esquema de <strong>Renta mensual 100% deducible (OPEX)</strong> o <strong>Venta directa patrimonial</strong>?</>
+                      <div className="bg-white text-neutral-900 p-2.5 rounded-2xl max-w-[90%] shadow-2xs border border-black/5 mt-1 leading-relaxed">
+                        {t(
+                          "¿Cuentan con acceso para cama baja y fecha estimada de inicio de obra?",
+                          "Do you have lowboy access on site, and what is your target start date?"
                         )}
                       </div>
-                      <span className="text-[9px] text-[#86868b] mt-1">
+                      <span className="text-[9px] text-[#86868b] mt-0.5">
                         09:42 AM
                       </span>
                     </div>
 
+                    {/* Client Bubble 2 */}
+                    <div className="flex flex-col items-end">
+                      <div className="bg-[#e1f3e7] text-neutral-900 p-2.5 rounded-2xl rounded-tr-xs max-w-[85%] shadow-2xs leading-relaxed">
+                        {t(
+                          "Sí, el acceso está libre y arrancamos en dos semanas.",
+                          "Yes, access is clear and we start in two weeks."
+                        )}
+                      </div>
+                      <span className="text-[9px] text-[#86868b] mt-0.5 flex items-center gap-0.5">
+                        09:43 AM <CheckCheck className="w-3 h-3 text-blue-500" />
+                      </span>
+                    </div>
+
+                    {/* Capelton Advisor Bubble 2 */}
+                    <div className="flex flex-col items-start">
+                      <div className="bg-white text-neutral-900 p-2.5 rounded-2xl rounded-tl-xs max-w-[90%] shadow-2xs border border-black/5 leading-relaxed">
+                        {t(
+                          "Excelente. Te comparto la ficha técnica con plano de distribución y cotización formal con flete.",
+                          "Excellent. I am sharing the spec sheet with layout plans and formal freight quote."
+                        )}
+                      </div>
+                      <span className="text-[9px] text-[#86868b] mt-0.5">
+                        09:43 AM
+                      </span>
+                    </div>
+
                     {/* Interactive Quick Reply Pills inside Simulator */}
-                    <div className="pt-2 space-y-1.5">
+                    <div className="pt-1.5 space-y-1.5">
                       <span className="text-[10px] text-[#86868b] font-semibold block px-1">
                         {t("Selecciona para continuar a WhatsApp:", "Select to continue to WhatsApp:")}
                       </span>
                       {quickReplies.map((reply) => (
                         <a
                           key={reply.id}
-                          href={
-                            reply.id === "renta"
-                              ? `https://wa.me/${CONTACT_INFO.rentas.waNumber}?text=${encodeURIComponent(reply.msg)}`
-                              : `https://wa.me/${CONTACT_INFO.ventas.waNumber}?text=${encodeURIComponent(reply.msg)}`
-                          }
+                          href={`https://wa.me/${CONTACT_INFO.ventas.waNumber}?text=${encodeURIComponent(reply.msg)}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          onClick={() => trackWhatsAppClick(reply.id === "renta" ? "rentas" : "ventas", "simulator_quick_reply")}
-                          className="w-full bg-white hover:bg-capelton-green hover:text-white p-2.5 rounded-xl border border-black/8 shadow-xs flex items-center justify-between text-[11px] font-semibold text-black transition-all group/btn"
+                          onClick={() => trackWhatsAppClick("ventas", "simulator_quick_reply")}
+                          className="w-full bg-white hover:bg-capelton-green hover:text-white p-2.5 rounded-xl border border-black/8 shadow-2xs flex items-center justify-between text-[11px] font-semibold text-black transition-all group/btn"
                         >
                           <span>{reply.label}</span>
                           <ArrowRight className="w-3 h-3 text-capelton-green group-hover/btn:text-white transform group-hover/btn:translate-x-0.5 transition-transform" />
@@ -266,10 +276,10 @@ export default function PhoneChatSimulator() {
                       {t("Escribe tu mensaje...", "Type your message...")}
                     </div>
                     <a
-                      href={selectedTopic === "renta" ? CONTACT_INFO.rentas.waLink : CONTACT_INFO.ventas.waLink}
+                      href={CONTACT_INFO.ventas.waLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => trackWhatsAppClick(selectedTopic === "renta" ? "rentas" : "ventas", "simulator_send_btn")}
+                      onClick={() => trackWhatsAppClick("ventas", "simulator_send_btn")}
                       className="w-8 h-8 rounded-full bg-capelton-green text-white flex items-center justify-center hover:bg-capelton-darkgreen transition-colors"
                       title={t("Enviar por WhatsApp", "Send via WhatsApp")}
                     >

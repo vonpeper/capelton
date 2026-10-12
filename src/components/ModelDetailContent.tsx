@@ -160,22 +160,24 @@ export default function ModelDetailContent({
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick("ventas", `detail_header_${product.modelCode}`)}
               title={t("WhatsApp Ventas: 55 2964 0104", "WhatsApp Sales: +52 55 2964 0104")}
-              className="px-3 py-1.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all flex items-center gap-1.5 shadow-[0_2px_10px_rgba(0,177,64,0.3)]"
+              className="px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all flex items-center gap-1.5 shadow-[0_2px_10px_rgba(0,177,64,0.3)]"
             >
               <MessageCircle className="w-3 h-3 fill-white" />
-              <span>{t("Venta", "Buy")}</span>
+              <span>{language === "en" ? "Request Quote" : "Cotizar Venta"}</span>
             </a>
-            <a
-              href={`https://wa.me/5215579483632?text=${whatsappRentMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick("rentas", `detail_header_${product.modelCode}`)}
-              title={t("WhatsApp Rentas: 55 7948 3632", "WhatsApp Rentals: +52 55 7948 3632")}
-              className="px-3 py-1.5 rounded-full text-xs font-bold text-black bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all flex items-center gap-1.5"
-            >
-              <MessageCircle className="w-3 h-3 text-capelton-green" />
-              <span>{t("Renta", "Rent")}</span>
-            </a>
+            {language !== "en" && (
+              <a
+                href={`https://wa.me/5215579483632?text=${whatsappRentMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("rentas", `detail_header_${product.modelCode}`)}
+                title="WhatsApp Rentas: 55 7948 3632"
+                className="px-3 py-1.5 rounded-full text-xs font-bold text-black bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all flex items-center gap-1.5"
+              >
+                <MessageCircle className="w-3 h-3 text-capelton-green" />
+                <span>Cotizar Renta</span>
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -215,16 +217,13 @@ export default function ModelDetailContent({
             <div>
               <SciFiHeading
                 text={product.modelCode}
-                className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-black tracking-tighter leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black tracking-tight leading-tight"
                 align="left"
-                showLaser={true}
-                showHudTag={true}
-                hudTag={`${categoryName.toUpperCase()} // ${t("ACERO CAL. 14", "14-GAUGE STEEL")}`}
+                showLaser={false}
+                showHudTag={false}
               />
-              <p className="text-sm text-[#6e6e73] mt-3 leading-relaxed">
-                {language === "en"
-                  ? `High-specification ${categoryName.toLowerCase()} unit engineered for rapid 24-48h deployment, certified seismic and anti-torsion structural rigidity, and optimal thermal performance.`
-                  : product.tagline}
+              <p className="text-sm text-[#515154] mt-3 leading-relaxed">
+                {language === "en" ? (product.taglineEn || product.tagline) : product.tagline}
               </p>
             </div>
 
@@ -274,7 +273,7 @@ export default function ModelDetailContent({
                   className="w-full py-3.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(0,177,64,0.3)]"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
-                  <span>{t("Cotizar Venta Inmediata", "Instant Purchase Quote")}</span>
+                  <span>{language === "en" ? "Request Purchase Quote" : "Cotizar Venta Inmediata"}</span>
                 </a>
                 <span className="block text-[10px] text-center text-[#86868b] mt-1 font-medium">
                   {t("Atención Ventas:", "Sales Department:")}{" "}
@@ -282,22 +281,23 @@ export default function ModelDetailContent({
                 </span>
               </div>
 
-              <div>
-                <a
-                  href={`https://wa.me/5215579483632?text=${whatsappRentMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick("rentas", `detail_main_${product.modelCode}`)}
-                  className="w-full py-3.5 rounded-full text-xs font-bold text-black bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all flex items-center justify-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4 text-capelton-green" />
-                  <span>{t("Solicitar Esquema de Renta", "Request Rental Plan")}</span>
-                </a>
-                <span className="block text-[10px] text-center text-[#86868b] mt-1 font-medium">
-                  {t("Atención Rentas:", "Rentals Department:")}{" "}
-                  <strong className="text-black">55 7948 3632</strong>
-                </span>
-              </div>
+              {language !== "en" && (
+                <div>
+                  <a
+                    href={`https://wa.me/5215579483632?text=${whatsappRentMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick("rentas", `detail_main_${product.modelCode}`)}
+                    className="w-full py-3.5 rounded-full text-xs font-bold text-black bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4 text-capelton-green" />
+                    <span>Solicitar Esquema de Renta</span>
+                  </a>
+                  <span className="block text-[10px] text-center text-[#86868b] mt-1 font-medium">
+                    Atención Rentas: <strong className="text-black">55 7948 3632</strong>
+                  </span>
+                </div>
+              )}
 
               {product.technicalSheetUrl && (
                 <a

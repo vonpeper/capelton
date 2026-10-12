@@ -40,8 +40,8 @@ export default function HeroFlagshipShowcase() {
       {/* Understated Minimal Footnote */}
       <div className="relative z-10 text-xs font-medium text-[#86868b] tracking-normal pt-2 text-center">
         {t(
-          "Modelo CM-10M • Acero Calibre 14 • Despliegue en 24h",
-          "Model CM-10M • 14-Gauge Steel • 24h Deployment"
+          "Unidad de referencia CM-10M. Las configuraciones y especificaciones varían por modelo.",
+          "Reference unit CM-10M. Configurations and specifications vary by model."
         )}
       </div>
     </div>

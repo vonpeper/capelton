@@ -394,70 +394,69 @@ export default function Hero() {
             introStage === "logo" ? "opacity-0 pointer-events-none select-none" : "opacity-100"
           }`}
         >
-          {/* Eyebrow: Sentence case, clean, no badge border */}
-          <p className="text-base sm:text-lg font-semibold text-[#1d1d1f] mb-3">
-            {t("Línea modular 2026", "2026 Modular Line")}
-          </p>
-
-          {/* Main Headline: Sci-Fi Decrypting HUD Atmosphere */}
+          {/* Main Headline: Clear, authentic, non-AI corporate headline */}
           <SciFiHeading
-            lines={[
-              t("Espacios móviles.", "Mobile Spaces."),
-              t("Redefinidos por la ingeniería.", "Redefined by Engineering.")
-            ]}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] font-bold tracking-tight text-[#1d1d1f] leading-[1.06] mb-5"
-            showLaser={true}
-            showHudTag={true}
-            hudTag={t("INGENIERÍA MODULAR // CALIBRE 14", "MODULAR ENGINEERING // 14-GAUGE")}
+            text={t(
+              "Oficinas móviles diseñadas para tu operación.",
+              "Mobile Offices Built Around Your Operation."
+            )}
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] font-bold tracking-tight text-[#1d1d1f] leading-[1.06] mb-5 max-w-4xl"
+            showLaser={false}
+            showHudTag={false}
             trigger={introStage === "heading"}
             delay={100}
-            duration={900}
+            duration={700}
           />
 
-          {/* Breathable subtitle */}
-          <p className="text-base sm:text-xl text-[#6e6e73] max-w-2xl font-normal leading-relaxed mb-8">
+          {/* Breathable, confident subtitle */}
+          <p className="text-base sm:text-xl text-[#6e6e73] max-w-3xl font-normal leading-relaxed mb-8">
             {t(
-              "Oficinas ejecutivas y casetas de alta especificación con entrega inmediata en todo México.",
-              "Executive offices and high-specification booths with immediate delivery across Mexico."
+              "Fabricamos espacios de trabajo móviles para la industria, la construcción y proyectos que necesitan soluciones prácticas, confiables y adaptadas a sus necesidades.",
+              "We design and manufacture mobile workspaces for jobsites, teams, and demanding operations. Standard configurations where they work. Custom solutions where they matter."
             )}
           </p>
 
-          {/* Action buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-2 sm:mb-3">
-            {/* Botón WhatsApp Ventas */}
+          {/* Action buttons: Significantly more visible, prominent & bold hierarchy */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-4 w-full sm:w-auto">
+            {/* CTA 1: Explorar Productos */}
+            <Link
+              href="/#modelos"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full text-sm sm:text-base font-bold text-white bg-black hover:bg-[#27272a] transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.18)] hover:shadow-[0_6px_22px_rgba(0,0,0,0.25)] flex items-center justify-center gap-2 group"
+            >
+              <span>{t("Explorar productos", "Explore Products")}</span>
+              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+            </Link>
+
+            {/* CTA 2: Solicitar Cotización */}
             <a
               href={CONTACT_INFO.ventas.waLink}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick("ventas", "hero_cta")}
-              title={t("WhatsApp Ventas Directas: 55 2964 0104", "WhatsApp Direct Sales: +52 55 2964 0104")}
-              className="px-5 py-2.5 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_4px_15px_rgba(0,177,64,0.3)] hover:shadow-[0_6px_20px_rgba(0,177,64,0.45)] flex items-center gap-2 group"
+              onClick={() => trackWhatsAppClick("ventas", "hero_primary_cta")}
+              title={t("WhatsApp Ventas Directas: 55 2964 0104", "WhatsApp Sales: +52 55 2964 0104")}
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full text-sm sm:text-base font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all duration-300 shadow-[0_4px_18px_rgba(0,177,64,0.35)] hover:shadow-[0_6px_26px_rgba(0,177,64,0.5)] flex items-center justify-center gap-2.5 group"
             >
-              <MessageCircle className="w-3.5 h-3.5 fill-white" />
-              <span>{t("WhatsApp Ventas", "WhatsApp Sales")}</span>
-              <span className="hidden sm:inline text-[10px] opacity-80 font-normal">55 2964 0104</span>
+              <MessageCircle className="w-4 h-4 fill-white" />
+              <span>{t("Solicitar cotización", "Request a Quote")}</span>
             </a>
+          </div>
 
-            {/* Botón WhatsApp Rentas */}
-            <a
-              href={CONTACT_INFO.rentas.waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick("rentas", "hero_cta")}
-              title={t("WhatsApp Rentas y Arrendamiento: 55 7948 3632", "WhatsApp Rentals: +52 55 7948 3632")}
-              className="px-5 py-2.5 rounded-full text-xs font-bold text-black bg-black/[0.04] hover:bg-black/[0.08] border border-black/10 transition-all duration-300 flex items-center gap-2"
-            >
-              <MessageCircle className="w-3.5 h-3.5 text-capelton-green" />
-              <span>{t("WhatsApp Rentas", "WhatsApp Rentals")}</span>
-              <span className="hidden sm:inline text-[10px] text-[#6e6e73] font-normal">55 7948 3632</span>
-            </a>
-
+          {/* Understated secondary direct channels */}
+          <div className="flex items-center gap-4 text-xs text-[#86868b]">
             <Link
               href="#duo-comparator"
-              className="text-xs font-semibold text-[#0066cc] hover:underline flex items-center gap-1 group ml-1"
+              className="hover:text-black transition-colors flex items-center gap-1 font-medium"
             >
-              <span>{t("Comparar modelos", "Compare Models")}</span>
-              <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+              <span>{t("Comparador entre modelos", "Compare Models")}</span>
+              <ArrowRight className="w-3 h-3 text-capelton-green" />
+            </Link>
+            <span>•</span>
+            <Link
+              href="#como-construimos"
+              className="hover:text-black transition-colors flex items-center gap-1 font-medium"
+            >
+              <span>{t("Cómo construimos", "How We Build")}</span>
+              <ArrowRight className="w-3 h-3 text-capelton-green" />
             </Link>
           </div>
         </div>

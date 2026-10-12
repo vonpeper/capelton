@@ -16,65 +16,54 @@ export default function AboutSection() {
     {
       value: "+15",
       label: t("Años de Trayectoria", "Years of Track Record"),
-      sub: t("Ingeniería en manufactura modular", "Modular manufacturing engineering"),
+      sub: t("Manufactura especializada en planta", "Specialized in-house manufacturing"),
     },
     {
       value: "100%",
-      label: t("Cobertura en México", "Coverage across Mexico"),
-      sub: t("Logística y traslados nacionales", "Nationwide logistics and transit"),
+      label: t("Cobertura y Entrega", "Logistics & Delivery"),
+      sub: t("Logística y maniobra en todo México", "Transport and crane placement on site"),
     },
     {
-      value: "24-48h",
-      label: t("Despliegue Inmediato", "Rapid Deployment"),
-      sub: t("Instalación Plug & Play en obra", "Plug & Play on-site installation"),
+      value: "1 Pieza",
+      label: t("Techo de Aluminio", "Seamless Aluminum Roof"),
+      sub: t("Sin uniones ni riesgo de filtraciones", "Zero vulnerable seams, zero leaks"),
     },
     {
-      value: "Cal. 14",
-      label: t("Acero Certificado", "Certified Steel"),
-      sub: t("Garantía de integridad estructural", "Structural integrity warranty"),
+      value: "Directo",
+      label: t("Soporte de Fábrica", "Direct Factory Support"),
+      sub: t("Garantía y refacciones sin intermediarios", "Warranty and parts direct from plant"),
     },
   ];
 
   return (
-    <section id="nosotros" className="py-24 sm:py-32 bg-[#f5f5f7] text-[#1d1d1f] relative overflow-hidden">
+    <section id="cotizacion-cierre" className="py-24 sm:py-32 bg-[#f5f5f7] text-[#1d1d1f] relative overflow-hidden border-t border-black/5">
       {/* Ambient Breathing Radial Pulse in Capelton Green */}
       <div className="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-r from-capelton-green/10 via-capelton-green/3 to-transparent rounded-full blur-[140px] pointer-events-none animate-pulse duration-[6000ms]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text Column */}
-          <FadeIn direction="up">
-            <div>
-              <p className="text-base sm:text-lg font-semibold text-[#1d1d1f] mb-3">
-                {t("Identidad e ingeniería", "Identity & Engineering")}
-              </p>
+          <div className="lg:col-span-6">
+            <FadeIn direction="up">
+              <span className="text-xs sm:text-sm font-semibold text-capelton-green uppercase tracking-wider block mb-3">
+                {t("FABRICACIÓN DIRECTA · ASESORÍA EN SITIO", "DIRECT MANUFACTURING · FIELD GUIDANCE")}
+              </span>
               <SciFiHeading
                 text={t(
-                  "Espacios de trabajo móviles. Seguros y de alta eficiencia.",
-                  "Mobile workspaces. Secure and highly efficient."
+                  "¿Listo para cotizar el espacio móvil de tu proyecto?",
+                  "Ready to Configure the Right Workspace for Your Project?"
                 )}
                 as="h2"
                 align="left"
-                className="text-4xl sm:text-6xl font-bold tracking-tight text-[#1d1d1f] leading-[1.08] mb-6"
+                className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.1] mb-5"
                 showLaser={false}
                 showHudTag={false}
                 duration={750}
               />
-              <p className="text-sm sm:text-base text-[#6e6e73] font-light leading-relaxed mb-6">
-                {language === "en" ? (
-                  <>
-                    At <strong className="text-black font-semibold">Capelton Mexico</strong> we develop rapid-implementation modular solutions for industry, mining, and construction.
-                  </>
-                ) : (
-                  <>
-                    En <strong className="text-black font-semibold">Capelton de México</strong> desarrollamos soluciones modulares de rápida implementación para la industria, la minería y la construcción.
-                  </>
-                )}
-              </p>
-              <p className="text-sm sm:text-base text-[#6e6e73] font-light leading-relaxed mb-8">
+              <p className="text-sm sm:text-base text-[#515154] font-normal leading-relaxed mb-8">
                 {t(
-                  "Espacios climatizados, ergonómicos y construidos con materiales de alto desempeño para adaptarse al ritmo de trabajo más demandante.",
-                  "Climate-controlled, ergonomic spaces engineered with high-performance materials to adapt to the most demanding operational pace."
+                  "Fabricamos en planta propia con chasis de acero reforzado, muros aislados y techo de aluminio continuo. Recibe asesoría técnica personalizada, planos de distribución y propuesta formal con logística incluida.",
+                  "Manufactured in-house with reinforced steel chassis, continuous thermal insulation, and seamless aluminum roof. Receive tailored technical consultation, floor plans, and a formal proposal with delivery included."
                 )}
               </p>
 
@@ -83,23 +72,12 @@ export default function AboutSection() {
                   href={CONTACT_INFO.ventas.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick("ventas", "about_section")}
-                  className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all shadow-md flex items-center justify-center gap-2"
+                  onClick={() => trackWhatsAppClick("ventas", "closing_cta")}
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all shadow-[0_4px_15px_rgba(0,177,64,0.3)] hover:shadow-[0_8px_25px_rgba(0,177,64,0.45)] flex items-center justify-center gap-2 group"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 fill-white" />
-                  <span>{t("WhatsApp Ventas", "WhatsApp Sales")}</span>
-                  <span className="text-[10px] opacity-80 font-normal">55 2964 0104</span>
-                </a>
-                <a
-                  href={CONTACT_INFO.rentas.waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick("rentas", "about_section")}
-                  className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold text-black bg-white hover:bg-gray-50 border border-black/10 transition-colors flex items-center justify-center gap-2 shadow-sm"
-                >
-                  <MessageCircle className="w-3.5 h-3.5 text-capelton-green" />
-                  <span>{t("WhatsApp Rentas", "WhatsApp Rentals")}</span>
-                  <span className="text-[10px] text-[#6e6e73] font-normal">55 7948 3632</span>
+                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <span>{t("Solicitar Cotización por WhatsApp", "Request Quote via WhatsApp")}</span>
+                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
 
@@ -109,36 +87,38 @@ export default function AboutSection() {
               >
                 <span>
                   {t(
-                    "Conoce nuestra historia completa y procesos de manufactura",
-                    "Learn our complete history and manufacturing processes"
+                    "Conoce más sobre nuestra historia, valores y planta en Nosotros",
+                    "Learn more about our history, values, and manufacturing plant in About Us"
                   )}
                 </span>
                 <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
               </Link>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
 
           {/* Right Stats Grid (Apple Bento Style) */}
-          <FadeIn direction="up" delay={200}>
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-[28px] p-7 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.03)]"
-                >
-                  <span className="text-4xl sm:text-5xl font-semibold text-black tracking-tight mb-3">
-                    {stat.value}
-                  </span>
-                  <div>
-                    <h4 className="text-xs sm:text-sm font-semibold text-black">
-                      {stat.label}
-                    </h4>
-                    <p className="text-[11px] text-[#86868b] mt-0.5 font-light">{stat.sub}</p>
+          <div className="lg:col-span-6">
+            <FadeIn direction="up" delay={150}>
+              <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                {stats.map((stat, i) => (
+                  <div
+                    key={i}
+                    className="bg-white rounded-[24px] sm:rounded-[28px] p-6 sm:p-7 flex flex-col justify-between shadow-2xs border border-black/5 hover:border-capelton-green/40 transition-all"
+                  >
+                    <span className="text-3xl sm:text-4xl font-bold text-black tracking-tight mb-2">
+                      {stat.value}
+                    </span>
+                    <div>
+                      <h4 className="text-xs sm:text-sm font-bold text-black">
+                        {stat.label}
+                      </h4>
+                      <p className="text-[11px] text-[#6e6e73] mt-0.5 leading-snug">{stat.sub}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </div>
     </section>

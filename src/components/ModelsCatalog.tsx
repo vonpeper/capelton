@@ -21,8 +21,8 @@ export default function ModelsCatalog({ products, categories }: ModelsCatalogPro
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  // Curated flagship selection representing core categories
-  const flagshipSlugs = ["cm10m", "cmvc3m2", "cmd10br", "cms10m", "cmm12co", "bodega8x32"];
+  // Curated flagship selection: Top 5 models most requested in industry & construction
+  const flagshipSlugs = ["cm10m", "cmv6m2", "cm6m", "cmd10br", "cms10m"];
   const flagshipModels = flagshipSlugs
     .map((slug) => products.find((p) => p.slug === slug))
     .filter(Boolean) as ProductModel[];
@@ -45,26 +45,26 @@ export default function ModelsCatalog({ products, categories }: ModelsCatalogPro
         <FadeIn direction="up">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div className="max-w-2xl">
-              <p className="text-base sm:text-lg font-semibold text-[#1d1d1f] mb-3">
-                {t("Línea insignia", "Flagship Line")}
+              <p className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-capelton-green mb-3">
+                {t("UNIDADES A LA MEDIDA DE CADA OPERACIÓN", "WORKSPACES TAILORED TO EVERY OPERATION")}
               </p>
               <SciFiHeading
                 text={t(
-                  "Espacios esenciales. Fabricados con precisión.",
-                  "Essential spaces. Engineered with precision."
+                  "Espacios esenciales diseñados para tu operación.",
+                  "Essential Workspaces Built for Demanding Operations."
                 )}
                 as="h2"
                 align="left"
-                className="text-4xl sm:text-6xl font-bold tracking-tight text-[#1d1d1f] leading-[1.08]"
+                className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.12]"
                 showLaser={false}
                 showHudTag={false}
                 duration={750}
               />
             </div>
-            <p className="text-sm text-[#6e6e73] max-w-sm font-light">
+            <p className="text-sm text-[#6e6e73] max-w-sm font-normal leading-relaxed">
               {t(
                 "Selección curada de los módulos más solicitados por la industria y la construcción en México.",
-                "Curated selection of the most requested modular units across industry and construction in Mexico."
+                "Curated selection of our most requested mobile workspaces across industry and construction."
               )}
             </p>
           </div>
@@ -81,11 +81,11 @@ export default function ModelsCatalog({ products, categories }: ModelsCatalogPro
                 <span className="text-[11px] font-semibold uppercase tracking-wider text-[#86868b] block mb-1">
                   {t(model.categoryName)}
                 </span>
-                <h3 className="text-2xl font-semibold tracking-tight text-black mb-2">
+                <h3 className="text-2xl font-bold tracking-tight text-black mb-2">
                   {model.modelCode}
                 </h3>
-                <p className="text-xs text-[#6e6e73] line-clamp-2 mb-6 font-light">
-                  {model.tagline}
+                <p className="text-xs text-[#515154] line-clamp-3 mb-6 font-normal leading-relaxed">
+                  {language === "en" ? (model.taglineEn || model.tagline) : model.tagline}
                 </p>
 
                 {/* Large Product Render with Natural Shadow */}

@@ -145,10 +145,10 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Categorías modulares */}
+            {/* Categorías */}
             <div className="space-y-3">
               <h4 className="text-xs font-bold uppercase tracking-wider text-white" style={{ color: "#ffffff" }}>
-                {t("Espacios Modulares", "Modular Spaces")}
+                {t("Espacios de Trabajo", "Mobile Workspaces")}
               </h4>
               <ul className="space-y-2 text-xs">
                 {categories.slice(0, 7).map((cat) => (
@@ -168,7 +168,7 @@ export default function Footer() {
             {/* Modalidades y Servicios */}
             <div className="space-y-3">
               <h4 className="text-xs font-bold uppercase tracking-wider text-white" style={{ color: "#ffffff" }}>
-                {t("Modalidades & Servicios", "Modes & Services")}
+                {t("Modalidades & Soluciones", "Solutions & Delivery")}
               </h4>
               <ul className="space-y-2 text-xs">
                 <li>
@@ -178,32 +178,32 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/#modalidades" className="text-neutral-300 hover:text-capelton-green transition-colors" style={{ color: "#d1d5db" }}>
-                    {t("Renta 100% Deducible (OPEX)", "100% Tax-Deductible Rental")}
+                    {t("Renta Flexible para Proyectos", "Jobsite Workspace Options")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/#duo-comparator" className="text-neutral-300 hover:text-capelton-green transition-colors" style={{ color: "#d1d5db" }}>
-                    {t("Comparador Técnico Dúo", "Duo Technical Comparator")}
+                    {t("Herramienta de Decisión Dúo", "Duo Decision Tool")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/#modelos" className="text-neutral-300 hover:text-capelton-green transition-colors" style={{ color: "#d1d5db" }}>
-                    {t("Catálogo de 31 Configuraciones", "Catalog of 31 Configurations")}
+                    {t("Catálogo de Productos", "Product Catalog")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/#por-que-capelton" className="text-neutral-300 hover:text-capelton-green transition-colors" style={{ color: "#d1d5db" }}>
-                    {t("Despliegue Inmediato 24-48h", "Rapid 24-48h Deployment")}
+                    {t("Tres Pilares: Fabricación y Entrega", "Three Pillars: Build & Deliver")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#proyectos" className="text-neutral-300 hover:text-capelton-green transition-colors" style={{ color: "#d1d5db" }}>
+                    {t("Proyectos Entregados en Campo", "Field Projects & Deliveries")}
                   </Link>
                 </li>
                 <li>
                   <Link href="/nosotros" className="text-neutral-300 hover:text-capelton-green transition-colors" style={{ color: "#d1d5db" }}>
-                    {t("Flete y Maniobras con Grúa Hiab", "Freight & Hiab Crane Rigging")}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/nosotros" className="text-neutral-300 hover:text-capelton-green transition-colors" style={{ color: "#d1d5db" }}>
-                    {t("Póliza de Garantía Estructural", "Structural Warranty Policy")}
+                    {t("Garantía Directa de Fábrica", "Direct Factory Warranty")}
                   </Link>
                 </li>
               </ul>

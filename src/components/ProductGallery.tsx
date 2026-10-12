@@ -57,6 +57,12 @@ function getLabelAndType(url: string, index: number): { label: string; labelEn: 
   if (name.includes("planta") || name.includes("plano") || name.includes("blueprint") || name.includes("_6b")) {
     return { label: "Plano Arquitectónico", labelEn: "Architectural Blueprint", type: "blueprint" };
   }
+  if (name.includes("almacen") || name.includes("categoria")) {
+    return { label: "Perspectiva de Interior", labelEn: "Interior Perspective", type: "render" };
+  }
+  if (name.includes("proyecto")) {
+    return { label: `Entrega en Obra #${index + 1}`, labelEn: `On-Site Delivery #${index + 1}`, type: "render" };
+  }
   if (name.includes("vista")) {
     return { label: `Perspectiva 3D #${index + 1}`, labelEn: `3D Perspective #${index + 1}`, type: "render" };
   }
@@ -66,7 +72,7 @@ function getLabelAndType(url: string, index: number): { label: string; labelEn: 
     return { label: "Vista Isométrica 3D", labelEn: "3D Isometric View", type: "render" };
   }
 
-  return null;
+  return { label: `Vista #${index + 1}`, labelEn: `View #${index + 1}`, type: "render" };
 }
 
 export default function ProductGallery({
@@ -274,6 +280,11 @@ export default function ProductGallery({
             className={`object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.08)] transition-all duration-300 animate-in fade-in zoom-in-95 ${
               currentItem.type === "blueprint" ? "p-2 sm:p-4 bg-white/70 rounded-2xl border border-black/5" : ""
             }`}
+            onError={(e) => {
+              const target = e.currentTarget as HTMLImageElement;
+              target.srcset = "";
+              target.src = "/images/CM_10M_Vista_01_cropped.png";
+            }}
           />
         </div>
 
@@ -313,6 +324,11 @@ export default function ProductGallery({
                       fill
                       sizes="96px"
                       className="object-contain"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.srcset = "";
+                        target.src = "/images/CM_10M_Vista_01_cropped.png";
+                      }}
                     />
                   </div>
                 </button>
@@ -361,6 +377,11 @@ export default function ProductGallery({
               fill
               sizes="100vw"
               className="object-contain filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)]"
+              onError={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.srcset = "";
+                target.src = "/images/CM_10M_Vista_01_cropped.png";
+              }}
             />
 
             {/* Left & Right Lightbox Arrows */}
@@ -401,7 +422,18 @@ export default function ProductGallery({
                       : "border-white/20 opacity-40 hover:opacity-80"
                   }`}
                 >
-                  <Image src={item.url} alt={itemLabel} fill sizes="56px" className="object-contain p-1" />
+                  <Image
+                    src={item.url}
+                    alt={itemLabel}
+                    fill
+                    sizes="56px"
+                    className="object-contain p-1"
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.srcset = "";
+                      target.src = "/images/CM_10M_Vista_01_cropped.png";
+                    }}
+                  />
                 </button>
               );
             })}

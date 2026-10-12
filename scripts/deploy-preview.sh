@@ -20,8 +20,11 @@ REMOTE_HOST="propodvps1"
 REMOTE_DEST="/opt/stacks/capelton/site/prev/"
 
 echo "-> 2. Sincronizando archivos estáticos hacia ${REMOTE_HOST}:${REMOTE_DEST}..."
-ssh "${REMOTE_HOST}" "mkdir -p ${REMOTE_DEST}"
-rsync -avz --delete out/ "${REMOTE_HOST}:${REMOTE_DEST}"
+ssh "${REMOTE_HOST}" "mkdir -p ${REMOTE_DEST}_next/static/chunks/"
+# Sincronizar chunks acumulativamente sin borrar versiones previas en sesión de usuarios activos
+rsync -avz out/_next/static/chunks/ "${REMOTE_HOST}:${REMOTE_DEST}_next/static/chunks/"
+# Sincronizar el resto del sitio eliminando páginas obsoletas
+rsync -avz --delete --exclude='_next/static/chunks/' out/ "${REMOTE_HOST}:${REMOTE_DEST}"
 
 echo "=========================================================="
 echo "  ✅ Archivos sincronizados exitosamente a ${REMOTE_DEST}"

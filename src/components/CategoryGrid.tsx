@@ -62,8 +62,7 @@ const bentoCategories: BentoCategory[] = [
       "Perimeter access control booths with 360° visibility for site security.",
     modelsLabel: "2 modelos",
     modelsLabelEn: "2 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Categoria_Casetas.png",
+    image: "/images/categories/caseta-vigilancia.jpg",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Shield className="w-5 h-5 text-capelton-green" />,
   },
@@ -79,8 +78,7 @@ const bentoCategories: BentoCategory[] = [
       "Workforce lodging modules and base camps for civil and mining crews.",
     modelsLabel: "7 modelos",
     modelsLabelEn: "7 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Dormitorios_Corte.png",
+    image: "/images/categories/dormitorio-movil.jpg",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Bed className="w-5 h-5 text-capelton-green" />,
   },
@@ -96,8 +94,7 @@ const bentoCategories: BentoCategory[] = [
       "High-capacity mobile restroom trailers and modules with easy maintenance.",
     modelsLabel: "3 modelos",
     modelsLabelEn: "3 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Sanitarios_Corte.png",
+    image: "/images/categories/sanitario-movil.jpg",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Bath className="w-5 h-5 text-capelton-green" />,
   },
@@ -113,8 +110,7 @@ const bentoCategories: BentoCategory[] = [
       "Spacious climate-controlled dining units for workforce crews in the field.",
     modelsLabel: "3 modelos",
     modelsLabelEn: "3 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Comedores_Corte.png",
+    image: "/images/categories/comedor-movil.jpg",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <Utensils className="w-5 h-5 text-capelton-green" />,
   },
@@ -130,8 +126,7 @@ const bentoCategories: BentoCategory[] = [
       "Reinforced mobile storage units for secure tool, material, and equipment custody.",
     modelsLabel: "3 modelos",
     modelsLabelEn: "3 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/02/Contenedores_Corte.png",
+    image: "/images/categoria-almacenes.png",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Box className="w-5 h-5 text-capelton-green" />,
   },
@@ -147,8 +142,7 @@ const bentoCategories: BentoCategory[] = [
       "Mobile clinic units for employee health checkups and jobsite first aid.",
     modelsLabel: "4 modelos",
     modelsLabelEn: "4 models",
-    image:
-      "https://capeltonmexico.com/wp-content/uploads/2025/07/Consultorios_Corte-min-scaled.png",
+    image: "/images/categories/consultorio-movil.jpg",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <HeartPulse className="w-5 h-5 text-capelton-green" />,
   },

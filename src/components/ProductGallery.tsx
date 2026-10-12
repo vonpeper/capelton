@@ -40,11 +40,57 @@ function getLabelAndType(url: string, index: number): { label: string; labelEn: 
   const name = url.split("/").pop()?.toLowerCase() || "";
   const base = name.split(".")[0];
 
-  // Exclude numbers and any icon asset
-  if (base.match(/^\d+$/) || ICON_KEYWORDS.some((k) => name.includes(k))) {
-    return null;
+  // Specific Capelton 3D Category & Product Renders
+  if (name.includes("caseta-vigilancia")) {
+    return { label: "Render 3D Caseta de Vigilancia", labelEn: "3D Guard Booth Render", type: "render" };
+  }
+  if (name.includes("dormitorio-movil")) {
+    return { label: "Render 3D Dormitorio Móvil", labelEn: "3D Sleeper Unit Render", type: "render" };
+  }
+  if (name.includes("sanitario-movil")) {
+    return { label: "Render 3D Sanitario Móvil", labelEn: "3D Restroom Trailer Render", type: "render" };
+  }
+  if (name.includes("comedor-movil")) {
+    return { label: "Render 3D Comedor Móvil", labelEn: "3D Dining Unit Render", type: "render" };
+  }
+  if (name.includes("consultorio-movil")) {
+    return { label: "Render 3D Consultorio Móvil", labelEn: "3D Medical Clinic Render", type: "render" };
+  }
+  if (name.includes("categoria-almacenes")) {
+    return { label: "Render 3D Bodega y Contenedor", labelEn: "3D Storage & Container Render", type: "render" };
+  }
+  if (name.includes("cm_10m_vista_01") || name.includes("cropped")) {
+    return { label: "Render 3D Oficina Móvil", labelEn: "3D Mobile Office Render", type: "render" };
   }
 
+  // Equipment & Finishes Details
+  if (name.includes("lavamanos")) {
+    return { label: "Equipamiento: Lavamanos Industrial", labelEn: "Equipment: Industrial Basin", type: "render" };
+  }
+  if (name.includes("mingitorio")) {
+    return { label: "Equipamiento: Mingitorio Inox", labelEn: "Equipment: Stainless Urinal", type: "render" };
+  }
+  if (name.includes("piso_spc") || name.includes("piso")) {
+    return { label: "Acabados: Piso Núcleo Rígido SPC", labelEn: "Finishes: SPC Rigid Core Flooring", type: "render" };
+  }
+  if (name.includes("ventana")) {
+    return { label: "Ventanería: Aluminio Grado Industrial", labelEn: "Glazing: Industrial Aluminum", type: "render" };
+  }
+  if (name.includes("luminarias") || name.includes("luminaria")) {
+    return { label: "Iluminación: Luminarias LED NOM", labelEn: "Lighting: NOM Certified LED", type: "render" };
+  }
+
+  // Blueprints
+  if (name.includes("planta") || name.includes("plano") || name.includes("blueprint") || name.includes("_6b")) {
+    return { label: "Plano Arquitectónico Oficial", labelEn: "Architectural CAD Blueprint", type: "blueprint" };
+  }
+
+  // Project Photos
+  if (name.includes("proyecto")) {
+    return { label: `Entrega en Obra #${index + 1}`, labelEn: `On-Site Delivery #${index + 1}`, type: "render" };
+  }
+
+  // Standard perspective angles
   if (name.includes("vista_01") || name.includes("vista1")) {
     return { label: "Vista Frontal 3D", labelEn: "3D Front View", type: "render" };
   }
@@ -54,17 +100,10 @@ function getLabelAndType(url: string, index: number): { label: string; labelEn: 
   if (name.includes("vista_03") || name.includes("vista3")) {
     return { label: "Vista Posterior 3D", labelEn: "3D Rear View", type: "render" };
   }
-  if (name.includes("planta") || name.includes("plano") || name.includes("blueprint") || name.includes("_6b")) {
-    return { label: "Plano Arquitectónico", labelEn: "Architectural Blueprint", type: "blueprint" };
-  }
-  if (name.includes("almacen") || name.includes("categoria")) {
-    return { label: "Perspectiva de Interior", labelEn: "Interior Perspective", type: "render" };
-  }
-  if (name.includes("proyecto")) {
-    return { label: `Entrega en Obra #${index + 1}`, labelEn: `On-Site Delivery #${index + 1}`, type: "render" };
-  }
-  if (name.includes("vista")) {
-    return { label: `Perspectiva 3D #${index + 1}`, labelEn: `3D Perspective #${index + 1}`, type: "render" };
+
+  // Filter out pure numbers or generic black UI icons
+  if (base.match(/^\d+$/) || name.includes("_blk") || name.includes(".blk") || name.includes("logo") || name.includes("favicon")) {
+    return null;
   }
 
   // Model-named renders like cm_10m...

@@ -178,7 +178,7 @@ export default function AppleScrollytelling() {
   const stages = [
     {
       id: 0,
-      src: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA1-scaled.png",
+      src: "/images/CM_10M_Vista_01_cropped.png",
       label: "Perspectiva Exterior",
       labelEn: "Exterior Perspective",
       step: "01 / Chasis Estructural",
@@ -199,7 +199,7 @@ export default function AppleScrollytelling() {
     },
     {
       id: 1,
-      src: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA2-1-scaled.png",
+      src: "/images/CM_10M_Vista_01_cropped.png",
       label: "Blindaje Térmico",
       labelEn: "Thermal Shielding",
       step: "02 / Aislamiento Continuo",
@@ -220,7 +220,7 @@ export default function AppleScrollytelling() {
     },
     {
       id: 2,
-      src: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA3-scaled.png",
+      src: "/images/CM_10M_Vista_01_cropped.png",
       label: "Habitabilidad Interior",
       labelEn: "Interior Living",
       step: "03 / Despliegue Inmediato",

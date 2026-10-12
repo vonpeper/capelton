@@ -1,20 +1,31 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Layers, Home, CheckCircle2 } from "lucide-react";
+import { motion, useScroll, AnimatePresence } from "framer-motion";
+import {
+  ShieldCheck,
+  Zap,
+  ThermometerSnowflake,
+  ArrowRight,
+  Maximize2,
+  FileText,
+  CheckCircle2,
+  Layers,
+  Sparkles,
+} from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { getWhatsAppUrl } from "@/lib/data";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import FadeIn from "@/components/FadeIn";
 import SciFiHeading from "@/components/SciFiHeading";
 
-interface TechPin {
+interface Hotspot {
   id: string;
-  tab: "exterior" | "interior";
-  x: string;
-  y: string;
+  stageId: number;
+  x: string; // percentage, e.g. "28%"
+  y: string; // percentage, e.g. "76%"
   title: string;
   titleEn: string;
   badge: string;
@@ -23,403 +34,487 @@ interface TechPin {
   descriptionEn: string;
 }
 
-const techPins: TechPin[] = [
-  // --- EXTERIORES ---
+const hotspots: Hotspot[] = [
+  // Stage 0: Exterior
   {
     id: "chasis",
-    tab: "exterior",
-    x: "26%",
+    stageId: 0,
+    x: "28%",
     y: "76%",
-    title: "Chasis estructural reforzado",
+    title: "Chasis Estructural Reforzado",
     titleEn: "Reinforced Steel Chassis",
-    badge: "Base Estructural",
-    badgeEn: "Structural Frame",
+    badge: "Anti-torsión",
+    badgeEn: "Anti-torsion",
     description:
-      "Perfiles electrogalvanizados de alta rigidez y soldadura continua certificada que soportan maniobras constantes de izaje y traslados severos en terracería sin fatiga estructural.",
+      "Perfiles electrogalvanizados de alta rigidez que soportan traslados severos en terracería y maniobras continuas de izaje sin deformarse.",
     descriptionEn:
-      "High-rigidity electrogalvanized beams engineered to endure continuous crane lifts and severe unpaved transit without structural deformation.",
-  },
-  {
-    id: "muros",
-    tab: "exterior",
-    x: "54%",
-    y: "44%",
-    title: "Muros aislados",
-    titleEn: "Insulated Walls",
-    badge: "Núcleo Térmico",
-    badgeEn: "Thermal Core",
-    description:
-      "Panel sándwich con espuma termoacústica continua de alta densidad que amortigua ruido exterior y reduce significativamente el consumo de climatización.",
-    descriptionEn:
-      "Continuous high-density thermoacoustic sandwich panel core dampening site noise and cutting HVAC power demand.",
+      "High-rigidity electrogalvanized beams engineered to endure severe unpaved roads and continuous crane lifts without structural deformation.",
   },
   {
     id: "techo",
-    tab: "exterior",
-    x: "60%",
-    y: "22%",
-    title: "Techo de aluminio de una pieza",
+    stageId: 0,
+    x: "65%",
+    y: "24%",
+    title: "Techo de Aluminio de Una Pieza",
     titleEn: "One-Piece Aluminum Roof",
     badge: "Cero Filtraciones",
-    badgeEn: "Leak-Proof",
+    badgeEn: "Zero Leaks",
     description:
-      "Cubierta engargolada monolítica de una sola pieza sin traslapes ni uniones intermedias, protegiendo contra estancamiento de agua y goteras.",
+      "Cubierta continua sin traslapes ni uniones intermedias que elimina por completo el riesgo de filtraciones y prolonga la vida útil de la unidad.",
     descriptionEn:
-      "Monolithic single-piece aluminum roofing with seamless construction preventing water ponding and leaks.",
+      "Continuous seamless roof membrane with no intermediate overlaps, completely eliminating leak risks and maximizing service life.",
   },
   {
     id: "ventanas",
-    tab: "exterior",
-    x: "38%",
-    y: "50%",
-    title: "Ventanas abatibles",
+    stageId: 0,
+    x: "50%",
+    y: "60%",
+    title: "Ventanas Abatibles",
     titleEn: "Awning Windows",
     badge: "Luz y Ventilación",
-    badgeEn: "Air & Light",
+    badgeEn: "Light & Air",
     description:
-      "Cancelería de aluminio reforzado con sellado perimetral contra polvo y lluvia, cristales de seguridad y mosquiteros integrados.",
+      "Marcos de aluminio de calidad industrial con mosquiteros y sellos herméticos perimetrales contra polvo y lluvia severa.",
     descriptionEn:
-      "Reinforced aluminum framing with perimeter dust and rain seals, safety glass, and integrated screens.",
+      "Heavy-duty aluminum frames equipped with insect screens and perimeter airtight seals against dust and harsh rain.",
   },
   {
     id: "accesos",
-    tab: "exterior",
-    x: "80%",
+    stageId: 0,
+    x: "85%",
     y: "72%",
-    title: "Accesos y soportes",
-    titleEn: "Access & Leveling Supports",
+    title: "Accesos y Soportes",
+    titleEn: "Access & Stabilizers",
     badge: "Despliegue Rápido",
     badgeEn: "Fast Setup",
     description:
-      "Puntos de apoyo reforzados para nivelación rápida en terreno natural y herrajes perimetrales para izaje seguro con grúa Hiab.",
+      "Escalera de servicio integrada y gatos estabilizadores perimetrales para nivelación segura y firme en terrenos irregulares.",
     descriptionEn:
-      "Reinforced support pads for swift on-ground leveling and dedicated perimeter rigging points for safe crane deployment.",
+      "Integrated service steps and perimeter leveling jacks engineered for rock-solid stability on unpaved terrain.",
   },
 
-  // --- INTERIORES ---
+  // Stage 1: Thermal Shielding
   {
-    id: "piso",
-    tab: "interior",
-    x: "46%",
-    y: "82%",
-    title: "Piso SPC",
-    titleEn: "SPC Rigid Core Flooring",
-    badge: "Tráfico Pesado",
-    badgeEn: "Heavy Traffic",
+    id: "aislamiento",
+    stageId: 1,
+    x: "56%",
+    y: "40%",
+    title: "Muros Aislados Termoacústicos",
+    titleEn: "Insulated Thermoacoustic Walls",
+    badge: "-10°C a +45°C",
+    badgeEn: "-10°C to +45°C",
     description:
-      "Duela vinílica SPC rígida de alta resistencia al desgaste, 100% impermeable, retardante al fuego y de limpieza sumamente rápida en campamentos y obras.",
+      "Núcleo de alta densidad con atenuación acústica de hasta 32 dB que reduce hasta un 40% el consumo eléctrico en climatización.",
     descriptionEn:
-      "Heavy-duty rigid-core SPC flooring: 100% waterproof, fire-retardant, and effortless to sanitize in demanding environments.",
+      "High-density thermal core with up to 32 dB acoustic dampening, reducing HVAC electricity consumption by up to 40%.",
   },
   {
-    id: "iluminacion",
-    tab: "interior",
-    x: "52%",
-    y: "22%",
-    title: "Iluminación LED",
-    titleEn: "LED Lighting",
-    badge: "Eficiencia y Confort",
-    badgeEn: "Visual Comfort",
-    description:
-      "Luminarias LED empotradas de bajo consumo energético que proporcionan luz uniforme y descansada para jornadas intensivas de trabajo.",
-    descriptionEn:
-      "Recessed high-efficiency LED fixtures providing balanced, flicker-free illumination across all workstations.",
-  },
-  {
-    id: "clima",
-    tab: "interior",
-    x: "82%",
-    y: "34%",
-    title: "Sistema de aire acondicionado",
+    id: "climatizacion",
+    stageId: 1,
+    x: "88%",
+    y: "48%",
+    title: "Sistema de Aire Acondicionado",
     titleEn: "Air Conditioning System",
-    badge: "Climatización Inverter",
-    badgeEn: "Inverter Climate",
+    badge: "Ahorro Energético",
+    badgeEn: "Energy Saving",
     description:
-      "Unidad minisplit de alto rendimiento térmico con ductería oculta que garantiza temperatura confortable tanto en climas desérticos como en zonas frías.",
+      "Unidad exterior minisplit de alta eficiencia con ductería oculta y sellado perimetral contra humedad y vibraciones.",
     descriptionEn:
-      "High-efficiency inverter minisplit system with concealed routing ensuring stable comfort in extreme heat or mountain cold.",
+      "High-efficiency outdoor minisplit unit with concealed ductwork and perimeter moisture and vibration seal.",
   },
+
+  // Stage 2: Interior Living & Plug & Play
   {
-    id: "electrica",
-    tab: "interior",
-    x: "22%",
-    y: "58%",
-    title: "Instalación eléctrica",
-    titleEn: "Electrical Installation",
-    badge: "Norma Oficial (NOM)",
+    id: "electrico",
+    stageId: 2,
+    x: "18%",
+    y: "54%",
+    title: "Instalación Eléctrica Norma NOM",
+    titleEn: "NOM-Certified Electrical System",
+    badge: "Norma NOM",
     badgeEn: "NOM Standard",
     description:
-      "Centro de carga homologado, cableado conduit canalizado y tomas polarizadas de uso rudo listas para conectar computadoras y equipo de oficina.",
+      "Centro de carga homologado, tomas polarizadas canalizadas y luminarias LED empotradas listas para operar al conectar la acometida.",
     descriptionEn:
-      "Certified industrial load center, conduit-routed concealed wiring, and heavy-duty grounded outlets ready for equipment.",
+      "Certified load center, grounded outlets, and recessed LED fixtures ready to operate immediately upon utility connection.",
+  },
+  {
+    id: "piso",
+    stageId: 2,
+    x: "42%",
+    y: "78%",
+    title: "Piso de Núcleo Rígido SPC",
+    titleEn: "SPC Rigid Core Flooring",
+    badge: "Alto Tráfico",
+    badgeEn: "Heavy-Duty",
+    description:
+      "Piso vinílico con núcleo de polímero de piedra (SPC), 100% resistente al agua, rayaduras y uso rudo en obras industriales.",
+    descriptionEn:
+      "Stone polymer composite (SPC) flooring, 100% waterproof and scratch-resistant for heavy jobsite foot traffic.",
   },
   {
     id: "distribucion",
-    tab: "interior",
-    x: "66%",
-    y: "64%",
-    title: "Distribución y mobiliario según configuración",
-    titleEn: "Custom Layout & Furniture by Config",
-    badge: "A la Medida",
-    badgeEn: "Tailored Layout",
+    stageId: 2,
+    x: "72%",
+    y: "58%",
+    title: "Mobiliario y Distribución",
+    titleEn: "Layout & Furniture",
+    badge: "Plug & Play",
+    badgeEn: "Plug & Play",
     description:
-      "Áreas abiertas colaborativas, privados con puerta, mamparas o módulos con medio baño privado según los requerimientos de tu equipo.",
+      "Estaciones de trabajo modulares, áreas de reunión técnica y opción de medio baño privado según las necesidades de tu operación.",
     descriptionEn:
-      "Open collaboration floorplans, private offices, or configurations with integrated half-bath according to your operation.",
+      "Modular workstations, technical meeting space, and optional private restroom configured to your operational needs.",
   },
 ];
 
 export default function AppleScrollytelling() {
   const { t, language } = useLanguage();
-  const [activeTab, setActiveTab] = useState<"exterior" | "interior">("exterior");
-  const [activePinId, setActivePinId] = useState<string | null>("chasis");
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [activeStage, setActiveStage] = useState(0);
+  const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
 
-  const currentPins = techPins.filter((p) => p.tab === activeTab);
-  const activePin = techPins.find((p) => p.id === activePinId) || currentPins[0];
+  // High-resolution 2560x1248 official renders from Capelton
+  const stages = [
+    {
+      id: 0,
+      src: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA1-scaled.png",
+      label: "Perspectiva Exterior",
+      labelEn: "Exterior Perspective",
+      step: "01 / Chasis Estructural",
+      stepEn: "01 / Structural Chassis",
+      title: "Chasis Estructural Reforzado",
+      titleEn: "Reinforced Steel Chassis",
+      highlight: "Rigidez estructural certificada",
+      highlightEn: "Certified structural rigidity",
+      metric: "100% Anti-torsión",
+      metricEn: "100% Anti-torsion",
+      metricSub: "Terracería severa",
+      metricSubEn: "Severe terrain",
+      icon: <Layers className="w-5 h-5 text-capelton-green" />,
+      description:
+        "Estructura rolada en frío y electrogalvanizada. Diseñada para soportar izajes continuos y caminos de terracería sin deformarse.",
+      descriptionEn:
+        "Cold-rolled and electrogalvanized frame. Engineered to withstand continuous crane lifts and unpaved terrain without deformation.",
+    },
+    {
+      id: 1,
+      src: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA2-1-scaled.png",
+      label: "Blindaje Térmico",
+      labelEn: "Thermal Shielding",
+      step: "02 / Aislamiento Continuo",
+      stepEn: "02 / Continuous Insulation",
+      title: "Muros Aislados Termoacústicos",
+      titleEn: "Insulated Thermoacoustic Walls",
+      highlight: "Confort de -10°C a +45°C",
+      highlightEn: "Comfort from -10°C to +45°C",
+      metric: "-40% Energía",
+      metricEn: "-40% Energy",
+      metricSub: "Consumo de clima",
+      metricSubEn: "HVAC consumption",
+      icon: <ThermometerSnowflake className="w-5 h-5 text-capelton-green" />,
+      description:
+        "Núcleo térmico de alta densidad con atenuación acústica de hasta 32 dB. Climatización eficiente en calor desértico o frío extremo.",
+      descriptionEn:
+        "High-density thermal core with up to 32 dB acoustic dampening. Efficient climate control in desert heat or extreme mountain cold.",
+    },
+    {
+      id: 2,
+      src: "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA3-scaled.png",
+      label: "Habitabilidad Interior",
+      labelEn: "Interior Living",
+      step: "03 / Despliegue Inmediato",
+      stepEn: "03 / Instant Deployment",
+      title: "Despliegue Plug & Play en 24h",
+      titleEn: "Plug & Play in 24h",
+      highlight: "Operativo al conectar acometida",
+      highlightEn: "Fully operational upon grid hookup",
+      metric: "24-48 Horas",
+      metricEn: "24-48 Hours",
+      metricSub: "Instalación en sitio",
+      metricSubEn: "On-site installation",
+      icon: <Zap className="w-5 h-5 text-capelton-green" />,
+      description:
+        "Instalaciones eléctricas industriales ocultas bajo norma NOM, iluminación LED empotrada y acabados ejecutivos listos para trabajar.",
+      descriptionEn:
+        "Industrial concealed electrical wiring under NOM standards, recessed LED lighting, and executive finishes ready to work.",
+    },
+  ];
 
-  const currentImage =
-    activeTab === "exterior"
-      ? "/images/CM_10M_Vista_01_cropped.png"
-      : "/images/categoria-almacenes.png";
+  // Track scroll progress across the container
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  // Synchronize scroll position with active stage
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (latest) => {
+      if (latest < 0.35) {
+        setActiveStage(0);
+      } else if (latest < 0.7) {
+        setActiveStage(1);
+      } else {
+        setActiveStage(2);
+      }
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
+  const current = stages[activeStage];
 
   return (
     <section
-      id="como-construimos"
-      className="py-20 sm:py-28 bg-white text-[#1d1d1f] relative overflow-hidden border-t border-black/5 scroll-mt-20"
+      id="scrollytelling"
+      ref={containerRef}
+      className="relative h-[280vh] bg-white text-[#1d1d1f]"
     >
-      {/* Anchor alias backward compatibility */}
-      <div id="scrollytelling" className="absolute -top-24" />
+      {/* Sticky Cinematic Viewport Stage */}
+      <div className="sticky top-0 h-screen w-full flex flex-col justify-between items-center px-4 sm:px-6 lg:px-8 py-4 sm:py-6 overflow-hidden">
+        {/* Apple Pearl Ambient Stage Lighting */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-b from-capelton-green/10 via-capelton-green/4 to-transparent rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Ambient Lighting in Capelton Green */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-b from-capelton-green/10 via-capelton-green/3 to-transparent rounded-full blur-[140px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+        {/* 1. Header & Stage Switcher (Compact, Apple Rhythm) */}
         <FadeIn direction="up">
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-            <span className="text-xs sm:text-sm font-semibold text-capelton-green uppercase tracking-wider block mb-2">
-              {t("Ficha Técnica & Anatomía del Producto", "Product Anatomy & Technical Specs")}
-            </span>
+          <div className="relative z-10 text-center max-w-3xl shrink-0 pt-1 sm:pt-2">
+            <p className="text-[11px] sm:text-xs font-semibold text-[#86868b] uppercase tracking-wider mb-1">
+              {t("Cómo construimos • Modelo CM-10M", "How We Build • Model CM-10M")}
+            </p>
             <SciFiHeading
               text={t(
                 "Cómo construimos nuestros espacios móviles",
                 "How We Build Our Mobile Spaces"
               )}
               as="h2"
-              className="text-3xl sm:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-[1.12] mb-3"
+              className="text-xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#1d1d1f] leading-tight"
               showLaser={false}
               showHudTag={false}
-              duration={700}
+              duration={750}
             />
-            <p className="text-xs sm:text-sm text-[#86868b] font-medium max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm text-[#86868b] mt-1.5 max-w-xl mx-auto">
               {t(
                 "Unidad de referencia CM-10M. Las configuraciones y especificaciones varían por modelo.",
                 "Reference unit CM-10M. Configurations and specifications vary by model."
               )}
             </p>
 
-            {/* Apple View Switcher: Exteriores vs Interiores */}
-            <div className="inline-flex items-center gap-1.5 p-1.5 mt-5 bg-[#f5f5f7] rounded-full border border-black/8 shadow-xs">
-              <button
-                type="button"
-                onClick={() => {
-                  setActiveTab("exterior");
-                  setActivePinId("chasis");
-                }}
-                className={`flex items-center gap-2 px-5 py-2 text-xs sm:text-sm rounded-full transition-all duration-200 cursor-pointer ${
-                  activeTab === "exterior"
-                    ? "bg-black text-white font-bold shadow-xs"
-                    : "text-[#6e6e73] hover:text-black font-semibold"
-                }`}
-              >
-                <Layers className="w-3.5 h-3.5" />
-                <span>{t("Exteriores", "Exterior Architecture")}</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setActiveTab("interior");
-                  setActivePinId("piso");
-                }}
-                className={`flex items-center gap-2 px-5 py-2 text-xs sm:text-sm rounded-full transition-all duration-200 cursor-pointer ${
-                  activeTab === "interior"
-                    ? "bg-black text-white font-bold shadow-xs"
-                    : "text-[#6e6e73] hover:text-black font-semibold"
-                }`}
-              >
-                <Home className="w-3.5 h-3.5" />
-                <span>{t("Interiores", "Interior Systems")}</span>
-              </button>
+            {/* Centered Apple View Switcher Pill */}
+            <div className="inline-flex items-center gap-1 p-1 mt-2 sm:mt-2.5 bg-black/[0.04] backdrop-blur-md rounded-full border border-black/8 shadow-xs">
+              {stages.map((stage) => {
+                const label = language === "en" ? stage.labelEn : stage.label;
+                const isActive = activeStage === stage.id;
+                return (
+                  <button
+                    key={stage.id}
+                    type="button"
+                    onClick={() => {
+                      setActiveStage(stage.id);
+                      setActiveHotspot(null);
+                    }}
+                    className={`px-3 py-1 text-xs rounded-full transition-all duration-200 ${
+                      isActive
+                        ? "bg-black text-white font-semibold shadow-xs"
+                        : "text-[#6e6e73] hover:text-black font-medium"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </FadeIn>
 
-        {/* Interactive Fluid 3D Product Stage */}
-        <FadeIn direction="up" delay={80}>
-          <div className="relative w-full max-w-5xl mx-auto bg-[#fafafc] rounded-[32px] sm:rounded-[40px] border border-black/8 p-4 sm:p-8 shadow-sm">
-            {/* Stage Container */}
-            <div className="relative w-full h-[280px] xs:h-[340px] sm:h-[440px] md:h-[500px] flex items-center justify-center select-none overflow-hidden rounded-2xl sm:rounded-3xl">
-              {/* Product Render */}
-              <div className="relative w-full h-full max-w-4xl transition-all duration-700 ease-out">
+        {/* 2. Responsive 3D Product Stage (Constrained to prevent screen crowding) */}
+        <div className="relative z-10 w-full max-w-5xl flex-1 flex flex-col items-center justify-center min-h-[180px] max-h-[38vh] my-1 sm:my-2">
+          <div className="relative w-full h-full max-w-4xl flex items-center justify-center">
+            {/* 3D Model Image Render Layers */}
+            {stages.map((stage, idx) => (
+              <div
+                key={idx}
+                className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-out ${
+                  activeStage === idx
+                    ? "opacity-100 scale-100 filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.08)]"
+                    : "opacity-0 scale-95 pointer-events-none"
+                }`}
+              >
                 <Image
-                  src={currentImage}
-                  alt={activeTab === "exterior" ? "Capelton Exterior" : "Capelton Interior"}
+                  src={stage.src}
+                  alt={language === "en" ? stage.titleEn : stage.title}
                   fill
-                  priority
-                  sizes="(max-width: 1280px) 100vw, 1100px"
-                  className="object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.08)]"
+                  priority={idx === 0}
+                  sizes="(max-width: 1280px) 100vw, 1200px"
+                  className="object-contain"
                 />
               </div>
+            ))}
 
-              {/* Interactive Floating Pins */}
-              <div className="absolute inset-0 pointer-events-none">
-                {currentPins.map((pin) => {
-                  const isSelected = activePinId === pin.id;
-                  const displayTitle = language === "en" ? pin.titleEn : pin.title;
-                  const displayBadge = language === "en" ? pin.badgeEn : pin.badge;
+            {/* Interactive Dynamic Radar Hotspots (Filtered strictly for active stage) */}
+            <div className="absolute inset-0 pointer-events-none">
+              {hotspots
+                .filter((spot) => spot.stageId === activeStage)
+                .map((spot) => {
+                  const isHovered = activeHotspot === spot.id;
+                  const displayTitle = language === "en" ? spot.titleEn : spot.title;
+                  const displayBadge = language === "en" ? spot.badgeEn : spot.badge;
+                  const displayDesc = language === "en" ? spot.descriptionEn : spot.description;
+                  const isBottomHalf = parseInt(spot.y) > 50;
 
                   return (
                     <div
-                      key={pin.id}
-                      style={{ left: pin.x, top: pin.y }}
-                      className="absolute transform -translate-x-1/2 -translate-y-1/2 pointer-events-auto transition-all duration-300"
+                      key={spot.id}
+                      style={{ left: spot.x, top: spot.y }}
+                      className="absolute transform -translate-x-1/2 -translate-y-1/2 pointer-events-auto transition-all duration-300 opacity-100 scale-100"
+                      onMouseEnter={() => setActiveHotspot(spot.id)}
+                      onMouseLeave={() => setActiveHotspot(null)}
+                      onClick={() => {
+                        setActiveHotspot(activeHotspot === spot.id ? null : spot.id);
+                      }}
                     >
-                      <button
-                        type="button"
-                        onClick={() => setActivePinId(pin.id)}
-                        className="relative flex items-center justify-center cursor-pointer group focus:outline-none"
-                        aria-label={displayTitle}
-                      >
-                        {/* Pulse Ring */}
-                        <span
-                          className={`animate-ping absolute inline-flex h-7 w-7 rounded-full bg-capelton-green/40 opacity-75 ${
-                            isSelected ? "scale-125" : ""
-                          }`}
-                        />
-                        {/* Pin Dot */}
-                        <span
-                          className={`relative inline-flex items-center justify-center rounded-full h-5 w-5 border-2 transition-all ${
-                            isSelected
-                              ? "bg-capelton-green border-white scale-125 shadow-[0_0_16px_rgba(0,177,64,0.9)]"
-                              : "bg-white border-capelton-green text-capelton-green group-hover:scale-110 shadow-sm"
-                          }`}
-                        >
-                          <span
-                            className={`w-1.5 h-1.5 rounded-full ${
-                              isSelected ? "bg-white" : "bg-capelton-green"
-                            }`}
-                          />
+                      {/* Pulsing Beacon Dot */}
+                      <div className="relative flex items-center justify-center cursor-pointer group">
+                        <span className="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-capelton-green/40 opacity-75" />
+                        <span className="relative inline-flex items-center justify-center rounded-full h-4 w-4 bg-capelton-green text-white shadow-[0_0_12px_rgba(0,177,64,0.7)] border-2 border-white">
+                          <span className="w-1 h-1 rounded-full bg-white" />
                         </span>
 
-                        {/* Floating Label Pill (Desktop) */}
-                        <div
-                          className={`hidden md:flex absolute left-7 items-center gap-1.5 px-3 py-1 rounded-full border shadow-sm whitespace-nowrap transition-all duration-200 ${
-                            isSelected
-                              ? "bg-black text-white border-black shadow-md scale-105"
-                              : "bg-white/95 backdrop-blur-md text-[#1d1d1f] border-black/8 group-hover:bg-white"
-                          }`}
-                        >
-                          <span className="text-[11px] font-bold">{displayTitle}</span>
-                          <span
-                            className={`text-[9px] font-semibold px-1.5 py-0.2 rounded-full ${
-                              isSelected
-                                ? "bg-capelton-green text-white"
-                                : "bg-capelton-green/10 text-capelton-green"
-                            }`}
-                          >
+                        {/* Hotspot Floating Pill Tag */}
+                        <div className="hidden sm:flex absolute left-6 items-center gap-1.5 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-black/8 shadow-sm whitespace-nowrap transition-all duration-200">
+                          <span className="text-[11px] font-bold text-[#1d1d1f]">
+                            {displayTitle}
+                          </span>
+                          <span className="text-[9px] text-capelton-green font-semibold bg-capelton-green/10 px-1.5 py-0.2 rounded-full">
                             {displayBadge}
                           </span>
                         </div>
-                      </button>
+                      </div>
+
+                      {/* Tooltip Card: opens UPWARDS if spot is in the bottom half so it never overlaps cards below */}
+                      {isHovered && (
+                        <div
+                          className={`absolute ${
+                            isBottomHalf ? "bottom-8" : "top-8"
+                          } left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 w-60 bg-white/95 backdrop-blur-xl p-3.5 rounded-2xl border border-black/10 shadow-xl z-30 animate-in fade-in zoom-in-95 duration-200`}
+                        >
+                          <span className="text-[9px] font-bold text-capelton-green uppercase tracking-wider block mb-0.5">
+                            {displayBadge}
+                          </span>
+                          <h4 className="text-xs font-bold text-black mb-1">
+                            {displayTitle}
+                          </h4>
+                          <p className="text-[11px] text-[#6e6e73] leading-relaxed">
+                            {displayDesc}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   );
                 })}
+            </div>
+          </div>
+        </div>
+
+        {/* 3. Modern Dynamic Feature Bento Selector */}
+        <FadeIn direction="up" delay={100} className="w-full max-w-4xl shrink-0 pt-1 pb-1 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 sm:gap-3">
+            {stages.map((stage) => {
+              const isActive = activeStage === stage.id;
+              const title = language === "en" ? stage.titleEn : stage.title;
+              const desc = language === "en" ? stage.descriptionEn : stage.description;
+              const metric = language === "en" ? stage.metricEn : stage.metric;
+
+              return (
+                <div
+                  key={stage.id}
+                  onClick={() => {
+                    setActiveStage(stage.id);
+                    setActiveHotspot(null);
+                  }}
+                  className={`cursor-pointer rounded-xl p-3 sm:p-3.5 transition-all duration-200 relative border select-none ${
+                    isActive
+                      ? "bg-white border-capelton-green/50 shadow-sm"
+                      : "bg-[#f5f5f7]/70 hover:bg-white border-transparent hover:border-black/5 opacity-80 hover:opacity-100"
+                  }`}
+                >
+                  {/* Top Subtle Green Indicator Bar */}
+                  {isActive && (
+                    <div className="absolute top-0 left-3 right-3 h-[2px] bg-capelton-green rounded-full" />
+                  )}
+
+                  <div className="flex items-start justify-between mb-1.5">
+                    <div className="w-7 h-7 rounded-lg bg-white flex items-center justify-center shadow-2xs border border-black/5">
+                      {stage.icon}
+                    </div>
+                    <span
+                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full transition-colors ${
+                        isActive
+                          ? "bg-capelton-green/10 text-capelton-green"
+                          : "bg-black/5 text-[#86868b]"
+                      }`}
+                    >
+                      {metric}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xs sm:text-sm font-bold text-[#1d1d1f] mb-0.5">
+                    {title}
+                  </h3>
+                  <p className="text-[11px] text-[#6e6e73] font-normal leading-relaxed line-clamp-2">
+                    {desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </FadeIn>
+
+        {/* 4. Bottom Metric Row & CTA Bar */}
+        <FadeIn direction="up" delay={180} className="w-full max-w-4xl shrink-0 pt-2 pb-1 border-t border-black/8 relative z-10">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div className="flex items-center justify-around w-full sm:w-auto gap-4 sm:gap-8">
+              <div>
+                <span className="text-[9px] uppercase tracking-wider text-[#86868b] block">
+                  {t("Dimensiones", "Dimensions")}
+                </span>
+                <span className="text-xs sm:text-sm font-bold text-black">
+                  10.0 × 2.5 × 3.4m
+                </span>
+              </div>
+              <div>
+                <span className="text-[9px] uppercase tracking-wider text-[#86868b] block">
+                  {t("Peso neto", "Net weight")}
+                </span>
+                <span className="text-xs sm:text-sm font-bold text-black">
+                  2,000 kg
+                </span>
+              </div>
+              <div>
+                <span className="text-[9px] uppercase tracking-wider text-[#86868b] block">
+                  {t("Aforo", "Capacity")}
+                </span>
+                <span className="text-xs sm:text-sm font-bold text-capelton-green">
+                  {t("7 a 10 personas", "7 to 10 people")}
+                </span>
               </div>
             </div>
 
-            {/* Active Pin Detailed Explanation Box (Floats on the card bottom) */}
-            {activePin && (
-              <div className="mt-4 p-4 sm:p-5 rounded-2xl bg-white border border-black/8 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-300">
-                <div className="flex items-start gap-3.5">
-                  <div className="w-8 h-8 rounded-xl bg-capelton-green/10 text-capelton-green flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle2 className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-capelton-green bg-capelton-green/10 px-2 py-0.5 rounded-full">
-                        {language === "en" ? activePin.badgeEn : activePin.badge}
-                      </span>
-                      <h4 className="text-sm sm:text-base font-bold text-black">
-                        {language === "en" ? activePin.titleEn : activePin.title}
-                      </h4>
-                    </div>
-                    <p className="text-xs sm:text-sm text-[#515154] leading-relaxed max-w-3xl">
-                      {language === "en" ? activePin.descriptionEn : activePin.description}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2 shrink-0 self-end sm:self-center">
-                  <span className="text-[11px] text-[#86868b] hidden lg:inline">
-                    {t("Haz clic en cualquier punto para inspeccionar", "Click any dot to inspect")}
-                  </span>
-                </div>
-              </div>
-            )}
-
-            {/* Bottom Spec Summary & Direct Actions */}
-            <div className="mt-5 pt-4 border-t border-black/8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-              <div className="flex items-center justify-around w-full sm:w-auto gap-4 sm:gap-8">
-                <div>
-                  <span className="text-[9px] uppercase tracking-wider text-[#86868b] block">
-                    {t("Dimensiones", "Dimensions")}
-                  </span>
-                  <span className="text-xs sm:text-sm font-bold text-black">
-                    10.0 × 2.5 × 3.4m
-                  </span>
-                </div>
-                <div>
-                  <span className="text-[9px] uppercase tracking-wider text-[#86868b] block">
-                    {t("Peso neto", "Net weight")}
-                  </span>
-                  <span className="text-xs sm:text-sm font-bold text-black">
-                    2,000 kg
-                  </span>
-                </div>
-                <div>
-                  <span className="text-[9px] uppercase tracking-wider text-[#86868b] block">
-                    {t("Aforo", "Capacity")}
-                  </span>
-                  <span className="text-xs sm:text-sm font-bold text-capelton-green">
-                    {t("7 a 10 personas", "7 to 10 people")}
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5">
-                <Link
-                  href="/modelos/cm10m"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#0066cc] hover:underline"
-                >
-                  <span>{t("Ver ficha completa CM-10M", "View full CM-10M spec sheet")}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-                <a
-                  href={getWhatsAppUrl(
-                    "ventas",
-                    t(
-                      "Hola, me interesa conocer más sobre la fabricación y acabados del modelo CM-10M",
-                      "Hello, I am interested in learning more about the engineering and specs of model CM-10M"
-                    )
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackWhatsAppClick("ventas", "como_construimos_cm10m")}
-                  className="px-4 py-2 rounded-full text-xs font-bold text-white bg-capelton-green hover:bg-capelton-darkgreen transition-all shadow-xs"
-                >
-                  {t("Cotizar Ventas", "Quote Sales")}
-                </a>
-              </div>
+            <div className="flex items-center gap-3">
+              <Link
+                href="/modelos/cm10m"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-[#0066cc] hover:underline"
+              >
+                <span>{t("Ver ficha completa CM-10M", "View full CM-10M spec sheet")}</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <a
+                href={getWhatsAppUrl("ventas", t("Hola, me interesa conocer más del modelo CM-10M", "Hello, I am interested in learning more about the CM-10M model"))}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("ventas", "scrollytelling_cm10m")}
+                className="px-4 py-1.5 rounded-full text-xs font-bold text-white bg-black hover:bg-capelton-green transition-all shadow-xs"
+              >
+                {t("Cotizar Ventas", "Quote Sales")}
+              </a>
             </div>
           </div>
         </FadeIn>

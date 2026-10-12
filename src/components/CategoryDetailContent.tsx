@@ -69,11 +69,6 @@ export default function CategoryDetailContent({
                 priority
                 sizes="(max-width: 1024px) 100vw, 400px"
                 className="object-contain filter drop-shadow-[0_16px_28px_rgba(0,0,0,0.08)]"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement;
-                  target.srcset = "";
-                  target.src = "/images/CM_10M_Vista_01_cropped.png";
-                }}
               />
             </div>
           )}

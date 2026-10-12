@@ -14,14 +14,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const { t, language } = useLanguage();
-  const defaultFallback =
-    product.category === "contenedores"
-      ? "/images/categoria-almacenes.png"
-      : "/images/CM_10M_Vista_01_cropped.png";
-  const mainImage =
-    product.images[0] && !product.images[0].startsWith("http")
-      ? product.images[0]
-      : defaultFallback;
+  const mainImage = product.images[0] || "/images/CM_10M_Vista_01_cropped.png";
 
   return (
     <div className="group bg-white rounded-3xl p-6 flex flex-col justify-between border border-black/8 hover:border-capelton-green/40 transition-all duration-500 shadow-sm hover:shadow-[0_15px_35px_rgba(0,0,0,0.06)]">
@@ -49,11 +42,6 @@ export default function ProductCard({ product }: ProductCardProps) {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-contain p-2 transform group-hover:scale-105 transition-transform duration-500 filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.06)]"
-            onError={(e) => {
-              const target = e.currentTarget as HTMLImageElement;
-              target.srcset = "";
-              target.src = "/images/CM_10M_Vista_01_cropped.png";
-            }}
           />
         </Link>
 

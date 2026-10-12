@@ -260,10 +260,10 @@ function cleanDuoFeatures(features: string[], language: string): string[] {
 }
 
 function getModelPlantaImage(model: ProductModel): string | null {
-  const localPlanta = model.images.find(
-    (img) => (img.toLowerCase().includes("planta") || img.includes("blueprints")) && !img.startsWith("http")
+  const planta = model.images.find(
+    (img) => img.toLowerCase().includes("planta") || img.includes("blueprints")
   );
-  if (localPlanta) return localPlanta;
+  if (planta) return planta;
   if (model.category === "casetas") {
     return "/images/blueprints/planta-caseta.svg";
   }
@@ -271,17 +271,16 @@ function getModelPlantaImage(model: ProductModel): string | null {
 }
 
 function getModelInteriorImage(model: ProductModel): string | null {
-  const localInterior = model.images.find(
+  const interior = model.images.find(
     (img) =>
       (img.toLowerCase().includes("vista_02") ||
         img.toLowerCase().includes("vista2") ||
         img.toLowerCase().includes("vista3") ||
         img.toLowerCase().includes("interior")) &&
-      !img.toLowerCase().includes("planta") &&
-      !img.startsWith("http")
+      !img.toLowerCase().includes("planta")
   );
-  if (localInterior) return localInterior;
-  return "/images/categoria-almacenes.png";
+  if (interior) return interior;
+  return model.images[1] || model.images[0] || null;
 }
 
 function getModelOptionLabel(model: ProductModel, language: string): string {
@@ -451,11 +450,6 @@ export default function DuoSwitcher() {
                       fill
                       sizes="(max-width: 1024px) 50vw, 380px"
                       className="object-contain filter drop-shadow-[0_10px_16px_rgba(0,0,0,0.06)]"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.srcset = "";
-                        target.src = "/images/CM_10M_Vista_01_cropped.png";
-                      }}
                     />
                   ) : (
                     <div className="text-xs text-[#86868b]">{t("Render disponible", "Render available")}</div>
@@ -512,11 +506,6 @@ export default function DuoSwitcher() {
                       fill
                       sizes="(max-width: 1024px) 50vw, 380px"
                       className="object-contain filter drop-shadow-[0_10px_16px_rgba(0,0,0,0.06)]"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.srcset = "";
-                        target.src = "/images/CM_10M_Vista_01_cropped.png";
-                      }}
                     />
                   ) : (
                     <div className="text-xs text-[#86868b]">{t("Render disponible", "Render available")}</div>
@@ -585,11 +574,6 @@ export default function DuoSwitcher() {
                         fill
                         sizes="(max-width: 768px) 50vw, 240px"
                         className="object-contain p-1"
-                        onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.srcset = "";
-                          target.src = "/images/blueprints/planta-oficina.svg";
-                        }}
                       />
                     ) : (
                       <span className="text-[11px] text-[#86868b]">{t("Planta en ficha técnica", "Floor plan in spec sheet")}</span>
@@ -603,11 +587,6 @@ export default function DuoSwitcher() {
                         fill
                         sizes="(max-width: 768px) 50vw, 240px"
                         className="object-contain p-1"
-                        onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.srcset = "";
-                          target.src = "/images/blueprints/planta-oficina.svg";
-                        }}
                       />
                     ) : (
                       <span className="text-[11px] text-[#86868b]">{t("Planta en ficha técnica", "Floor plan in spec sheet")}</span>
@@ -631,11 +610,6 @@ export default function DuoSwitcher() {
                           fill
                           sizes="(max-width: 768px) 50vw, 240px"
                           className="object-contain"
-                          onError={(e) => {
-                            const target = e.currentTarget as HTMLImageElement;
-                            target.srcset = "";
-                            target.src = "/images/categoria-almacenes.png";
-                          }}
                         />
                       ) : (
                         <span className="text-[11px] text-[#86868b]">{t("Disponible", "Available")}</span>
@@ -649,11 +623,6 @@ export default function DuoSwitcher() {
                           fill
                           sizes="(max-width: 768px) 50vw, 240px"
                           className="object-contain"
-                          onError={(e) => {
-                            const target = e.currentTarget as HTMLImageElement;
-                            target.srcset = "";
-                            target.src = "/images/categoria-almacenes.png";
-                          }}
                         />
                       ) : (
                         <span className="text-[11px] text-[#86868b]">{t("Disponible", "Available")}</span>

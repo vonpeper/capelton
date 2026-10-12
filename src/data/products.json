@@ -20,16 +20,16 @@
       "Ventanas de aluminio"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_3M_VISTA_01-1.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_3M_VISTA_02-1.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_3M_VISTA_03-1.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_3M.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_3B.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2024/11/CM-3M.pdf",
     "tagline": "Oficina móvil compacta de 3m diseñada para supervisión técnica y control individual en sitios con espacio restringido. Equipada con aire acondicionado, aislamiento térmico y conexiones eléctricas integradas.",
     "isFlagship": false,
-    "taglineEn": "Compact 3m mobile office designed for individual technical supervision in tight footprint sites. Equipped with air conditioning, thermal insulation, and integrated electrical hookups.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Compact 3m mobile office designed for individual technical supervision in tight footprint sites. Equipped with air conditioning, thermal insulation, and integrated electrical hookups."
   },
   {
     "id": 1559,
@@ -52,16 +52,14 @@
       "06_blk"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-2.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_3M_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_3M_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_3M_VISTA_03.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2024/11/CM-3M.pdf",
     "tagline": "Oficina móvil sobre remolque con eje y tirón para proyectos viales y traslados continuos en campo. Lista para operar inmediatamente con aire acondicionado e instalación eléctrica bajo norma.",
     "isFlagship": false,
-    "taglineEn": "Towable 3m trailer office with hitch and axle for linear road projects and continuous transit. Ready for immediate deployment with air conditioning and certified electrical wiring.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Towable 3m trailer office with hitch and axle for linear road projects and continuous transit. Ready for immediate deployment with air conditioning and certified electrical wiring."
   },
   {
     "id": 1590,
@@ -84,16 +82,16 @@
       "Sistema de aire acondicionado"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-3.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_4M_Vista_01-1.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_4M_Vista_02-1.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_4M_Vista_03-1.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_4M.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_4B.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2024/11/CM-4M.pdf",
     "tagline": "Oficina móvil estándar de 4m diseñada para supervisión técnica de obra, contratistas y jefaturas de frente. Ofrece espacio para 2 a 4 ingenieros con climatización e iluminación LED eficiente.",
     "isFlagship": false,
-    "taglineEn": "Standard 4m mobile office built for civil site supervision, contractors, and field managers. Accommodates 2 to 4 engineers with efficient climate control and LED lighting.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Standard 4m mobile office built for civil site supervision, contractors, and field managers. Accommodates 2 to 4 engineers with efficient climate control and LED lighting."
   },
   {
     "id": 1700,
@@ -116,16 +114,18 @@
       "Cm-6p \n  ficha técnica"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-4.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_6M_Vista_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_6M_Vista_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_6M_Vista_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_6M.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_6B.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_6P.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_6BP.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/01/CM-6M.pdf",
     "tagline": "Oficina móvil intermedia de 6m concebida para coordinación técnica, reuniones operativas y control de calidad. Cuenta con amplio espacio de trabajo, aire acondicionado, piso SPC y cancelería de aluminio.",
     "isFlagship": false,
-    "taglineEn": "Versatile 6m mobile office engineered for technical coordination, site meetings, and QA labs. Features ample workspace, air conditioning, durable SPC flooring, and aluminum windows.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Versatile 6m mobile office engineered for technical coordination, site meetings, and QA labs. Features ample workspace, air conditioning, durable SPC flooring, and aluminum windows."
   },
   {
     "id": 1713,
@@ -148,16 +148,18 @@
       "Cm-8p \n  ficha técnica"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-5.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_8M_Vista_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_8M_Vista_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_8M_Vista_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_8M.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_8B.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_8P.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_8BP.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2024/11/CM-8M.pdf",
     "tagline": "Oficina móvil ejecutiva de 8m diseñada para coordinación general de planta o frente de obra mayor. Permite configuración combinada de privado gerencial y área de trabajo operativo.",
     "isFlagship": false,
-    "taglineEn": "Executive 8m mobile office designed for plant management and major jobsite supervision. Allows dual-zone layout with private executive office and open workspace.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Executive 8m mobile office designed for plant management and major jobsite supervision. Allows dual-zone layout with private executive office and open workspace."
   },
   {
     "id": 1728,
@@ -180,16 +182,18 @@
       "Cm-10p \n  ficha técnica"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_10M_Vista_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_10M_Vista_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_10M_Vista_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_10M.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_10B.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_10P.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_10BP.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2024/11/CM-10M.pdf",
     "tagline": "Oficina móvil insignia de 10m para dirección de proyectos de infraestructura y corporativos en campo. Incluye privado ejecutivo, área técnica de trabajo y medio baño integrado.",
     "isFlagship": true,
-    "taglineEn": "Flagship 10m mobile office built for project directors, infrastructure consortia, and corporate field offices. Includes executive office, open workstations, and private restroom.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Flagship 10m mobile office built for project directors, infrastructure consortia, and corporate field offices. Includes executive office, open workstations, and private restroom."
   },
   {
     "id": 1740,
@@ -212,16 +216,18 @@
       "Cm-12p \n  ficha técnica"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_12M_Vista_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_12M_Vista_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_12M_Vista_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_12M.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_12B.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_12P.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_12BP.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2024/11/CM-12M.pdf",
     "tagline": "Macro-oficina móvil de 12m diseñada para consolidar múltiples departamentos técnicos en una sola unidad. Equipada con climatización de alta eficiencia, áreas divididas y acabados de alta resistencia.",
     "isFlagship": false,
-    "taglineEn": "Heavy-duty 12m mobile office consolidating multiple engineering teams in one footprint. Equipped with high-efficiency HVAC, partitioned meeting zones, and rugged finishes.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Heavy-duty 12m mobile office consolidating multiple engineering teams in one footprint. Equipped with high-efficiency HVAC, partitioned meeting zones, and rugged finishes."
   },
   {
     "id": 1751,
@@ -244,16 +250,19 @@
       "Cm-14p \n  ficha técnica"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-2.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_14M_Vista_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_14M_Vista_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_14M_Vista_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_14M.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_14B.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_14P.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_14BP.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_14BPP.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2024/11/CM-14M.pdf",
     "tagline": "Oficina móvil corporativa de 14m para dirección general de megaproyectos y auditorías en sitio. Configurable con doble privado gerencial, sala de juntas y servicios sanitarios.",
     "isFlagship": false,
-    "taglineEn": "Corporate 14m mobile office for megaproject directorates and on-site audit teams. Configurable with dual executive suites, conference room, and restroom facilities.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Corporate 14m mobile office for megaproject directorates and on-site audit teams. Configurable with dual executive suites, conference room, and restroom facilities."
   },
   {
     "id": 1764,
@@ -276,16 +285,19 @@
       "Cm-17p \n  ficha técnica"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-3.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_17M_Vista_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_17M_Vista_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/CM_17M_Vista_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_17M.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_17B.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_17P.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_17BP.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/01/Planta_CM_17BPP.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2024/11/CM-17M.pdf",
     "tagline": "Oficina móvil de máxima escala (17m) para centros de mando, consorcios multinacionales y terminales. Distribución versátil con salas de juntas, privados y servicios para operación continua.",
     "isFlagship": false,
-    "taglineEn": "Maximum-scale 17m mobile workspace for strategic command centers and multinational operations. Versatile layout with boardrooms, private offices, and complete utilities.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Maximum-scale 17m mobile workspace for strategic command centers and multinational operations. Versatile layout with boardrooms, private offices, and complete utilities."
   },
   {
     "id": 2068,
@@ -308,16 +320,15 @@
       "Luminarias led"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-4.jpg",
-      "/images/blueprints/planta-caseta.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV3M2_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV3M2_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV3M2_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV3M2_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV-3M2.pdf",
     "tagline": "Caseta móvil de vigilancia para control de accesos, registro y seguridad perimetral (2.4×1.2m). Fabricada para resistir intemperie continua y brindar visibilidad panorámica al operador.",
     "isFlagship": false,
-    "taglineEn": "Compact guard booth (2.4×1.2m) for access control, visitor registration, and perimeter security. Built for continuous exterior exposure with panoramic visibility for one operator.",
-    "blueprintUrl": "/images/blueprints/planta-caseta.svg"
+    "taglineEn": "Compact guard booth (2.4×1.2m) for access control, visitor registration, and perimeter security. Built for continuous exterior exposure with panoramic visibility for one operator."
   },
   {
     "id": 2045,
@@ -340,16 +351,15 @@
       "Luminarias led"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-5.jpg",
-      "/images/blueprints/planta-caseta.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV6M2_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV6M2_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV6M2_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV6M2_PLANTA-1.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMV-6M2.pdf",
     "tagline": "Caseta de vigilancia amplia de 2.4×2.4m para 2 oficiales con espacio para monitores CCTV y registro vehicular. Equipada con aire acondicionado, visibilidad 360° y muros aislados.",
     "isFlagship": false,
-    "taglineEn": "Spacious 2.4×2.4m security booth for 2 officers with space for CCTV monitoring and access logs. Equipped with air conditioning, 360° visibility, and insulated panels.",
-    "blueprintUrl": "/images/blueprints/planta-caseta.svg"
+    "taglineEn": "Spacious 2.4×2.4m security booth for 2 officers with space for CCTV monitoring and access logs. Equipped with air conditioning, 360° visibility, and insulated panels."
   },
   {
     "id": 1984,
@@ -372,16 +382,15 @@
       "Luces de navegación"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CML6X16_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CML6X16_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CML6X16_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CML6X16_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CML-6X16.pdf",
     "tagline": "Remolque sanitario autónomo para frentes de obra viales, cuadrillas móviles y eventos industriales. Cuenta con cabinas independientes, lavamanos y sistema de fácil conexión o desalojo.",
     "isFlagship": false,
-    "taglineEn": "Self-contained mobile restroom trailer for road construction crews, field teams, and industrial events. Features separate private stalls, sinks, and quick-connect plumbing.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Self-contained mobile restroom trailer for road construction crews, field teams, and industrial events. Features separate private stalls, sinks, and quick-connect plumbing."
   },
   {
     "id": 2085,
@@ -404,16 +413,15 @@
       "Muros de lámina pintro"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD4IB_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD4IB_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD4IB_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD4IB_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD-4LB.pdf",
     "tagline": "Módulo habitacional compacto de 4m para descanso de cuadrillas técnicas en sitio. Configurado con literas resistentes, aislamiento termoacústico y climatización para confort continuo.",
     "isFlagship": false,
-    "taglineEn": "Compact 4m crew quarters for field technicians. Configured with heavy-duty bunks, thermoacoustic insulation, and air conditioning for continuous rest comfort.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Compact 4m crew quarters for field technicians. Configured with heavy-duty bunks, thermoacoustic insulation, and air conditioning for continuous rest comfort."
   },
   {
     "id": 2166,
@@ -436,16 +444,15 @@
       "Piso de spc"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-2.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDBC_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDBC_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDBC_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDBC_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDBC-6M.pdf",
     "tagline": "Dormitorio móvil de 6m para 2 a 4 supervisores o especialistas en campo. Equipado con lockers, aire acondicionado y aislamiento perimetral para climas extremos.",
     "isFlagship": false,
-    "taglineEn": "6m crew quarters for 2 to 4 site supervisors or specialists. Equipped with lockers, air conditioning, and full insulation for extreme climate conditions.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "6m crew quarters for 2 to 4 site supervisors or specialists. Equipped with lockers, air conditioning, and full insulation for extreme climate conditions."
   },
   {
     "id": 2098,
@@ -468,16 +475,15 @@
       "Muros de lámina pintro"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-3.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD10BR_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD10BR_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD10BR_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD10BR_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD-10BR.pdf",
     "tagline": "Dormitorio de obra de 10m con baño y regadera integrados para cuadrillas en sitios remotos o minería. Ofrece descanso confortable, privacidad y servicios completos en una sola huella.",
     "isFlagship": false,
-    "taglineEn": "10m workforce quarters with integrated bathroom and shower for remote sites or mining. Provides restful accommodations, privacy, and full amenities in a single footprint.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "10m workforce quarters with integrated bathroom and shower for remote sites or mining. Provides restful accommodations, privacy, and full amenities in a single footprint."
   },
   {
     "id": 2112,
@@ -500,16 +506,15 @@
       "Ventanas de aluminio"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-4.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDC10M_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDC10M_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDC10M_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDC10M_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMDC-10M.pdf",
     "tagline": "Dormitorio compartido de 10m diseñado para optimizar el alojamiento de cuadrillas medianas. Incluye literas reforzadas, lockers individuales, iluminación LED y aire acondicionado.",
     "isFlagship": false,
-    "taglineEn": "Shared 10m crew quarters designed to optimize mid-sized workforce housing. Features reinforced bunks, individual lockers, LED lighting, and climate control.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Shared 10m crew quarters designed to optimize mid-sized workforce housing. Features reinforced bunks, individual lockers, LED lighting, and climate control."
   },
   {
     "id": 2127,
@@ -532,16 +537,15 @@
       "Luminarias led"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-5.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD12M_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD12M_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD12M_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD12M_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD-12M.pdf",
     "tagline": "Módulo habitacional de 12m para campamentos de obra civil e infraestructura de alta rotación. Gran capacidad de descanso con aislamiento acústico para turnos continuos.",
     "isFlagship": false,
-    "taglineEn": "12m lodging module for civil works and infrastructure camps with rotating shifts. High sleeping capacity with acoustic insulation for day and night workers.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "12m lodging module for civil works and infrastructure camps with rotating shifts. High sleeping capacity with acoustic insulation for day and night workers."
   },
   {
     "id": 2140,
@@ -564,16 +568,15 @@
       "Muros de lámina pintro"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD12X60_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD12X60_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD12X60_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD12X60_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMD-12X60.pdf",
     "tagline": "Campamento habitacional modular de 17m para proyectos energéticos y mineros de gran escala. Máxima habitabilidad con pasillo central, módulos de literas y climatización dividida.",
     "isFlagship": true,
-    "taglineEn": "Modular 17m workforce camp unit for large-scale energy and mining projects. High livability with central corridor, bunk quarters, and multi-zone climate control.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Modular 17m workforce camp unit for large-scale energy and mining projects. High livability with central corridor, bunk quarters, and multi-zone climate control."
   },
   {
     "id": 2139,
@@ -596,16 +599,15 @@
       "Muros de lámina pintro"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/HOTEL12X60_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/HOTEL12X60_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/HOTEL12X60_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/HOTEL12X60_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/HOTEL-12X60.pdf",
     "tagline": "Campamento habitacional tipo hotel de 17m con cuartos independientes y acabados de confort superior. Diseñado para estancias prolongadas de directores de proyecto y especialistas técnicos.",
     "isFlagship": true,
-    "taglineEn": "17m hotel-style modular camp unit with private rooms and upgraded finishes. Tailored for extended stays of project executives and specialized engineers.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "17m hotel-style modular camp unit with private rooms and upgraded finishes. Tailored for extended stays of project executives and specialized engineers."
   },
   {
     "id": 2027,
@@ -628,16 +630,15 @@
       "Luces de navegación"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-2.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMS10M_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMS10M_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMS10M_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMS10M_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMS-10M.pdf",
     "tagline": "Módulo sanitario industrial de alta capacidad (10m) para frentes de trabajo y campamentos de obra. Diseñado con divisiones independientes, ventilación forzada y piso de alta higiene.",
     "isFlagship": false,
-    "taglineEn": "High-capacity 10m industrial restroom module for jobsite crews and workforce camps. Engineered with independent stalls, forced ventilation, and hygienic, easy-clean surfaces.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "High-capacity 10m industrial restroom module for jobsite crews and workforce camps. Engineered with independent stalls, forced ventilation, and hygienic, easy-clean surfaces."
   },
   {
     "id": 2013,
@@ -660,16 +661,15 @@
       "Extractor de aire"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-3.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMB10M_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMB10M_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMB10M_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMB10M_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMB-10M.pdf",
     "tagline": "Módulo combinado de sanitarios y regaderas industriales (10m) para personal en campamento continuo. Incluye cabinas de ducha, lavamanos colectivos y calentador de alta demanda.",
     "isFlagship": false,
-    "taglineEn": "Combined 10m restroom and industrial shower module for continuous camp personnel. Includes private shower stalls, wash stations, and high-capacity water heating.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Combined 10m restroom and industrial shower module for continuous camp personnel. Includes private shower stalls, wash stations, and high-capacity water heating."
   },
   {
     "id": 2221,
@@ -692,16 +692,15 @@
       "Piso de spc"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-4.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK6M_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK6M_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK6M_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK6M_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK-6M.pdf",
     "tagline": "Comedor móvil de 6m para cuadrillas de obra de 7 a 8 personas simultáneas. Equipado con mesas y bancas integradas, barra con tarja, aire acondicionado y superficies lavables.",
     "isFlagship": false,
-    "taglineEn": "6m mobile dining unit seating 7 to 8 crew members simultaneously. Equipped with integrated tables and benches, sink counter, AC, and easy-clean surfaces.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "6m mobile dining unit seating 7 to 8 crew members simultaneously. Equipped with integrated tables and benches, sink counter, AC, and easy-clean surfaces."
   },
   {
     "id": 2237,
@@ -724,16 +723,15 @@
       "Piso de spc"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-5.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK8M_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK8M_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK8M_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK8M_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMK-8M.pdf",
     "tagline": "Comedor móvil de 8m para servicio de 10 a 12 comensales en turnos de trabajo continuos. Cuenta con área de preparación básica, iluminación LED y piso SPC de alta durabilidad.",
     "isFlagship": false,
-    "taglineEn": "8m mobile dining unit serving 10 to 12 diners per shift. Features prep counter with sink, LED lighting, and heavy-duty SPC flooring.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "8m mobile dining unit serving 10 to 12 diners per shift. Features prep counter with sink, LED lighting, and heavy-duty SPC flooring."
   },
   {
     "id": 2238,
@@ -756,16 +754,15 @@
       "Piso de spc"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMM12CO_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMM12CO_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMM12CO_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/CMM12CO_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/CMM-12CO.pdf",
     "tagline": "Comedor masivo de 12m diseñado para campamentos de 35 a 37 personas por turno. Estructura higiénica, ventilación cruzada, aire acondicionado y facilidad de sanitización rápida.",
     "isFlagship": true,
-    "taglineEn": "Massive 12m dining hall designed for workforce camps seating 35 to 37 per shift. Sanitary build, cross ventilation, air conditioning, and quick-clean finishes.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Massive 12m dining hall designed for workforce camps seating 35 to 37 per shift. Sanitary build, cross ventilation, air conditioning, and quick-clean finishes."
   },
   {
     "id": 2788,
@@ -788,16 +785,16 @@
       "Cortina metálica"
     ],
     "images": [
-      "/images/categoria-almacenes.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA_VISTA1.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA_VISTA2.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA_VISTA3.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA4M_PLANTA.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA6M_PLANTA-scaled.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA_CAJA_SECA.pdf",
     "tagline": "Módulo de resguardo y almacén seco para herramientas, planos y equipo delicado de obra. Estructura sellada contra polvo y humedad con cerradura de seguridad perimetral.",
     "isFlagship": false,
-    "taglineEn": "Dry storage unit for jobsite tools, blueprints, and sensitive field equipment. Sealed against dust and moisture with high-security locking hardware.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Dry storage unit for jobsite tools, blueprints, and sensitive field equipment. Sealed against dust and moisture with high-security locking hardware."
   },
   {
     "id": 2790,
@@ -820,16 +817,16 @@
       "Cortina metálica"
     ],
     "images": [
-      "/images/categoria-almacenes.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-2.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA_FONDO_VISTA1-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA_FONDO_VISTA2-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA_FONDO_VISTA3-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA4M_PLANTA-1.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA6M_PLANTA-1-scaled.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/08/MINIBODEGA_CONTENEDOR.pdf",
     "tagline": "Bodega de seguridad reforzada para resguardo de maquinaria menor, insumos y herramientas críticas. Máxima resistencia a impacto e intemperie con acceso amplio para carga.",
     "isFlagship": false,
-    "taglineEn": "Reinforced security storage unit for small machinery, supplies, and high-value tools. Maximum weather and impact resistance with wide cargo door access.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Reinforced security storage unit for small machinery, supplies, and high-value tools. Maximum weather and impact resistance with wide cargo door access."
   },
   {
     "id": 2180,
@@ -852,16 +849,15 @@
       "Ventanas de aluminio"
     ],
     "images": [
-      "/images/categoria-almacenes.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-3.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/BODEGA_8X32_VISTA_01.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/BODEGA_8X32_VISTA_02.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/BODEGA_8X32_VISTA_03.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/02/BODEGA_8X32_PLANTA.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/2025/02/BODEGA-8X32.pdf",
     "tagline": "Almacén móvil de 8.5m para gestión y control de inventarios directos en frente de obra. Equipada con piso reforzado para estantería pesada e iluminación interior.",
     "isFlagship": true,
-    "taglineEn": "8.5m mobile warehouse for on-site inventory management and material control. Built with reinforced flooring for heavy shelving and full interior lighting.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "8.5m mobile warehouse for on-site inventory management and material control. Built with reinforced flooring for heavy shelving and full interior lighting."
   },
   {
     "id": 2713,
@@ -884,16 +880,15 @@
       "Escalera de acero antiderrapante"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-4.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM4MM_VISTA1-1-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM4MM_VISTA2-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM4MM_VISTA3-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM4MM_PLANTA-1-scaled.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/fichas/cm4-mm.pdf",
     "tagline": "Consultorio médico móvil básico de 4m para atención primaria, curaciones y toma de signos vitales en obra. Equipado con mesa de exploración, lavamanos y climatización.",
     "isFlagship": false,
-    "taglineEn": "Basic 4m mobile medical clinic for on-site first aid, triage, and employee health checkups. Equipped with exam table, sink, and climate control.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Basic 4m mobile medical clinic for on-site first aid, triage, and employee health checkups. Equipped with exam table, sink, and climate control."
   },
   {
     "id": 2743,
@@ -916,16 +911,15 @@
       "Escalera de acero antiderrapante"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-5.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM6MM_VISTA1-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM6MM_VISTA2-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM6MM_VISTA3-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM6MM_PLANTA-scaled.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/fichas/cm6-mm.pdf",
     "tagline": "Consultorio clínico de 6m diseñado para brigadas de salud laboral y atención preventiva en plantas. Cuenta con área de auscultación, escritorio médico y acabados asépticos.",
     "isFlagship": false,
-    "taglineEn": "6m occupational health clinic designed for preventive care and industrial checkups. Features examination zone, doctor workstation, and aseptic finishes.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "6m occupational health clinic designed for preventive care and industrial checkups. Features examination zone, doctor workstation, and aseptic finishes."
   },
   {
     "id": 2745,
@@ -948,16 +942,15 @@
       "Escalera de acero antiderrapante"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM8MM_VISTA1-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM8MM_VISTA2-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM8MM_VISTA3-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM8MM_PLANTA-scaled.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/fichas/cm8-mm.pdf",
     "tagline": "Consultorio médico integral de 8m para chequeos periódicos de personal y primeros auxilios mayores. Incluye privado médico, área de curación y baño completo.",
     "isFlagship": false,
-    "taglineEn": "Comprehensive 8m mobile medical unit for routine health screenings and advanced first aid. Includes consultation office, triage area, and private restroom.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Comprehensive 8m mobile medical unit for routine health screenings and advanced first aid. Includes consultation office, triage area, and private restroom."
   },
   {
     "id": 2747,
@@ -980,15 +973,14 @@
       "Escalera de acero antiderrapante"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/categoria-almacenes.png",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/blueprints/planta-oficina.svg"
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA1-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA2-1-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_VISTA3-scaled.png",
+      "https://capeltonmexico.com/wp-content/uploads/2025/08/CM10MM_PLANTA-1-scaled.png"
     ],
     "technicalSheetUrl": "https://capeltonmexico.com/wp-content/uploads/fichas/cm10-mm.pdf",
     "tagline": "Clínica médica móvil de 10m para campamentos remotos y frentes de trabajo de alto riesgo. Configurada con sala de atención, camillas de estabilización y farmacia básica.",
     "isFlagship": false,
-    "taglineEn": "Full 10m mobile medical clinic for remote work camps and high-risk projects. Configured with exam room, stabilization beds, and basic dispensary.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "taglineEn": "Full 10m mobile medical clinic for remote work camps and high-risk projects. Configured with exam room, stabilization beds, and basic dispensary."
   }
 ]

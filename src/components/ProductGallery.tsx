@@ -280,11 +280,6 @@ export default function ProductGallery({
             className={`object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.08)] transition-all duration-300 animate-in fade-in zoom-in-95 ${
               currentItem.type === "blueprint" ? "p-2 sm:p-4 bg-white/70 rounded-2xl border border-black/5" : ""
             }`}
-            onError={(e) => {
-              const target = e.currentTarget as HTMLImageElement;
-              target.srcset = "";
-              target.src = "/images/CM_10M_Vista_01_cropped.png";
-            }}
           />
         </div>
 
@@ -324,11 +319,6 @@ export default function ProductGallery({
                       fill
                       sizes="96px"
                       className="object-contain"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.srcset = "";
-                        target.src = "/images/CM_10M_Vista_01_cropped.png";
-                      }}
                     />
                   </div>
                 </button>
@@ -377,11 +367,6 @@ export default function ProductGallery({
               fill
               sizes="100vw"
               className="object-contain filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)]"
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement;
-                target.srcset = "";
-                target.src = "/images/CM_10M_Vista_01_cropped.png";
-              }}
             />
 
             {/* Left & Right Lightbox Arrows */}
@@ -428,11 +413,6 @@ export default function ProductGallery({
                     fill
                     sizes="56px"
                     className="object-contain p-1"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.srcset = "";
-                      target.src = "/images/CM_10M_Vista_01_cropped.png";
-                    }}
                   />
                 </button>
               );

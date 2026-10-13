@@ -66,9 +66,9 @@ const CATEGORY_MODEL_ORDER: Record<string, string[]> = {
 
 const DEFAULT_CATEGORY_PAIRS: Record<string, [string, string]> = {
   oficinas: ["cm4m", "cm10m"],
-  dormitorios: ["cmd10br", "hotel12x60"],
-  comedores: ["cmk6m", "cmm12co"],
-  sanitarios: ["cml6x16", "cms10m"],
+  dormitorios: ["cmd4ib", "cmd10br"],
+  comedores: ["cmk8m", "cmk8m"],
+  sanitarios: ["cms10m", "cmb10m"],
   casetas: ["cmvc3m2", "cmv6m2"],
   contenedores: ["bodega8x32", "minibodega-contenedor"],
   consultorios: ["cm4-mm", "cm10-mm"],
@@ -260,27 +260,27 @@ function cleanDuoFeatures(features: string[], language: string): string[] {
 }
 
 function getModelPlantaImage(model: ProductModel): string | null {
+  if (model.blueprintUrl) return model.blueprintUrl;
   const planta = model.images.find(
-    (img) => img.toLowerCase().includes("planta") || img.includes("blueprints")
+    (img) => img.toLowerCase().includes("planta") || img.includes("blueprints") || img.includes("layout")
   );
   if (planta) return planta;
-  if (model.category === "casetas") {
-    return "/images/blueprints/planta-caseta.svg";
-  }
-  return "/images/blueprints/planta-oficina.svg";
+  return null;
 }
 
 function getModelInteriorImage(model: ProductModel): string | null {
   const interior = model.images.find(
     (img) =>
-      (img.toLowerCase().includes("vista_02") ||
-        img.toLowerCase().includes("vista2") ||
-        img.toLowerCase().includes("vista3") ||
-        img.toLowerCase().includes("interior")) &&
-      !img.toLowerCase().includes("planta")
+      (img.toLowerCase().includes("tarja") ||
+        img.toLowerCase().includes("interior") ||
+        img.toLowerCase().includes("oficinas_caapelton") ||
+        img.toLowerCase().includes("vista_02") ||
+        img.toLowerCase().includes("vista2")) &&
+      !img.toLowerCase().includes("planta") &&
+      !img.toLowerCase().includes("blueprint") &&
+      !img.toLowerCase().includes("layout")
   );
-  if (interior) return interior;
-  return model.images[1] || model.images[0] || null;
+  return interior || null;
 }
 
 function getModelOptionLabel(model: ProductModel, language: string): string {
@@ -443,7 +443,7 @@ export default function DuoSwitcher() {
                 </div>
 
                 <div className="relative w-full h-32 sm:h-44 mb-3 flex items-center justify-center">
-                  {modelA.images[0] ? (
+                  {modelA.images && modelA.images[0] ? (
                     <Image
                       src={modelA.images[0]}
                       alt={modelA.title}
@@ -451,8 +451,22 @@ export default function DuoSwitcher() {
                       sizes="(max-width: 1024px) 50vw, 380px"
                       className="object-contain filter drop-shadow-[0_10px_16px_rgba(0,0,0,0.06)]"
                     />
+                  ) : modelA.blueprintUrl ? (
+                    <Image
+                      src={modelA.blueprintUrl}
+                      alt={modelA.title}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 380px"
+                      className="object-contain p-2 filter contrast-125"
+                    />
                   ) : (
-                    <div className="text-xs text-[#86868b]">{t("Render disponible", "Render available")}</div>
+                    <div className="w-full h-full max-w-[260px] rounded-2xl bg-black/[0.03] border border-black/8 flex flex-col items-center justify-center p-3 text-center">
+                      <span className="text-sm font-bold text-black">{modelA.modelCode}</span>
+                      <span className="text-[11px] text-[#86868b] mt-0.5">{modelA.dimensions}</span>
+                      <span className="text-[9px] font-semibold text-capelton-green bg-capelton-green/10 border border-capelton-green/20 px-2 py-0.5 rounded-full mt-2">
+                        {t("Ficha Técnica Disponible", "Spec Sheet Available")}
+                      </span>
+                    </div>
                   )}
                 </div>
 
@@ -499,7 +513,7 @@ export default function DuoSwitcher() {
                 </div>
 
                 <div className="relative w-full h-32 sm:h-44 mb-3 flex items-center justify-center">
-                  {modelB.images[0] ? (
+                  {modelB.images && modelB.images[0] ? (
                     <Image
                       src={modelB.images[0]}
                       alt={modelB.title}
@@ -507,8 +521,22 @@ export default function DuoSwitcher() {
                       sizes="(max-width: 1024px) 50vw, 380px"
                       className="object-contain filter drop-shadow-[0_10px_16px_rgba(0,0,0,0.06)]"
                     />
+                  ) : modelB.blueprintUrl ? (
+                    <Image
+                      src={modelB.blueprintUrl}
+                      alt={modelB.title}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 380px"
+                      className="object-contain p-2 filter contrast-125"
+                    />
                   ) : (
-                    <div className="text-xs text-[#86868b]">{t("Render disponible", "Render available")}</div>
+                    <div className="w-full h-full max-w-[260px] rounded-2xl bg-black/[0.03] border border-black/8 flex flex-col items-center justify-center p-3 text-center">
+                      <span className="text-sm font-bold text-black">{modelB.modelCode}</span>
+                      <span className="text-[11px] text-[#86868b] mt-0.5">{modelB.dimensions}</span>
+                      <span className="text-[9px] font-semibold text-capelton-green bg-capelton-green/10 border border-capelton-green/20 px-2 py-0.5 rounded-full mt-2">
+                        {t("Ficha Técnica Disponible", "Spec Sheet Available")}
+                      </span>
+                    </div>
                   )}
                 </div>
 

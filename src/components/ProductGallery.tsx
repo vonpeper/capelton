@@ -40,7 +40,28 @@ function getLabelAndType(url: string, index: number): { label: string; labelEn: 
   const name = url.split("/").pop()?.toLowerCase() || "";
   const base = name.split(".")[0];
 
-  // Specific Capelton 3D Category & Product Renders
+  // Blueprints
+  if (name.includes("planta") || name.includes("plano") || name.includes("blueprint") || name.includes("layout")) {
+    return { label: "Plano Arquitectónico Oficial", labelEn: "Official Architectural Blueprint", type: "blueprint" };
+  }
+
+  // Authentic Interiors
+  if (name.includes("oficinas_caapelton") || name.includes("interior")) {
+    return { label: "Perspectiva de Interior Ejecutivo", labelEn: "Executive Interior Perspective", type: "render" };
+  }
+  if (name.includes("tarja")) {
+    return { label: "Módulo Interior con Tarja", labelEn: "Interior Module with Sink", type: "render" };
+  }
+
+  // Perspective Views
+  if (name.includes("persp")) {
+    return { label: "Perspectiva Isométrica 3D", labelEn: "3D Isometric Perspective", type: "render" };
+  }
+  if (name.includes("alt") || name.includes("ret")) {
+    return { label: "Vista Lateral 3D", labelEn: "3D Side View", type: "render" };
+  }
+
+  // Category 3D Renders
   if (name.includes("caseta-vigilancia")) {
     return { label: "Render 3D Caseta de Vigilancia", labelEn: "3D Guard Booth Render", type: "render" };
   }
@@ -60,55 +81,17 @@ function getLabelAndType(url: string, index: number): { label: string; labelEn: 
     return { label: "Render 3D Bodega y Contenedor", labelEn: "3D Storage & Container Render", type: "render" };
   }
   if (name.includes("cm_10m_vista_01") || name.includes("cropped")) {
-    return { label: "Render 3D Oficina Móvil", labelEn: "3D Mobile Office Render", type: "render" };
+    return { label: "Render 3D Oficial Insignia", labelEn: "3D Flagship Official Render", type: "render" };
   }
 
-  // Equipment & Finishes Details
-  if (name.includes("lavamanos")) {
-    return { label: "Equipamiento: Lavamanos Industrial", labelEn: "Equipment: Industrial Basin", type: "render" };
-  }
-  if (name.includes("mingitorio")) {
-    return { label: "Equipamiento: Mingitorio Inox", labelEn: "Equipment: Stainless Urinal", type: "render" };
-  }
-  if (name.includes("piso_spc") || name.includes("piso")) {
-    return { label: "Acabados: Piso Núcleo Rígido SPC", labelEn: "Finishes: SPC Rigid Core Flooring", type: "render" };
-  }
-  if (name.includes("ventana")) {
-    return { label: "Ventanería: Aluminio Grado Industrial", labelEn: "Glazing: Industrial Aluminum", type: "render" };
-  }
-  if (name.includes("luminarias") || name.includes("luminaria")) {
-    return { label: "Iluminación: Luminarias LED NOM", labelEn: "Lighting: NOM Certified LED", type: "render" };
-  }
-
-  // Blueprints
-  if (name.includes("planta") || name.includes("plano") || name.includes("blueprint") || name.includes("_6b")) {
-    return { label: "Plano Arquitectónico Oficial", labelEn: "Architectural CAD Blueprint", type: "blueprint" };
-  }
-
-  // Project Photos
-  if (name.includes("proyecto")) {
-    return { label: `Entrega en Obra #${index + 1}`, labelEn: `On-Site Delivery #${index + 1}`, type: "render" };
-  }
-
-  // Standard perspective angles
-  if (name.includes("vista_01") || name.includes("vista1")) {
-    return { label: "Vista Frontal 3D", labelEn: "3D Front View", type: "render" };
-  }
-  if (name.includes("vista_02") || name.includes("vista2")) {
-    return { label: "Vista Lateral 3D", labelEn: "3D Side View", type: "render" };
-  }
-  if (name.includes("vista_03") || name.includes("vista3")) {
-    return { label: "Vista Posterior 3D", labelEn: "3D Rear View", type: "render" };
-  }
-
-  // Filter out pure numbers or generic black UI icons
+  // Filter out UI icons, logos, favicons
   if (base.match(/^\d+$/) || name.includes("_blk") || name.includes(".blk") || name.includes("logo") || name.includes("favicon")) {
     return null;
   }
 
-  // Model-named renders like cm_10m...
-  if (name.startsWith("cm_") || name.startsWith("cm") || name.startsWith("minibodega") || name.startsWith("hotel") || name.startsWith("bodega")) {
-    return { label: "Vista Isométrica 3D", labelEn: "3D Isometric View", type: "render" };
+  // Model-named renders like cm4m, cm6m...
+  if (name.startsWith("cm") || name.startsWith("minibodega") || name.startsWith("hotel") || name.startsWith("bodega")) {
+    return { label: "Render 3D Oficial", labelEn: "Official 3D Render", type: "render" };
   }
 
   return { label: `Vista #${index + 1}`, labelEn: `View #${index + 1}`, type: "render" };

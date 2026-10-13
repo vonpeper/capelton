@@ -19,13 +19,7 @@
       "Muros de lámina pintro",
       "Ventanas de aluminio"
     ],
-    "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM3M",
     "tagline": "Oficina móvil compacta de 3m diseñada para supervisión técnica y control individual en sitios con espacio restringido. Equipada con aire acondicionado, aislamiento térmico y conexiones eléctricas integradas.",
     "isFlagship": false,
@@ -52,13 +46,7 @@
       "05_blk",
       "06_blk"
     ],
-    "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-2.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM-3MR",
     "tagline": "Oficina móvil sobre remolque con eje y tirón para proyectos viales y traslados continuos en campo. Lista para operar inmediatamente con aire acondicionado e instalación eléctrica bajo norma.",
     "isFlagship": false,
@@ -86,11 +74,7 @@
       "Sistema de aire acondicionado"
     ],
     "images": [
-      "/images/models/cm4m.png",
-      "/images/blueprints/layout-cm4m.webp",
-      "/images/proyectos/proyecto-3.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cm4m.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM4M",
     "tagline": "Oficina móvil estándar de 4m diseñada para supervisión técnica de obra, contratistas y jefaturas de frente. Ofrece espacio para 2 a 4 ingenieros con climatización e iluminación LED eficiente.",
@@ -120,11 +104,7 @@
     ],
     "images": [
       "/images/models/cm6m.png",
-      "/images/blueprints/layout-cm6m.webp",
-      "/images/models/cm6bp.jpg",
-      "/images/proyectos/proyecto-4.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cm6bp.jpg"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM6M",
     "tagline": "Oficina móvil intermedia de 6m concebida para coordinación técnica, reuniones operativas y control de calidad. Cuenta con amplio espacio de trabajo, aire acondicionado, piso SPC y cancelería de aluminio.",
@@ -154,11 +134,7 @@
     ],
     "images": [
       "/images/models/cm8m.png",
-      "/images/blueprints/layout-cm8m.webp",
-      "/images/models/cm8m-01.webp",
-      "/images/proyectos/proyecto-5.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cm8m-01.webp"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM8M",
     "tagline": "Oficina móvil ejecutiva de 8m diseñada para coordinación general de planta o frente de obra mayor. Permite configuración combinada de privado gerencial y área de trabajo operativo.",
@@ -187,12 +163,10 @@
       "Cm-10p \n  ficha técnica"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
-      "/images/blueprints/layout-cm10m.png",
+      "/images/models/cm10m.png",
       "/images/models/cm10m-persp.png",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/CM_10M_Vista_01_cropped.png",
+      "/images/archived/oficinas_caapelton-04-2-2048x1365.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM10M",
     "tagline": "Oficina móvil insignia de 10m para dirección de proyectos de infraestructura y corporativos en campo. Incluye privado ejecutivo, área técnica de trabajo y medio baño integrado.",
@@ -221,11 +195,7 @@
       "Cm-12p \n  ficha técnica"
     ],
     "images": [
-      "/images/models/cm12m.png",
-      "/images/blueprints/layout-cm12m.webp",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cm12m.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM12M",
     "tagline": "Macro-oficina móvil de 12m diseñada para consolidar múltiples departamentos técnicos en una sola unidad. Equipada con climatización de alta eficiencia, áreas divididas y acabados de alta resistencia.",
@@ -255,11 +225,7 @@
     ],
     "images": [
       "/images/models/cm14m.png",
-      "/images/blueprints/layout-cm14bp.webp",
-      "/images/models/cm14m-tarja.png",
-      "/images/proyectos/proyecto-2.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cm14m-tarja.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM14M",
     "tagline": "Oficina móvil corporativa de 14m para dirección general de megaproyectos y auditorías en sitio. Configurable con doble privado gerencial, sala de juntas y servicios sanitarios.",
@@ -289,11 +255,7 @@
     ],
     "images": [
       "/images/models/cm17m.png",
-      "/images/blueprints/layout-cm17bpp.webp",
-      "/images/models/cm17bpp.jpg",
-      "/images/proyectos/proyecto-3.jpg",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cm17bpp.jpg"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM17M",
     "tagline": "Oficina móvil de máxima escala (17m) para centros de mando, consorcios multinacionales y terminales. Distribución versátil con salas de juntas, privados y servicios para operación continua.",
@@ -323,10 +285,7 @@
     ],
     "images": [
       "/images/models/cmvc3m2.png",
-      "/images/blueprints/layout-cmcv3m.webp",
-      "/images/models/cmvc3m2-alt.png",
-      "/images/categories/caseta-vigilancia.jpg",
-      "/images/recovered/VENTANA.png"
+      "/images/models/cmvc3m2-alt.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMVC-3M2",
     "tagline": "Caseta móvil de vigilancia para control de accesos, registro y seguridad perimetral (2.4×1.2m). Fabricada para resistir intemperie continua y brindar visibilidad panorámica al operador.",
@@ -355,10 +314,7 @@
       "Luminarias led"
     ],
     "images": [
-      "/images/models/cmv6m2.png",
-      "/images/blueprints/layout-cmcv6m.webp",
-      "/images/categories/caseta-vigilancia.jpg",
-      "/images/recovered/VENTANA.png"
+      "/images/models/cmv6m2.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMVC-6M2",
     "tagline": "Caseta de vigilancia amplia de 2.4×2.4m para 2 oficiales con espacio para monitores CCTV y registro vehicular. Equipada con aire acondicionado, visibilidad 360° y muros aislados.",
@@ -386,18 +342,12 @@
       "Escalera de acero antiderrapante",
       "Luces de navegación"
     ],
-    "images": [
-      "/images/categories/sanitario-movil.jpg",
-      "/images/recovered/LAVAMANOS-1.png",
-      "/images/recovered/MINGITORIO_INOX.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-6.jpg"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CML-6X16",
     "tagline": "Remolque sanitario autónomo para frentes de obra viales, cuadrillas móviles y eventos industriales. Cuenta con cabinas independientes, lavamanos y sistema de fácil conexión o desalojo.",
     "isFlagship": false,
     "taglineEn": "Self-contained mobile restroom trailer for road construction crews, field teams, and industrial events. Features separate private stalls, sinks, and quick-connect plumbing.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2085,
@@ -421,16 +371,13 @@
     ],
     "images": [
       "/images/models/cmd4ib.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/categories/dormitorio-movil.jpg",
-      "/images/recovered/LUMINARIAS.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cmd4lb.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMD-4IB",
     "tagline": "Módulo habitacional compacto de 4m para descanso de cuadrillas técnicas en sitio. Configurado con literas resistentes, aislamiento termoacústico y climatización para confort continuo.",
     "isFlagship": false,
     "taglineEn": "Compact 4m crew quarters for field technicians. Configured with heavy-duty bunks, thermoacoustic insulation, and air conditioning for continuous rest comfort.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2166,
@@ -452,18 +399,12 @@
       "Muros de lámina pintro",
       "Piso de spc"
     ],
-    "images": [
-      "/images/categories/dormitorio-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-2.jpg",
-      "/images/recovered/LUMINARIAS.png",
-      "/images/recovered/PISO_SPC.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMDBC6M",
     "tagline": "Dormitorio móvil de 6m para 2 a 4 supervisores o especialistas en campo. Equipado con lockers, aire acondicionado y aislamiento perimetral para climas extremos.",
     "isFlagship": false,
     "taglineEn": "6m crew quarters for 2 to 4 site supervisors or specialists. Equipped with lockers, air conditioning, and full insulation for extreme climate conditions.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2098,
@@ -486,17 +427,13 @@
       "Muros de lámina pintro"
     ],
     "images": [
-      "/images/models/cmd10br.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/categories/dormitorio-movil.jpg",
-      "/images/recovered/LUMINARIAS.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cmd10br.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMD10BR",
     "tagline": "Dormitorio de obra de 10m con baño y regadera integrados para cuadrillas en sitios remotos o minería. Ofrece descanso confortable, privacidad y servicios completos en una sola huella.",
     "isFlagship": false,
     "taglineEn": "10m workforce quarters with integrated bathroom and shower for remote sites or mining. Provides restful accommodations, privacy, and full amenities in a single footprint.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2112,
@@ -519,17 +456,13 @@
       "Ventanas de aluminio"
     ],
     "images": [
-      "/images/models/cmdc10m.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/categories/dormitorio-movil.jpg",
-      "/images/recovered/LUMINARIAS.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cmdc10m.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMDC10M",
     "tagline": "Dormitorio compartido de 10m diseñado para optimizar el alojamiento de cuadrillas medianas. Incluye literas reforzadas, lockers individuales, iluminación LED y aire acondicionado.",
     "isFlagship": false,
     "taglineEn": "Shared 10m crew quarters designed to optimize mid-sized workforce housing. Features reinforced bunks, individual lockers, LED lighting, and climate control.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2127,
@@ -552,17 +485,13 @@
       "Luminarias led"
     ],
     "images": [
-      "/images/models/cmd12m.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/categories/dormitorio-movil.jpg",
-      "/images/recovered/LUMINARIAS.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/models/cmd12m.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMD12M",
     "tagline": "Módulo habitacional de 12m para campamentos de obra civil e infraestructura de alta rotación. Gran capacidad de descanso con aislamiento acústico para turnos continuos.",
     "isFlagship": false,
     "taglineEn": "12m lodging module for civil works and infrastructure camps with rotating shifts. High sleeping capacity with acoustic insulation for day and night workers.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2140,
@@ -584,18 +513,12 @@
       "Piso de spc",
       "Muros de lámina pintro"
     ],
-    "images": [
-      "/images/categories/dormitorio-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/recovered/LUMINARIAS.png",
-      "/images/recovered/PISO_SPC.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMD12X60",
     "tagline": "Campamento habitacional modular de 17m para proyectos energéticos y mineros de gran escala. Máxima habitabilidad con pasillo central, módulos de literas y climatización dividida.",
     "isFlagship": true,
     "taglineEn": "Modular 17m workforce camp unit for large-scale energy and mining projects. High livability with central corridor, bunk quarters, and multi-zone climate control.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2139,
@@ -617,18 +540,12 @@
       "Piso de spc",
       "Muros de lámina pintro"
     ],
-    "images": [
-      "/images/categories/dormitorio-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/recovered/LUMINARIAS.png",
-      "/images/recovered/PISO_SPC.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20HOTEL-12X60",
     "tagline": "Campamento habitacional tipo hotel de 17m con cuartos independientes y acabados de confort superior. Diseñado para estancias prolongadas de directores de proyecto y especialistas técnicos.",
     "isFlagship": true,
     "taglineEn": "17m hotel-style modular camp unit with private rooms and upgraded finishes. Tailored for extended stays of project executives and specialized engineers.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2027,
@@ -652,11 +569,7 @@
     ],
     "images": [
       "/images/models/cms10m.png",
-      "/images/blueprints/layout-cms10m.png",
-      "/images/models/cms10m-ret.jpg",
-      "/images/categories/sanitario-movil.jpg",
-      "/images/recovered/LAVAMANOS-1.png",
-      "/images/recovered/MINGITORIO_INOX.png"
+      "/images/models/cms10m-ret.jpg"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMS10M",
     "tagline": "Módulo sanitario industrial de alta capacidad (10m) para frentes de trabajo y campamentos de obra. Diseñado con divisiones independientes, ventilación forzada y piso de alta higiene.",
@@ -685,11 +598,7 @@
       "Extractor de aire"
     ],
     "images": [
-      "/images/models/cmb10m.png",
-      "/images/blueprints/layout-cmb10m.png",
-      "/images/categories/sanitario-movil.jpg",
-      "/images/recovered/LAVAMANOS-1.png",
-      "/images/recovered/MINGITORIO_INOX.png"
+      "/images/models/cmb10m.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMB10M",
     "tagline": "Módulo combinado de sanitarios y regaderas industriales (10m) para personal en campamento continuo. Incluye cabinas de ducha, lavamanos colectivos y calentador de alta demanda.",
@@ -717,17 +626,12 @@
       "Muros de lámina pintro",
       "Piso de spc"
     ],
-    "images": [
-      "/images/categories/comedor-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-4.jpg",
-      "/images/recovered/LUMINARIAS.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMK6M",
     "tagline": "Comedor móvil de 6m para cuadrillas de obra de 7 a 8 personas simultáneas. Equipado con mesas y bancas integradas, barra con tarja, aire acondicionado y superficies lavables.",
     "isFlagship": false,
     "taglineEn": "6m mobile dining unit seating 7 to 8 crew members simultaneously. Equipped with integrated tables and benches, sink counter, AC, and easy-clean surfaces.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2237,
@@ -750,10 +654,7 @@
       "Piso de spc"
     ],
     "images": [
-      "/images/models/cmk8m.png",
-      "/images/blueprints/layout-cmk8m.png",
-      "/images/categories/comedor-movil.jpg",
-      "/images/recovered/LUMINARIAS.png"
+      "/images/models/cmk8m.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMK8M",
     "tagline": "Comedor móvil de 8m para servicio de 10 a 12 comensales en turnos de trabajo continuos. Cuenta con área de preparación básica, iluminación LED y piso SPC de alta durabilidad.",
@@ -781,17 +682,12 @@
       "Muros de lámina pintro",
       "Piso de spc"
     ],
-    "images": [
-      "/images/categories/comedor-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/recovered/LUMINARIAS.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMM12CO",
     "tagline": "Comedor masivo de 12m diseñado para campamentos de 35 a 37 personas por turno. Estructura higiénica, ventilación cruzada, aire acondicionado y facilidad de sanitización rápida.",
     "isFlagship": true,
     "taglineEn": "Massive 12m dining hall designed for workforce camps seating 35 to 37 per shift. Sanitary build, cross ventilation, air conditioning, and quick-clean finishes.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2788,
@@ -813,16 +709,12 @@
       "Escalera de acero antiderrapante",
       "Cortina metálica"
     ],
-    "images": [
-      "/images/categoria-almacenes.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-1.jpg"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20MINIBODEGA%20CAJA%20SECA",
     "tagline": "Módulo de resguardo y almacén seco para herramientas, planos y equipo delicado de obra. Estructura sellada contra polvo y humedad con cerradura de seguridad perimetral.",
     "isFlagship": false,
     "taglineEn": "Dry storage unit for jobsite tools, blueprints, and sensitive field equipment. Sealed against dust and moisture with high-security locking hardware.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2790,
@@ -844,16 +736,12 @@
       "Escalera de acero antiderrapante",
       "Cortina metálica"
     ],
-    "images": [
-      "/images/categoria-almacenes.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-2.jpg"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20MINIBODEGA%20CONTENEDOR",
     "tagline": "Bodega de seguridad reforzada para resguardo de maquinaria menor, insumos y herramientas críticas. Máxima resistencia a impacto e intemperie con acceso amplio para carga.",
     "isFlagship": false,
     "taglineEn": "Reinforced security storage unit for small machinery, supplies, and high-value tools. Maximum weather and impact resistance with wide cargo door access.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2180,
@@ -875,16 +763,12 @@
       "Piso de spc",
       "Ventanas de aluminio"
     ],
-    "images": [
-      "/images/categoria-almacenes.png",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-3.jpg"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20BODEGA-8X32",
     "tagline": "Almacén móvil de 8.5m para gestión y control de inventarios directos en frente de obra. Equipada con piso reforzado para estantería pesada e iluminación interior.",
     "isFlagship": true,
     "taglineEn": "8.5m mobile warehouse for on-site inventory management and material control. Built with reinforced flooring for heavy shelving and full interior lighting.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2713,
@@ -906,17 +790,12 @@
       "Ventanas de aluminio",
       "Escalera de acero antiderrapante"
     ],
-    "images": [
-      "/images/categories/consultorio-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-4.jpg",
-      "/images/recovered/LAVAMANOS-1.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM-4MM",
     "tagline": "Consultorio médico móvil básico de 4m para atención primaria, curaciones y toma de signos vitales en obra. Equipado con mesa de exploración, lavamanos y climatización.",
     "isFlagship": false,
     "taglineEn": "Basic 4m mobile medical clinic for on-site first aid, triage, and employee health checkups. Equipped with exam table, sink, and climate control.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2743,
@@ -938,17 +817,12 @@
       "Ventanas de aluminio",
       "Escalera de acero antiderrapante"
     ],
-    "images": [
-      "/images/categories/consultorio-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-5.jpg",
-      "/images/recovered/LAVAMANOS-1.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM-6MM",
     "tagline": "Consultorio clínico de 6m diseñado para brigadas de salud laboral y atención preventiva en plantas. Cuenta con área de auscultación, escritorio médico y acabados asépticos.",
     "isFlagship": false,
     "taglineEn": "6m occupational health clinic designed for preventive care and industrial checkups. Features examination zone, doctor workstation, and aseptic finishes.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2745,
@@ -970,17 +844,12 @@
       "Ventanas de aluminio",
       "Escalera de acero antiderrapante"
     ],
-    "images": [
-      "/images/categories/consultorio-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-6.jpg",
-      "/images/recovered/LAVAMANOS-1.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM-8MM",
     "tagline": "Consultorio médico integral de 8m para chequeos periódicos de personal y primeros auxilios mayores. Incluye privado médico, área de curación y baño completo.",
     "isFlagship": false,
     "taglineEn": "Comprehensive 8m mobile medical unit for routine health screenings and advanced first aid. Includes consultation office, triage area, and private restroom.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   },
   {
     "id": 2747,
@@ -1002,16 +871,11 @@
       "Ventanas de aluminio",
       "Escalera de acero antiderrapante"
     ],
-    "images": [
-      "/images/categories/consultorio-movil.jpg",
-      "/images/blueprints/planta-oficina.svg",
-      "/images/proyectos/proyecto-1.jpg",
-      "/images/recovered/LAVAMANOS-1.png"
-    ],
+    "images": [],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CM-10MM",
     "tagline": "Clínica médica móvil de 10m para campamentos remotos y frentes de trabajo de alto riesgo. Configurada con sala de atención, camillas de estabilización y farmacia básica.",
     "isFlagship": false,
     "taglineEn": "Full 10m mobile medical clinic for remote work camps and high-risk projects. Configured with exam room, stabilization beds, and basic dispensary.",
-    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
+    "blueprintUrl": null
   }
 ]

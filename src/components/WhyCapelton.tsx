@@ -79,7 +79,7 @@ const differentiators: Differentiator[] = [
       "Fabricamos en planta propia con chasis de acero rolado de alta resistencia, muros aislados y techo continuo de una sola pieza sin uniones para eliminar goteras por completo.",
     descriptionEn:
       "Manufactured in-house with reinforced steel chassis, continuous thermal insulation panels, and seamless one-piece aluminum roof to eliminate water leaks.",
-    image: "/images/categoria-almacenes.png",
+    image: "/images/models/cm10m-persp.png",
     modalTitle: "Fabricamos con Propósito",
     modalTitleEn: "Build with Purpose",
     modalSubtitle: "Materiales certificados y ensamblaje industrial para resistir intemperie y traslado continuo.",
@@ -203,7 +203,7 @@ const differentiators: Differentiator[] = [
       "Instalación eléctrica certificada, iluminación LED, contactos de uso rudo y climatización preinstalada para empezar a operar desde el primer día en obra sin retrasos.",
     descriptionEn:
       "Certified electrical systems, LED lighting, heavy-duty outlets, and pre-installed climate control to start operating immediately on site without civil construction delays.",
-    image: "/images/categoria-almacenes.png",
+    image: "/images/archived/oficinas_caapelton-04-2-2048x1365.png",
     modalTitle: "Despliegue Inmediato en Sitio",
     modalTitleEn: "Immediate Jobsite Deployment",
     modalSubtitle: "Tu oficina o espacio móvil listo para operar sin retrasos de construcción.",

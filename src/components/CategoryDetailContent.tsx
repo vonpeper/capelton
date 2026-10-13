@@ -60,10 +60,10 @@ export default function CategoryDetailContent({
                 : "Solución modular integral para proyectos de alta demanda."}
             </p>
           </div>
-          {(category.corteImage || category.image) && (
+          {(category.image || category.corteImage) && (
             <div className="relative w-full lg:w-96 h-48 sm:h-64 lg:h-72 shrink-0 flex items-center justify-center">
               <Image
-                src={category.corteImage || category.image || ""}
+                src={category.image || category.corteImage || ""}
                 alt={categoryName}
                 fill
                 priority

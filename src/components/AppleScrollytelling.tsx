@@ -199,7 +199,7 @@ export default function AppleScrollytelling() {
     },
     {
       id: 1,
-      src: "/images/CM_10M_Vista_01_cropped.png",
+      src: "/images/models/cm10m.png",
       label: "Blindaje Térmico",
       labelEn: "Thermal Shielding",
       step: "02 / Aislamiento Continuo",
@@ -220,7 +220,7 @@ export default function AppleScrollytelling() {
     },
     {
       id: 2,
-      src: "/images/CM_10M_Vista_01_cropped.png",
+      src: "/images/archived/oficinas_caapelton-04-2-2048x1365.png",
       label: "Habitabilidad Interior",
       labelEn: "Interior Living",
       step: "03 / Despliegue Inmediato",

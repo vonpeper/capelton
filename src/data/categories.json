@@ -8,7 +8,7 @@
     "taglineEn": "Climate-controlled executive workspaces and command centers for industry and construction.",
     "modelsCount": 9,
     "image": "/images/CM_10M_Vista_01_cropped.png",
-    "corteImage": "/images/blueprints/planta-oficina.svg",
+    "corteImage": "/images/blueprints/layout-cm10m.png",
     "modelSlugs": [
       "cm3m",
       "cm3mr",
@@ -30,7 +30,7 @@
     "taglineEn": "Perimeter control checkpoints with 360° visibility for site security and access management.",
     "modelsCount": 2,
     "image": "/images/categories/caseta-vigilancia.jpg",
-    "corteImage": "/images/blueprints/planta-caseta.svg",
+    "corteImage": "/images/blueprints/layout-cmcv3m.webp",
     "modelSlugs": [
       "cmvc3m2",
       "cmv6m2"
@@ -45,7 +45,7 @@
     "taglineEn": "Residential sleeper modules and base camp accommodations for construction and mining crews.",
     "modelsCount": 7,
     "image": "/images/categories/dormitorio-movil.jpg",
-    "corteImage": "/images/blueprints/planta-oficina.svg",
+    "corteImage": "/images/categories/dormitorio-movil.jpg",
     "modelSlugs": [
       "cmd4ib",
       "cmdbc6m",
@@ -65,7 +65,7 @@
     "taglineEn": "Autonomous mobile restroom trailers and modules with hospital-grade hygiene standards.",
     "modelsCount": 3,
     "image": "/images/categories/sanitario-movil.jpg",
-    "corteImage": "/images/blueprints/planta-oficina.svg",
+    "corteImage": "/images/blueprints/layout-cms10m.png",
     "modelSlugs": [
       "cms10m",
       "cmb10m",
@@ -81,7 +81,7 @@
     "taglineEn": "Climate-controlled industrial dining units with food service counters for high-density crews.",
     "modelsCount": 3,
     "image": "/images/categories/comedor-movil.jpg",
-    "corteImage": "/images/blueprints/planta-oficina.svg",
+    "corteImage": "/images/blueprints/layout-cmk8m.png",
     "modelSlugs": [
       "cmk6m",
       "cmk8m",
@@ -97,7 +97,7 @@
     "taglineEn": "Modular high-security storage and warehouse units for tools, equipment, and materials.",
     "modelsCount": 3,
     "image": "/images/categoria-almacenes.png",
-    "corteImage": "/images/blueprints/planta-oficina.svg",
+    "corteImage": "/images/categoria-almacenes.png",
     "modelSlugs": [
       "bodega8x32",
       "minibodega-casa-seca",
@@ -113,7 +113,7 @@
     "taglineEn": "Mobile medical units and clinical consult rooms for field health programs and emergency response.",
     "modelsCount": 4,
     "image": "/images/categories/consultorio-movil.jpg",
-    "corteImage": "/images/blueprints/planta-oficina.svg",
+    "corteImage": "/images/categories/consultorio-movil.jpg",
     "modelSlugs": [
       "cm4-mm",
       "cm6-mm",

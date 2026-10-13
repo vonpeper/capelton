@@ -88,7 +88,7 @@
     "images": [
       "/images/models/cm4m.png",
       "/images/blueprints/layout-cm4m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/proyectos/proyecto-3.jpg",
       "/images/recovered/VENTANA.png",
       "/images/recovered/PISO_SPC.png"
     ],
@@ -122,7 +122,7 @@
       "/images/models/cm6m.png",
       "/images/blueprints/layout-cm6m.webp",
       "/images/models/cm6bp.jpg",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/proyectos/proyecto-4.jpg",
       "/images/recovered/VENTANA.png",
       "/images/recovered/PISO_SPC.png"
     ],
@@ -156,7 +156,7 @@
       "/images/models/cm8m.png",
       "/images/blueprints/layout-cm8m.webp",
       "/images/models/cm8m-01.webp",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/proyectos/proyecto-5.jpg",
       "/images/recovered/VENTANA.png",
       "/images/recovered/PISO_SPC.png"
     ],
@@ -187,10 +187,10 @@
       "Cm-10p \n  ficha técnica"
     ],
     "images": [
-      "/images/models/cm10m.png",
+      "/images/CM_10M_Vista_01_cropped.png",
       "/images/blueprints/layout-cm10m.png",
       "/images/models/cm10m-persp.png",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/proyectos/proyecto-6.jpg",
       "/images/recovered/VENTANA.png",
       "/images/recovered/PISO_SPC.png"
     ],
@@ -223,7 +223,7 @@
     "images": [
       "/images/models/cm12m.png",
       "/images/blueprints/layout-cm12m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/proyectos/proyecto-1.jpg",
       "/images/recovered/VENTANA.png",
       "/images/recovered/PISO_SPC.png"
     ],
@@ -257,7 +257,7 @@
       "/images/models/cm14m.png",
       "/images/blueprints/layout-cm14bp.webp",
       "/images/models/cm14m-tarja.png",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/proyectos/proyecto-2.jpg",
       "/images/recovered/VENTANA.png",
       "/images/recovered/PISO_SPC.png"
     ],
@@ -291,7 +291,7 @@
       "/images/models/cm17m.png",
       "/images/blueprints/layout-cm17bpp.webp",
       "/images/models/cm17bpp.jpg",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/proyectos/proyecto-3.jpg",
       "/images/recovered/VENTANA.png",
       "/images/recovered/PISO_SPC.png"
     ],
@@ -325,9 +325,8 @@
       "/images/models/cmvc3m2.png",
       "/images/blueprints/layout-cmcv3m.webp",
       "/images/models/cmvc3m2-alt.png",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/categories/caseta-vigilancia.jpg",
+      "/images/recovered/VENTANA.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMVC-3M2",
     "tagline": "Caseta móvil de vigilancia para control de accesos, registro y seguridad perimetral (2.4×1.2m). Fabricada para resistir intemperie continua y brindar visibilidad panorámica al operador.",
@@ -358,9 +357,8 @@
     "images": [
       "/images/models/cmv6m2.png",
       "/images/blueprints/layout-cmcv6m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/categories/caseta-vigilancia.jpg",
+      "/images/recovered/VENTANA.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMVC-6M2",
     "tagline": "Caseta de vigilancia amplia de 2.4×2.4m para 2 oficiales con espacio para monitores CCTV y registro vehicular. Equipada con aire acondicionado, visibilidad 360° y muros aislados.",
@@ -389,17 +387,17 @@
       "Luces de navegación"
     ],
     "images": [
-      "/images/models/cmd4lb.png",
-      "/images/blueprints/layout-cms10m.png",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/categories/sanitario-movil.jpg",
       "/images/recovered/LAVAMANOS-1.png",
-      "/images/recovered/MINGITORIO_INOX.png"
+      "/images/recovered/MINGITORIO_INOX.png",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/proyectos/proyecto-6.jpg"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CML-6X16",
     "tagline": "Remolque sanitario autónomo para frentes de obra viales, cuadrillas móviles y eventos industriales. Cuenta con cabinas independientes, lavamanos y sistema de fácil conexión o desalojo.",
     "isFlagship": false,
     "taglineEn": "Self-contained mobile restroom trailer for road construction crews, field teams, and industrial events. Features separate private stalls, sinks, and quick-connect plumbing.",
-    "blueprintUrl": "/images/blueprints/layout-cms10m.png"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2085,
@@ -423,16 +421,16 @@
     ],
     "images": [
       "/images/models/cmd4ib.png",
-      "/images/blueprints/layout-cm4m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/categories/dormitorio-movil.jpg",
+      "/images/recovered/LUMINARIAS.png",
       "/images/recovered/PISO_SPC.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMD-4IB",
     "tagline": "Módulo habitacional compacto de 4m para descanso de cuadrillas técnicas en sitio. Configurado con literas resistentes, aislamiento termoacústico y climatización para confort continuo.",
     "isFlagship": false,
     "taglineEn": "Compact 4m crew quarters for field technicians. Configured with heavy-duty bunks, thermoacoustic insulation, and air conditioning for continuous rest comfort.",
-    "blueprintUrl": "/images/blueprints/layout-cm4m.webp"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2166,
@@ -455,17 +453,17 @@
       "Piso de spc"
     ],
     "images": [
-      "/images/models/cm6bp.jpg",
-      "/images/blueprints/layout-cm6m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
+      "/images/categories/dormitorio-movil.jpg",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/proyectos/proyecto-2.jpg",
+      "/images/recovered/LUMINARIAS.png",
       "/images/recovered/PISO_SPC.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMDBC6M",
     "tagline": "Dormitorio móvil de 6m para 2 a 4 supervisores o especialistas en campo. Equipado con lockers, aire acondicionado y aislamiento perimetral para climas extremos.",
     "isFlagship": false,
     "taglineEn": "6m crew quarters for 2 to 4 site supervisors or specialists. Equipped with lockers, air conditioning, and full insulation for extreme climate conditions.",
-    "blueprintUrl": "/images/blueprints/layout-cm6m.webp"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2098,
@@ -489,16 +487,16 @@
     ],
     "images": [
       "/images/models/cmd10br.png",
-      "/images/blueprints/layout-cm10m.png",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/categories/dormitorio-movil.jpg",
+      "/images/recovered/LUMINARIAS.png",
       "/images/recovered/PISO_SPC.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMD10BR",
     "tagline": "Dormitorio de obra de 10m con baño y regadera integrados para cuadrillas en sitios remotos o minería. Ofrece descanso confortable, privacidad y servicios completos en una sola huella.",
     "isFlagship": false,
     "taglineEn": "10m workforce quarters with integrated bathroom and shower for remote sites or mining. Provides restful accommodations, privacy, and full amenities in a single footprint.",
-    "blueprintUrl": "/images/blueprints/layout-cm10m.png"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2112,
@@ -522,16 +520,16 @@
     ],
     "images": [
       "/images/models/cmdc10m.png",
-      "/images/blueprints/layout-cm10m.png",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/categories/dormitorio-movil.jpg",
+      "/images/recovered/LUMINARIAS.png",
       "/images/recovered/PISO_SPC.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMDC10M",
     "tagline": "Dormitorio compartido de 10m diseñado para optimizar el alojamiento de cuadrillas medianas. Incluye literas reforzadas, lockers individuales, iluminación LED y aire acondicionado.",
     "isFlagship": false,
     "taglineEn": "Shared 10m crew quarters designed to optimize mid-sized workforce housing. Features reinforced bunks, individual lockers, LED lighting, and climate control.",
-    "blueprintUrl": "/images/blueprints/layout-cm10m.png"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2127,
@@ -555,16 +553,16 @@
     ],
     "images": [
       "/images/models/cmd12m.png",
-      "/images/blueprints/layout-cm12m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/categories/dormitorio-movil.jpg",
+      "/images/recovered/LUMINARIAS.png",
       "/images/recovered/PISO_SPC.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMD12M",
     "tagline": "Módulo habitacional de 12m para campamentos de obra civil e infraestructura de alta rotación. Gran capacidad de descanso con aislamiento acústico para turnos continuos.",
     "isFlagship": false,
     "taglineEn": "12m lodging module for civil works and infrastructure camps with rotating shifts. High sleeping capacity with acoustic insulation for day and night workers.",
-    "blueprintUrl": "/images/blueprints/layout-cm12m.webp"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2140,
@@ -587,17 +585,17 @@
       "Muros de lámina pintro"
     ],
     "images": [
-      "/images/models/cmd4lb.png",
-      "/images/blueprints/layout-cm12m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
+      "/images/categories/dormitorio-movil.jpg",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/proyectos/proyecto-6.jpg",
+      "/images/recovered/LUMINARIAS.png",
       "/images/recovered/PISO_SPC.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMD12X60",
     "tagline": "Campamento habitacional modular de 17m para proyectos energéticos y mineros de gran escala. Máxima habitabilidad con pasillo central, módulos de literas y climatización dividida.",
     "isFlagship": true,
     "taglineEn": "Modular 17m workforce camp unit for large-scale energy and mining projects. High livability with central corridor, bunk quarters, and multi-zone climate control.",
-    "blueprintUrl": "/images/blueprints/layout-cm12m.webp"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2139,
@@ -620,17 +618,17 @@
       "Muros de lámina pintro"
     ],
     "images": [
-      "/images/models/cmd4lb.png",
-      "/images/blueprints/layout-cm14bp.webp",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
+      "/images/categories/dormitorio-movil.jpg",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/proyectos/proyecto-1.jpg",
+      "/images/recovered/LUMINARIAS.png",
       "/images/recovered/PISO_SPC.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20HOTEL-12X60",
     "tagline": "Campamento habitacional tipo hotel de 17m con cuartos independientes y acabados de confort superior. Diseñado para estancias prolongadas de directores de proyecto y especialistas técnicos.",
     "isFlagship": true,
     "taglineEn": "17m hotel-style modular camp unit with private rooms and upgraded finishes. Tailored for extended stays of project executives and specialized engineers.",
-    "blueprintUrl": "/images/blueprints/layout-cm14bp.webp"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2027,
@@ -656,7 +654,7 @@
       "/images/models/cms10m.png",
       "/images/blueprints/layout-cms10m.png",
       "/images/models/cms10m-ret.jpg",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/categories/sanitario-movil.jpg",
       "/images/recovered/LAVAMANOS-1.png",
       "/images/recovered/MINGITORIO_INOX.png"
     ],
@@ -689,7 +687,7 @@
     "images": [
       "/images/models/cmb10m.png",
       "/images/blueprints/layout-cmb10m.png",
-      "/images/proyectos/oficinas-campo-real.png",
+      "/images/categories/sanitario-movil.jpg",
       "/images/recovered/LAVAMANOS-1.png",
       "/images/recovered/MINGITORIO_INOX.png"
     ],
@@ -720,17 +718,16 @@
       "Piso de spc"
     ],
     "images": [
-      "/images/models/cmk8m.png",
-      "/images/blueprints/layout-cm6m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/categories/comedor-movil.jpg",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/proyectos/proyecto-4.jpg",
+      "/images/recovered/LUMINARIAS.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMK6M",
     "tagline": "Comedor móvil de 6m para cuadrillas de obra de 7 a 8 personas simultáneas. Equipado con mesas y bancas integradas, barra con tarja, aire acondicionado y superficies lavables.",
     "isFlagship": false,
     "taglineEn": "6m mobile dining unit seating 7 to 8 crew members simultaneously. Equipped with integrated tables and benches, sink counter, AC, and easy-clean surfaces.",
-    "blueprintUrl": "/images/blueprints/layout-cm6m.webp"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2237,
@@ -755,9 +752,8 @@
     "images": [
       "/images/models/cmk8m.png",
       "/images/blueprints/layout-cmk8m.png",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/categories/comedor-movil.jpg",
+      "/images/recovered/LUMINARIAS.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMK8M",
     "tagline": "Comedor móvil de 8m para servicio de 10 a 12 comensales en turnos de trabajo continuos. Cuenta con área de preparación básica, iluminación LED y piso SPC de alta durabilidad.",
@@ -786,17 +782,16 @@
       "Piso de spc"
     ],
     "images": [
-      "/images/models/cmk8m.png",
-      "/images/blueprints/layout-cm12m.webp",
-      "/images/proyectos/oficinas-campo-real.png",
-      "/images/recovered/VENTANA.png",
-      "/images/recovered/PISO_SPC.png"
+      "/images/categories/comedor-movil.jpg",
+      "/images/blueprints/planta-oficina.svg",
+      "/images/proyectos/proyecto-6.jpg",
+      "/images/recovered/LUMINARIAS.png"
     ],
     "technicalSheetUrl": "https://wa.me/5215529640104?text=Hola%2C%20solicito%20la%20ficha%20t%C3%A9cnica%20oficial%20en%20PDF%20del%20modelo%20CMM12CO",
     "tagline": "Comedor masivo de 12m diseñado para campamentos de 35 a 37 personas por turno. Estructura higiénica, ventilación cruzada, aire acondicionado y facilidad de sanitización rápida.",
     "isFlagship": true,
     "taglineEn": "Massive 12m dining hall designed for workforce camps seating 35 to 37 per shift. Sanitary build, cross ventilation, air conditioning, and quick-clean finishes.",
-    "blueprintUrl": "/images/blueprints/layout-cm12m.webp"
+    "blueprintUrl": "/images/blueprints/planta-oficina.svg"
   },
   {
     "id": 2788,
@@ -912,7 +907,7 @@
       "Escalera de acero antiderrapante"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
+      "/images/categories/consultorio-movil.jpg",
       "/images/blueprints/planta-oficina.svg",
       "/images/proyectos/proyecto-4.jpg",
       "/images/recovered/LAVAMANOS-1.png"
@@ -944,7 +939,7 @@
       "Escalera de acero antiderrapante"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
+      "/images/categories/consultorio-movil.jpg",
       "/images/blueprints/planta-oficina.svg",
       "/images/proyectos/proyecto-5.jpg",
       "/images/recovered/LAVAMANOS-1.png"
@@ -976,7 +971,7 @@
       "Escalera de acero antiderrapante"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
+      "/images/categories/consultorio-movil.jpg",
       "/images/blueprints/planta-oficina.svg",
       "/images/proyectos/proyecto-6.jpg",
       "/images/recovered/LAVAMANOS-1.png"
@@ -1008,7 +1003,7 @@
       "Escalera de acero antiderrapante"
     ],
     "images": [
-      "/images/CM_10M_Vista_01_cropped.png",
+      "/images/categories/consultorio-movil.jpg",
       "/images/blueprints/planta-oficina.svg",
       "/images/proyectos/proyecto-1.jpg",
       "/images/recovered/LAVAMANOS-1.png"

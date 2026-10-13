@@ -224,6 +224,7 @@ export default function InstagramCommsConsole() {
                       }}
                       src={reel.videoSrc}
                       poster={reel.posterSrc}
+                      preload="none"
                       playsInline
                       loop
                       muted={isMuted}

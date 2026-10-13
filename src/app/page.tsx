@@ -4,9 +4,8 @@ import MainSiteContent from "@/components/MainSiteContent";
 import { SITE_CONFIG } from "@/config/site";
 
 export default function HomePage() {
-  // Si el modo pre-lanzamiento está activo, mostrar la Landing Previa con logotipo oficial,
-  // mensaje de renovación y accesos directos a Venta y Renta.
-  if (SITE_CONFIG.prelaunchMode) {
+  // En prev.capeltonmexico.com siempre se muestra el sitio completo de revisión
+  if (SITE_CONFIG.prelaunchMode && SITE_CONFIG.domain !== "prev.capeltonmexico.com") {
     return <PrelaunchLanding />;
   }
 

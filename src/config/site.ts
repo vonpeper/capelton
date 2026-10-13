@@ -1,5 +1,10 @@
-const isPrelaunch = process.env.NEXT_PUBLIC_PRELAUNCH_MODE === "false" ? false : true;
 const siteDomain = process.env.NEXT_PUBLIC_SITE_DOMAIN || "capeltonmexico.com";
+const isPrelaunch =
+  siteDomain === "prev.capeltonmexico.com"
+    ? false
+    : process.env.NEXT_PUBLIC_PRELAUNCH_MODE === "false"
+    ? false
+    : true;
 
 export const SITE_CONFIG = {
   // Conmutador principal: 'true' muestra la Landing Previa ("Estamos preparando nuestro nuevo sitio").

@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ShieldCheck,
   Zap,
@@ -241,39 +241,18 @@ export default function AppleScrollytelling() {
     },
   ];
 
-  // Track scroll progress across the container
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  // Synchronize scroll position with active stage
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (latest) => {
-      if (latest < 0.35) {
-        setActiveStage(0);
-      } else if (latest < 0.7) {
-        setActiveStage(1);
-      } else {
-        setActiveStage(2);
-      }
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress]);
-
   const current = stages[activeStage];
 
   return (
     <section
       id="scrollytelling"
       ref={containerRef}
-      className="relative h-[280vh] bg-white text-[#1d1d1f]"
+      className="py-16 sm:py-24 bg-white text-[#1d1d1f] relative overflow-hidden border-t border-black/5 scroll-mt-20"
     >
-      {/* Sticky Cinematic Viewport Stage */}
-      <div className="sticky top-0 h-screen w-full flex flex-col justify-between items-center px-4 sm:px-6 lg:px-8 py-4 sm:py-6 overflow-hidden">
-        {/* Apple Pearl Ambient Stage Lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-b from-capelton-green/10 via-capelton-green/4 to-transparent rounded-full blur-[140px] pointer-events-none" />
+      {/* Apple Pearl Ambient Stage Lighting */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-b from-capelton-green/10 via-capelton-green/4 to-transparent rounded-full blur-[140px] pointer-events-none" />
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
         {/* 1. Header & Stage Switcher (Compact, Apple Rhythm) */}
         <FadeIn direction="up">
           <div className="relative z-10 text-center max-w-3xl shrink-0 pt-1 sm:pt-2">
@@ -325,8 +304,8 @@ export default function AppleScrollytelling() {
           </div>
         </FadeIn>
 
-        {/* 2. Responsive 3D Product Stage (Constrained to prevent screen crowding) */}
-        <div className="relative z-10 w-full max-w-5xl flex-1 flex flex-col items-center justify-center min-h-[180px] max-h-[38vh] my-1 sm:my-2">
+        {/* 2. Responsive 3D Product Stage */}
+        <div className="relative z-10 w-full max-w-5xl flex flex-col items-center justify-center h-[260px] xs:h-[320px] sm:h-[400px] md:h-[460px] my-6 sm:my-8">
           <div className="relative w-full h-full max-w-4xl flex items-center justify-center">
             {/* 3D Model Image Render Layers */}
             {stages.map((stage, idx) => (

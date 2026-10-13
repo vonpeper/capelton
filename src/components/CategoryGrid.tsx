@@ -46,7 +46,7 @@ const bentoCategories: BentoCategory[] = [
       "Mobile workspaces for site supervision, technical meetings, and project directors.",
     modelsLabel: "9 modelos",
     modelsLabelEn: "9 models",
-    image: "/images/CM_10M_Vista_01_cropped.png",
+    image: "/images/models/cm10m.png",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <Building2 className="w-5 h-5 text-capelton-green" />,
   },
@@ -62,7 +62,7 @@ const bentoCategories: BentoCategory[] = [
       "Perimeter access control booths with 360° visibility for site security.",
     modelsLabel: "2 modelos",
     modelsLabelEn: "2 models",
-    image: "/images/categories/caseta-vigilancia.jpg",
+    image: "/images/proyectos/oficinas-campo-real.png",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Shield className="w-5 h-5 text-capelton-green" />,
   },
@@ -78,7 +78,7 @@ const bentoCategories: BentoCategory[] = [
       "Workforce lodging modules and base camps for civil and mining crews.",
     modelsLabel: "7 modelos",
     modelsLabelEn: "7 models",
-    image: "/images/categories/dormitorio-movil.jpg",
+    image: "/images/CM_10M_Vista_01_cropped.png",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Bed className="w-5 h-5 text-capelton-green" />,
   },
@@ -94,7 +94,7 @@ const bentoCategories: BentoCategory[] = [
       "High-capacity mobile restroom trailers and modules with easy maintenance.",
     modelsLabel: "3 modelos",
     modelsLabelEn: "3 models",
-    image: "/images/categories/sanitario-movil.jpg",
+    image: "/images/archived/CMS-10M.png",
     gridSpan: "col-span-1 lg:col-span-1",
     icon: <Bath className="w-5 h-5 text-capelton-green" />,
   },
@@ -110,7 +110,7 @@ const bentoCategories: BentoCategory[] = [
       "Spacious climate-controlled dining units for workforce crews in the field.",
     modelsLabel: "3 modelos",
     modelsLabelEn: "3 models",
-    image: "/images/categories/comedor-movil.jpg",
+    image: "/images/models/cmk8m.png",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <Utensils className="w-5 h-5 text-capelton-green" />,
   },
@@ -142,7 +142,7 @@ const bentoCategories: BentoCategory[] = [
       "Mobile clinic units for employee health checkups and jobsite first aid.",
     modelsLabel: "4 modelos",
     modelsLabelEn: "4 models",
-    image: "/images/categories/consultorio-movil.jpg",
+    image: "/images/models/cm4m.png",
     gridSpan: "col-span-1 sm:col-span-2 lg:col-span-2",
     icon: <HeartPulse className="w-5 h-5 text-capelton-green" />,
   },
@@ -216,19 +216,19 @@ export default function CategoryGrid() {
                   id={`cat-${cat.id}`}
                   className="group relative h-[320px] sm:h-[340px] w-full rounded-[28px] sm:rounded-[32px] p-7 sm:p-8 flex flex-col justify-between overflow-hidden bg-[#f5f5f7] hover:bg-white border border-black/[0.04] shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.07)] hover:-translate-y-1 transition-all duration-500 block select-none scroll-mt-28 target:ring-2 target:ring-capelton-green target:ring-offset-4"
                 >
-                  {/* Background Allusive Image with Elegant Transparency */}
+                  {/* Background Allusive Image with Crisp Visibility */}
                   <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-[28px] sm:rounded-[32px]">
-                    <div className="absolute -right-4 sm:right-0 -bottom-4 sm:bottom-0 w-[68%] sm:w-[62%] h-[74%] sm:h-[68%]">
+                    <div className="absolute right-0 bottom-0 w-[72%] sm:w-[65%] h-[78%] sm:h-[72%]">
                       <Image
                         src={cat.image}
                         alt={displayName}
                         fill
                         sizes="(max-width: 768px) 100vw, 550px"
-                        className="object-contain object-bottom-right opacity-20 group-hover:opacity-35 group-hover:scale-105 transition-all duration-700 ease-out filter contrast-110 drop-shadow-[0_12px_24px_rgba(0,0,0,0.06)]"
+                        className="object-contain object-bottom-right opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out filter drop-shadow-[0_16px_32px_rgba(0,0,0,0.10)]"
                       />
                     </div>
-                    {/* Subtle Gradient Scrim ensuring 100% typography legibility */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[#f5f5f7]/95 via-[#f5f5f7]/65 to-transparent group-hover:from-white/95 group-hover:via-white/70 transition-colors duration-500" />
+                    {/* Subtle Left Scrim ensuring 100% typography legibility while keeping render crisp on the right */}
+                    <div className="absolute inset-y-0 left-0 w-3/5 bg-gradient-to-r from-[#f5f5f7] via-[#f5f5f7]/80 to-transparent group-hover:from-white group-hover:via-white/80 transition-colors duration-500 pointer-events-none" />
                   </div>
 
                   {/* Foreground Card Content */}

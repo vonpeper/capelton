@@ -183,8 +183,23 @@ export default function ProductGallery({
 
   if (galleryItems.length === 0) {
     return (
-      <div className="bg-[#fbfbfd] rounded-3xl p-8 flex items-center justify-center min-h-[420px] border border-black/8 text-[#6e6e73]">
-        {t("Sin imágenes disponibles", "No images available")}
+      <div className="relative bg-[#fbfbfd] rounded-3xl p-8 sm:p-12 flex flex-col items-center justify-center min-h-[420px] sm:min-h-[480px] border border-black/8 text-center shadow-xs overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-capelton-green/8 rounded-full blur-[90px] pointer-events-none" />
+        <div className="relative z-10 flex flex-col items-center max-w-sm">
+          <div className="w-16 h-16 rounded-2xl bg-white border border-black/8 shadow-sm flex items-center justify-center text-capelton-green mb-4">
+            <Layers className="w-8 h-8" />
+          </div>
+          <span className="text-xl sm:text-2xl font-bold text-black tracking-tight mb-1">
+            {modelCode}
+          </span>
+          <p className="text-xs text-[#6e6e73] mb-4">
+            {title}
+          </p>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-capelton-green/10 text-capelton-green border border-capelton-green/20">
+            <Check className="w-3 h-3" />
+            {t("Ficha Técnica y Planos Ejecutivos Disponibles", "Spec Sheet & Blueprints Available")}
+          </span>
+        </div>
       </div>
     );
   }

@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: product.images[0] || "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png",
+          url: product.images[0] || product.blueprintUrl || "https://capeltonmexico.com/images/logo-capelton.png",
           width: 1200,
           height: 630,
           alt: `${product.modelCode} - ${product.categoryName}`,
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: `${product.modelCode} | Capelton México`,
       description: product.tagline,
-      images: [product.images[0] || "https://capeltonmexico.com/images/CM_10M_Vista_01_cropped.png"],
+      images: [product.images[0] || product.blueprintUrl || "https://capeltonmexico.com/images/logo-capelton.png"],
     },
   };
 }

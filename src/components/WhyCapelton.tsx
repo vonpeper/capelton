@@ -172,7 +172,7 @@ const differentiators: Differentiator[] = [
       "Muros con aislamiento de alta densidad que protegen del calor del desierto o el frío de montaña, reduciendo el consumo eléctrico de aire acondicionado y el ruido exterior de obra.",
     descriptionEn:
       "Insulated sandwich panels protecting against extreme heat or cold, reducing HVAC energy load and dampening heavy machinery noise on site.",
-    image: "/images/proyectos/proyecto-3.jpg",
+    image: "/images/proyectos/oficinas-campo-real.png",
     modalTitle: "Aislamiento Termoacústico Continuo",
     modalTitleEn: "Continuous Thermo-Acoustic Insulation",
     modalSubtitle: "Confort térmico y acústico garantizado en cualquier entorno operativo.",

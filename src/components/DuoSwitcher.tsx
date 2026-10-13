@@ -67,7 +67,7 @@ const CATEGORY_MODEL_ORDER: Record<string, string[]> = {
 const DEFAULT_CATEGORY_PAIRS: Record<string, [string, string]> = {
   oficinas: ["cm4m", "cm10m"],
   dormitorios: ["cmd4ib", "cmd10br"],
-  comedores: ["cmk8m", "cmk8m"],
+  comedores: ["cmk6m", "cmk8m"],
   sanitarios: ["cms10m", "cmb10m"],
   casetas: ["cmvc3m2", "cmv6m2"],
   contenedores: ["bodega8x32", "minibodega-contenedor"],

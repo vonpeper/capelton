@@ -61,22 +61,6 @@ function getLabelAndType(url: string, index: number): { label: string; labelEn: 
     return { label: "Vista Lateral 3D", labelEn: "3D Side View", type: "render" };
   }
 
-  // Category 3D Renders
-  if (name.includes("caseta-vigilancia")) {
-    return { label: "Render 3D Caseta de Vigilancia", labelEn: "3D Guard Booth Render", type: "render" };
-  }
-  if (name.includes("dormitorio-movil")) {
-    return { label: "Render 3D Dormitorio Móvil", labelEn: "3D Sleeper Unit Render", type: "render" };
-  }
-  if (name.includes("sanitario-movil")) {
-    return { label: "Render 3D Sanitario Móvil", labelEn: "3D Restroom Trailer Render", type: "render" };
-  }
-  if (name.includes("comedor-movil")) {
-    return { label: "Render 3D Comedor Móvil", labelEn: "3D Dining Unit Render", type: "render" };
-  }
-  if (name.includes("consultorio-movil")) {
-    return { label: "Render 3D Consultorio Móvil", labelEn: "3D Medical Clinic Render", type: "render" };
-  }
   if (name.includes("categoria-almacenes")) {
     return { label: "Render 3D Bodega y Contenedor", labelEn: "3D Storage & Container Render", type: "render" };
   }

@@ -100,37 +100,37 @@ export default function NosotrosContent() {
       title: "Campamento CFE Presa Peñitas",
       location: "Chiapas",
       type: t("Complejo Habitacional & Comedor", "Housing Complex & Dining"),
-      image: "/images/proyectos/proyecto-1.jpg",
+      image: "/images/proyectos/oficinas-campo-real.png",
     },
     {
       title: "Secretaría de Marina (SEMAR)",
       location: "AIFA, Zumpango",
       type: t("Centro de Mando CM-17M", "Command Center CM-17M"),
-      image: "/images/proyectos/proyecto-2.jpg",
+      image: "/images/models/cm17m.png",
     },
     {
       title: "Liverpool Car Center",
       location: "Polanco, CDMX",
       type: t("Módulo Comercial y Logístico", "Commercial & Logistics Unit"),
-      image: "/images/proyectos/proyecto-3.jpg",
+      image: "/images/proyectos/transporte-trailer.png",
     },
     {
       title: "Michelin Car Center",
       location: "Polanco, CDMX",
       type: t("Centro de Operaciones", "Operations Center"),
-      image: "/images/proyectos/proyecto-4.jpg",
+      image: "/images/proyectos/unidad-mas-vendida.jpg",
     },
     {
       title: "Juzgado Itinerante Poder Judicial",
       location: "Toluca, Méx.",
       type: t("Salas de Audiencia Móviles", "Mobile Courtrooms"),
-      image: "/images/proyectos/proyecto-5.jpg",
+      image: "/images/models/cm10m.png",
     },
     {
       title: "Unidad Móvil de Salud (ISEM)",
       location: "Tlalnepantla, Méx.",
       type: t("Clínica de Mastografía", "Mammography Clinic"),
-      image: "/images/proyectos/proyecto-6.jpg",
+      image: "/images/proyectos/entrega-cliente-real.jpg",
     },
   ];
 

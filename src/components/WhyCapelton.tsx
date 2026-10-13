@@ -110,7 +110,7 @@ const differentiators: Differentiator[] = [
       "Trato directo sin intermediarios. Coordinamos logística de traslado, maniobra de descarga y nivelación en sitio, respaldados con garantía y refacciones de fábrica.",
     descriptionEn:
       "Direct relationship without brokers. We coordinate transport logistics, on-site crane positioning, and leveling, backed by direct factory warranty and support.",
-    image: "/images/proyectos/proyecto-1.jpg",
+    image: "/images/proyectos/entrega-cliente-real.jpg",
     modalTitle: "Acompañamos Cada Entrega",
     modalTitleEn: "Deliver with Care",
     modalSubtitle: "Cero intermediarios: respaldo técnico antes, durante y después del montaje.",

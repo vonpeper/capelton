@@ -7,7 +7,7 @@
     "tagline": "Espacios ejecutivos climatizados y salas de mando para la industria y construcción.",
     "taglineEn": "Climate-controlled executive workspaces and command centers for industry and construction.",
     "modelsCount": 9,
-    "image": "/images/CM_10M_Vista_01_cropped.png",
+    "image": "/images/models/render-cm10m.png",
     "corteImage": "/images/blueprints/layout-cm10m.png",
     "modelSlugs": [
       "cm3m",
@@ -29,7 +29,7 @@
     "tagline": "Puntos de control perimetral con visibilidad 360° para seguridad y acceso en sitio.",
     "taglineEn": "Perimeter control checkpoints with 360° visibility for site security and access management.",
     "modelsCount": 2,
-    "image": "/images/models/cmvc3m2.png",
+    "image": "/images/models/render-cmvc3m2.png",
     "corteImage": "/images/blueprints/layout-cmcv3m.webp",
     "modelSlugs": [
       "cmvc3m2",
@@ -44,7 +44,7 @@
     "tagline": "Módulos habitacionales y campamentos de descanso para personal de obra y minería.",
     "taglineEn": "Residential sleeper modules and base camp accommodations for construction and mining crews.",
     "modelsCount": 7,
-    "image": "/images/models/cmd10br.png",
+    "image": "/images/models/render-cmd10br.png",
     "corteImage": null,
     "modelSlugs": [
       "cmd4ib",
@@ -64,7 +64,7 @@
     "tagline": "Remolques y módulos hidrosanitarios autónomos con estándares de máxima higiene.",
     "taglineEn": "Autonomous mobile restroom trailers and modules with hospital-grade hygiene standards.",
     "modelsCount": 3,
-    "image": "/images/models/cms10m.png",
+    "image": "/images/models/render-cms10m.png",
     "corteImage": "/images/blueprints/layout-cms10m.png",
     "modelSlugs": [
       "cms10m",
@@ -80,7 +80,7 @@
     "tagline": "Comedores industriales climatizados con barras de servicio para alta densidad.",
     "taglineEn": "Climate-controlled industrial dining units with food service counters for high-density crews.",
     "modelsCount": 3,
-    "image": "/images/models/cmk8m.png",
+    "image": "/images/models/render-cmk8m.png",
     "corteImage": "/images/blueprints/layout-cmk8m.png",
     "modelSlugs": [
       "cmk6m",
@@ -112,8 +112,8 @@
     "tagline": "Unidades médicas móviles y consultorios clínicos para atención en campo y brigadas.",
     "taglineEn": "Mobile medical units and clinical consult rooms for field health programs and emergency response.",
     "modelsCount": 4,
-    "image": "/images/models/cm4m.png",
-    "corteImage": "/images/blueprints/planta-oficina.svg",
+    "image": "/images/models/render-cm4-mm.png",
+    "corteImage": "/images/blueprints/layout-cm4m.webp",
     "modelSlugs": [
       "cm4-mm",
       "cm6-mm",
